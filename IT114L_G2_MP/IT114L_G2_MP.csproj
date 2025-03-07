@@ -67,7 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css\homecss.css" />
     <Content Include="Css\mastercss.css" />
+    <Content Include="img\front-banner-logo.png" />
+    <Content Include="img\home-banner.jpg" />
     <Content Include="img\smallLogo.svg" />
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
