@@ -2,4 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    </asp:Content>
+    
+    <asp:Image ID="banner" runat="server" ImageUrl="~/img/inner-banner 1.jpg" />
+</asp:Content>
