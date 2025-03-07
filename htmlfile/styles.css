@@ -444,12 +444,4 @@ body {
         margin-bottom: 20px;
     }
 
-    .footer-container {
-        flex-direction: column;
-    }
-
-    .footer-column {
-        margin-right: 0;
-        margin-bottom: 30px;
-    }
 }
