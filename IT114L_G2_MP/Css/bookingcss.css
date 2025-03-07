@@ -1,1 +1,53 @@
 ﻿
+.booking-con {
+    margin-inline: 15vw;
+}
+
+.evt-container-line {
+    font-family: "Poppins", sans-serif;
+    border-bottom: 3px solid #333;
+    font-weight: 400;
+    font-size: 22px;
+    padding-top: 20px;
+}
+
+.booking-input-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    gap: 50px; /* Adds space between inputs */
+    width: 100%;
+}
+
+.booking-input {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    width: 500px;
+}
+.booking-input p {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 5px; /* Add space between label and input */
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+}
+
+.input {
+    font-family: "Poppins", sans-serif;
+    width: 100%; 
+    max-width: 500px; 
+    height: 45px;
+    font-size: 18px;
+    padding: 12px;
+    border: 2px solid;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.wide-booking-input {
+    width: 100%;
+}
+
+.wide-input {
+    width: 300vw;
+}
