@@ -59,9 +59,11 @@
             </div>
         </div>
 
-        <div class="booking-input wide-booking-input">
-            <p>Address</p>
-            <asp:TextBox ID="TextBox1" runat="server" CssClass="input wide-input" ></asp:TextBox>
+        <div class="booking-input-container">
+            <div class="booking-input">
+                <p>Address</p>
+                <asp:TextBox ID="TextBox1" runat="server" CssClass="input" ></asp:TextBox>
+            </div>
         </div>
 
 
