@@ -41,9 +41,5 @@
         </div>
     </div>
     <div>
-
-        <asp:Image ID="Image3" runat="server" Height="175px" Width="245px" />
-        <asp:Image ID="Image4" runat="server" Height="181px" Width="247px" />
-
     </div>
 </asp:Content>
