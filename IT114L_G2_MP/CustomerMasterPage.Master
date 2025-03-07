@@ -16,13 +16,13 @@
 
             <asp:HyperLink ID="logolink" runat="server" NavigateUrl="~/Home.aspx"><asp:Image ID="smallLogo" runat="server" CssClass="hyperlink" ImageUrl="~/img/smallLogo.svg" /></asp:HyperLink>
 
-            <nav>
+            <nav> 
                 <ul class="navbar-items">
                     <li class="nav-list"><asp:HyperLink ID="home" runat="server" NavigateUrl="~/Home.aspx" CssClass="hyperlink">Home</asp:HyperLink></li>
-                    <li class="nav-list"><asp:HyperLink ID="about" runat="server" CssClass="hyperlink">About Us</asp:HyperLink></li>
-                    <li class="nav-list"><asp:HyperLink ID="services" runat="server" CssClass="hyperlink">Services</asp:HyperLink></li>
-                    <li class="nav-list"><asp:HyperLink ID="booking" runat="server" CssClass="hyperlink">My Booking</asp:HyperLink></li>
-                    <li class="nav-list"><asp:HyperLink ID="contact" runat="server" CssClass="hyperlink">Contact Us</asp:HyperLink></li>
+                    <li class="nav-list"><asp:HyperLink ID="about" runat="server" CssClass="hyperlink" NavigateUrl="~/About.aspx">About Us</asp:HyperLink></li>
+                    <li class="nav-list"><asp:HyperLink ID="services" runat="server" CssClass="hyperlink" NavigateUrl="~/Services.aspx">Services</asp:HyperLink></li>
+                    <li class="nav-list"><asp:HyperLink ID="booking" runat="server" CssClass="hyperlink" NavigateUrl="~/Booking.aspx">My Booking</asp:HyperLink></li>
+                    <li class="nav-list"><asp:HyperLink ID="contact" runat="server" CssClass="hyperlink" NavigateUrl="~/Contact.aspx">Contact Us</asp:HyperLink></li>
                 </ul>
             </nav>
             <asp:Button ID="Button1" runat="server" Text="Book Now" CssClass="BookBtn" />
