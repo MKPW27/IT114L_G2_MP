@@ -17,8 +17,10 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -67,11 +69,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css\bookingcss.css" />
     <Content Include="Css\homecss.css" />
     <Content Include="Css\mastercss.css" />
     <Content Include="img\About Light Sync Audio.jpg" />
     <Content Include="img\front-banner-logo.png" />
     <Content Include="img\home-banner.jpg" />
+    <Content Include="img\inner-banner 1.jpg" />
     <Content Include="img\smallLogo.svg" />
     <Content Include="Web.config" />
     <Content Include="Home.aspx" />
