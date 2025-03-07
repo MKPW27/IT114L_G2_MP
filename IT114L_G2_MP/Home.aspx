@@ -3,7 +3,7 @@
     <link href="Css/homecss.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="banner-container">
+    <div class="banner-container">
     <asp:Image runat="server" ImageUrl="~/img/home-banner.jpg" CssClass="home-banner"/>
     
     <div class="overlay-content">

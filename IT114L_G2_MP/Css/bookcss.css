@@ -1,0 +1,122 @@
+﻿
+.booking-con {
+    margin-inline: 15vw;
+}
+
+.evt-container-line {
+    font-family: "Poppins", sans-serif;
+    border-bottom: 3px solid #333;
+    font-weight: 400;
+    font-size: 22px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.booking-input-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.booking-input {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.booking-input p,.wide-booking-input p {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 5px;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+}
+
+.input {
+    font-family: "Poppins", sans-serif;
+    height: 45px;
+    font-size: 18px;
+    border: 2px solid;
+    border-radius: 8px;
+    padding-left: 10px;
+    text-align: start;
+}
+
+.wide-input {
+    font-family: "Poppins", sans-serif;
+    height: 45px;
+    font-size: 18px;
+    border: 2px solid;
+    border-radius: 8px;
+    text-align: start;
+    width: 100%;
+    padding-left: 10px;
+}
+.wide-booking-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.container p, .checkbox, .submit-col {
+    font-family: "Poppins", sans-serif;
+}
+
+.checkbox {
+    padding: 12px;
+    padding-bottom: 30px;
+}
+
+.checkbox input[type="checkbox"],.submit input[type="checkbox"]{
+    margin-right: 12px;
+}
+
+.bold.booking-input p {
+    font-weight: 600;
+}
+.submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+..submit input[type="button"] {
+    width: 40px;
+}
+
+.submit-btn {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 35px;
+    margin-top: 10px;
+    margin-right: 40px;
+    background: #B02B2D;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 150px;
+}
+
+.submit-btn:hover {
+    background: #A51518;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+.submit-col {
+    padding-block: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+.test {
+    height: 600px;
+}

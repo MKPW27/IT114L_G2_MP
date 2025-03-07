@@ -69,7 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Css\bookingcss.css" />
+    <Content Include="Css\bookcss.css" />
     <Content Include="Css\homecss.css" />
     <Content Include="Css\mastercss.css" />
     <Content Include="img\About Light Sync Audio.jpg" />
