@@ -8,9 +8,10 @@
     
     <div class="overlay-content">
         <asp:Image runat="server" ImageUrl="~/img/front-banner-logo.png" CssClass="home-banner-logo"/>
-        <asp:Button runat="server" Text="Book Now" CssClass="banner-button"/>
+        <asp:Button runat="server" Text="Book Now" CssClass="banner-button" PostBackUrl="~/Booking.aspx" />
     </div>
 </div>
+
     <div class="fill"></div> <!-- filler remove later -->
 
 </asp:Content>

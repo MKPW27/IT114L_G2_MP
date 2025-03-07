@@ -25,7 +25,7 @@
                     <li class="nav-list"><asp:HyperLink ID="contact" runat="server" CssClass="hyperlink" NavigateUrl="~/Contact.aspx">Contact Us</asp:HyperLink></li>
                 </ul>
             </nav>
-            <asp:Button ID="Button1" runat="server" Text="Book Now" CssClass="BookBtn" />
+            <asp:Button ID="Button1" runat="server" Text="Book Now" CssClass="BookBtn" PostBackUrl="~/Booking.aspx" />
         </header>
 
         <div>
