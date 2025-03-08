@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Css\bookcss.css" />
+    <Content Include="Css\contactcss.css" />
     <Content Include="Css\homepagecss.css" />
     <Content Include="Css\mastercss.css" />
     <Content Include="Css\servicecss.css" />
