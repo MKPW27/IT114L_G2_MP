@@ -117,6 +117,10 @@
     align-items: center; 
     text-align: center;
 }
+.half-sized{
+    width: 50% !important;
+    padding: 100px
+}
 .test {
     height: 600px;
 }

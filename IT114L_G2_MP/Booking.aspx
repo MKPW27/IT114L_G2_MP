@@ -19,7 +19,6 @@
                     <p>Event Type</p>
                     <asp:TextBox ID="evtType" runat="server" CssClass="input"></asp:TextBox>
                 </div>
-
             </div>
 
             <div class="booking-input-container">
@@ -28,11 +27,11 @@
                     <p>Number of Attendees</p>
                     <asp:TextBox ID="numAttendees" runat="server" CssClass="input"></asp:TextBox>
                 </div>
-
                 <div class="booking-input">
                     <p>Event Date</p>
-                    <asp:TextBox ID="evtDate" runat="server" CssClass="input" TextMode="DateTime"></asp:TextBox>
+                     <asp:TextBox ID="TextBox1" runat="server" CssClass="input" TextMode="Date"></asp:TextBox>
                 </div>
+
             </div>
 
         </div>
