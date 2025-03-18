@@ -25,11 +25,11 @@
 
                 <div class="booking-input">
                     <p>Number of Attendees</p>
-                    <asp:TextBox ID="numAttendees" runat="server" CssClass="input"></asp:TextBox>
+                    <asp:TextBox ID="numAttendees" runat="server" CssClass="input" TextMode="Number"></asp:TextBox>
                 </div>
                 <div class="booking-input">
                     <p>Event Date</p>
-                     <asp:TextBox ID="TextBox1" runat="server" CssClass="input" TextMode="Date"></asp:TextBox>
+                     <asp:TextBox ID="bookDate" runat="server" CssClass="input" TextMode="Date"></asp:TextBox>
                 </div>
 
             </div>
