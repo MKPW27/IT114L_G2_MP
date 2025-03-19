@@ -71,9 +71,11 @@
   <ItemGroup>
     <Content Include="Css\bookcss.css" />
     <Content Include="Css\contactcss.css" />
+    <Content Include="Css\events.css" />
     <Content Include="Css\homepagecss.css" />
     <Content Include="Css\mastercss.css" />
     <Content Include="Css\servicecss.css" />
+    <Content Include="Event Management.aspx" />
     <Content Include="img\About Light Sync Audio.jpg" />
     <Content Include="img\front-banner-logo.png" />
     <Content Include="img\home-banner.jpg" />
@@ -93,6 +95,13 @@
     </Compile>
     <Compile Include="CustomerMasterPage.Master.designer.cs">
       <DependentUpon>CustomerMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Event Management.aspx.cs">
+      <DependentUpon>Event Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Event Management.aspx.designer.cs">
+      <DependentUpon>Event Management.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Home.aspx.cs">
