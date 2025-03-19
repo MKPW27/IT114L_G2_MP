@@ -177,247 +177,148 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox teamname;
 
         /// <summary>
-        /// mh_cb control.
+        /// mh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox mh_cb;
+        protected global::System.Web.UI.WebControls.TextBox mh;
 
         /// <summary>
-        /// bl_cb control.
+        /// pl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox bl_cb;
+        protected global::System.Web.UI.WebControls.TextBox pl;
 
         /// <summary>
-        /// fl_cb control.
+        /// bl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox fl_cb;
+        protected global::System.Web.UI.WebControls.TextBox bl;
 
         /// <summary>
-        /// b_cb control.
+        /// fs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox b_cb;
+        protected global::System.Web.UI.WebControls.TextBox fs;
 
         /// <summary>
-        /// mh_quant control.
+        /// sl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox mh_quant;
+        protected global::System.Web.UI.WebControls.TextBox sl;
 
         /// <summary>
-        /// bl_quant control.
+        /// sw control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox bl_quant;
+        protected global::System.Web.UI.WebControls.TextBox sw;
 
         /// <summary>
-        /// fl_quant control.
+        /// hs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fl_quant;
+        protected global::System.Web.UI.WebControls.TextBox hs;
 
         /// <summary>
-        /// b_quant control.
+        /// ms control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox b_quant;
+        protected global::System.Web.UI.WebControls.TextBox ms;
 
         /// <summary>
-        /// hs_cb control.
+        /// wdm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox hs_cb;
+        protected global::System.Web.UI.WebControls.TextBox wdm;
 
         /// <summary>
-        /// sw_cb control.
+        /// wlm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox sw_cb;
+        protected global::System.Web.UI.WebControls.TextBox wlm;
 
         /// <summary>
-        /// mo_sb control.
+        /// backline_type control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox mo_sb;
+        protected global::System.Web.UI.WebControls.DropDownList backline_type;
 
         /// <summary>
-        /// mi_cb control.
+        /// led_wall_type control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox mi_cb;
+        protected global::System.Web.UI.WebControls.DropDownList led_wall_type;
 
         /// <summary>
-        /// bk_cb control.
+        /// DropDownList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox bk_cb;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
-        /// hs_quant control.
+        /// DropDownList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox hs_quant;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
 
         /// <summary>
-        /// sw_quant control.
+        /// DropDownList3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox sw_quant;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
 
         /// <summary>
-        /// mo_quant control.
+        /// DropDownList4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox mo_quant;
-
-        /// <summary>
-        /// mi_quant control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox mi_quant;
-
-        /// <summary>
-        /// bk_type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox bk_type;
-
-        /// <summary>
-        /// lw_cb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox lw_cb;
-
-        /// <summary>
-        /// st_cb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox st_cb;
-
-        /// <summary>
-        /// rf_cb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox rf_cb;
-
-        /// <summary>
-        /// lz_cb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox lz_cb;
-
-        /// <summary>
-        /// mm_cb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox mm_cb;
-
-        /// <summary>
-        /// lw_type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lw_type;
-
-        /// <summary>
-        /// st_type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox st_type;
-
-        /// <summary>
-        /// rf_type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox rf_type;
-
-        /// <summary>
-        /// lz_type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lz_type;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList4;
 
         /// <summary>
         /// bookStatus control.
@@ -429,12 +330,21 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.DropDownList bookStatus;
 
         /// <summary>
-        /// save_button control.
+        /// delete_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button save_button;
+        protected global::System.Web.UI.WebControls.Button delete_btn;
+
+        /// <summary>
+        /// save_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button save_btn;
     }
 }

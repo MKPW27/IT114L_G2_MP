@@ -69,68 +69,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Booking.aspx" />
+    <Content Include="Client Management.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Employee Management.aspx" />
     <Content Include="Css\bookcss.css" />
     <Content Include="Css\contactcss.css" />
     <Content Include="Css\events.css" />
     <Content Include="Css\homepagecss.css" />
     <Content Include="Css\mastercss.css" />
     <Content Include="Css\servicecss.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Equipment Management.aspx" />
     <Content Include="Event Management.aspx" />
     <Content Include="img\About Light Sync Audio.jpg" />
     <Content Include="img\front-banner-logo.png" />
     <Content Include="img\home-banner.jpg" />
     <Content Include="img\inner-banner 1.jpg" />
     <Content Include="img\smallLogo.svg" />
-    <Content Include="Web.config" />
-    <Content Include="Home.aspx" />
-    <Content Include="About.aspx" />
+    <Content Include="Payment Management.aspx" />
     <Content Include="Services.aspx" />
-    <Content Include="Contact.aspx" />
-    <Content Include="Booking.aspx" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerMasterPage.Master.cs">
-      <DependentUpon>CustomerMasterPage.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CustomerMasterPage.Master.designer.cs">
-      <DependentUpon>CustomerMasterPage.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Event Management.aspx.cs">
-      <DependentUpon>Event Management.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Event Management.aspx.designer.cs">
-      <DependentUpon>Event Management.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Services.aspx.cs">
-      <DependentUpon>Services.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Services.aspx.designer.cs">
-      <DependentUpon>Services.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Booking.aspx.cs">
       <DependentUpon>Booking.aspx</DependentUpon>
@@ -139,10 +107,82 @@
     <Compile Include="Booking.aspx.designer.cs">
       <DependentUpon>Booking.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Client Management.aspx.cs">
+      <DependentUpon>Client Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client Management.aspx.designer.cs">
+      <DependentUpon>Client Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerMasterPage.Master.cs">
+      <DependentUpon>CustomerMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerMasterPage.Master.designer.cs">
+      <DependentUpon>CustomerMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Employee Management.aspx.cs">
+      <DependentUpon>Employee Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee Management.aspx.designer.cs">
+      <DependentUpon>Employee Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Equipment Management.aspx.cs">
+      <DependentUpon>Equipment Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Equipment Management.aspx.designer.cs">
+      <DependentUpon>Equipment Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Event Management.aspx.cs">
+      <DependentUpon>Event Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Event Management.aspx.designer.cs">
+      <DependentUpon>Event Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Management.aspx.cs">
+      <DependentUpon>Payment Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment Management.aspx.designer.cs">
+      <DependentUpon>Payment Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffMasterPage.Master.cs">
+      <DependentUpon>StaffMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffMasterPage.Master.designer.cs">
+      <DependentUpon>StaffMasterPage.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="CustomerMasterPage.Master" />
     <None Include="packages.config" />
+    <Content Include="StaffMasterPage.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -150,6 +190,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
