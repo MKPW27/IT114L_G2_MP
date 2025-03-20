@@ -6,6 +6,30 @@
     text-align: center;
 }
 
+.gridview {
+    height: 20px;
+    width: 80%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+    .gridview th {
+        position: sticky;
+        top: 0;
+        background-color: #f8f8f8;
+        z-index: 2;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .gridview td, .gridview th {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
 h3 {
     font-size: 25px;
     font-family: "Poppins", sans-serif;
@@ -40,12 +64,23 @@ h5 {
     padding: 10px;
 }
 
+.gridviewcontainer {
+    overflow: auto;
+    height: 500px;
+    padding-top: 2px;
+    box-shadow: 0px 0px 4px rgba(1, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding-top: 30px;
+    padding: 10px;
+}
 .container {
     padding-top: 2px;
     box-shadow: 0px 0px 4px rgba(1, 0, 0, 0.2);
     border-radius: 20px;
     margin-bottom: 10px;
     padding-top: 30px;
+    padding: 10px;
 }
 
 .content {

@@ -69,7 +69,7 @@
         </div>
 
         <center>
-            <asp:Button runat="server" ID="paid" Text="Paid" CssClass="paid"/>
+            <asp:Button runat="server" ID="paid" Text="Paid" Enabled="false" CssClass="paid"/>
         </center>
     </div>
 </asp:Content>

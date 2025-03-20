@@ -22,7 +22,6 @@
             </div>
 
             <div class="booking-input-container">
-
                 <div class="booking-input">
                     <p>Number of Attendees</p>
                     <asp:TextBox ID="numAttendees" runat="server" CssClass="input" TextMode="Number"></asp:TextBox>
@@ -218,7 +217,7 @@
                 <asp:CheckBox ID="CheckBox1" runat="server" />
                 <p>I have read and understood the Terms and Conditions of Light Sync Audio and agree to abide by them.</p>
             </div>
-            <asp:Button ID="submit" runat="server" Text="Submit" CssClass="submit-btn" />
+            <asp:Button ID="submit" runat="server" Text="Submit" CssClass="submit-btn" OnClick="submit_Click" />
         </div>
     </div>
 

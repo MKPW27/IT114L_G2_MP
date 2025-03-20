@@ -3,18 +3,19 @@
     <link href="css\events.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container"> 
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table">
+
+    <div class="gridviewcontainer"> 
+        <div class="heading_container">
+            <h3>My Events</h3>
+        </div>
+
+        <center>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="True" CssClass="gridview" ShowSelectButton="True">
             <Columns>
-                <asp:BoundField DataField="ID" HeaderText="ID" />
-                <asp:BoundField DataField="EventName" HeaderText="Event Name" />
-                <asp:BoundField DataField="CustomerName" HeaderText="Customer Name" />
-                <asp:BoundField DataField="Email" HeaderText="Email" />
-                <asp:BoundField DataField="ContactNumber" HeaderText="Contact Number" />
-                <asp:BoundField DataField="EventDate" HeaderText="Event Date" />
-                <asp:CheckBoxField DataField="Verified" HeaderText="Verified" />
+                <asp:CommandField ShowSelectButton="True" />
             </Columns>
         </asp:GridView>
+        </center>
     </div>
 
     <div class="event_details">
