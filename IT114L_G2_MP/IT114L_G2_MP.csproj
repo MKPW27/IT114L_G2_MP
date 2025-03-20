@@ -73,6 +73,7 @@
     <Content Include="Booking.aspx" />
     <Content Include="Client Management.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Css\payment.css" />
     <Content Include="Employee Management.aspx" />
     <Content Include="Css\bookcss.css" />
     <Content Include="Css\contactcss.css" />

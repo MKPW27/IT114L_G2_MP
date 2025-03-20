@@ -29,33 +29,34 @@
                 <div class="left">
                     <div class="prompt">
                         Booking ID <br />
-                        <asp:TextBox ID="bookingID" runat="server" Width="90%" Height="40px"></asp:TextBox>
+                        <asp:TextBox ID="bookingID" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         Customer Name <br />
-                        <asp:TextBox ID="custname" runat="server" Width="90%" Height="40px"></asp:TextBox>
+                        <asp:TextBox ID="custname" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         Email <br />
-                        <asp:TextBox ID="custemail" runat="server" Width="90%" Height="40px"></asp:TextBox>
+                        <asp:TextBox ID="custemail" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                 </div>
 
                 <div class="right">
                     <div class="prompt">
                         Business Number <br />
-                        <asp:TextBox ID="b_number" runat="server" Width="90%" Height="40px" TextMode="Phone" MaxLength="11" CssClass="textprompt"></asp:TextBox>
+                        <asp:TextBox ID="b_number" runat="server" Width="90%" Height="40px" TextMode="Phone" MaxLength="11" CssClass="textprompt" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         Company Name <br />
-                        <asp:TextBox ID="compname" runat="server" Width="90%" Height="40px"></asp:TextBox>
+                        <asp:TextBox ID="compname" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div> 
                     <div class="prompt">
                         Phone Number <br />
-                        <asp:TextBox ID="p_number" runat="server" Width="90%" Height="40px" TextMode="Phone" MaxLength="11" CssClass="textprompt"></asp:TextBox>
+                        <asp:TextBox ID="p_number" runat="server" Width="90%" Height="40px" TextMode="Phone" MaxLength="11" CssClass="textprompt" Enabled="false"></asp:TextBox>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
         <div class="container">
@@ -66,30 +67,30 @@
                 <div class="left">
                     <div class="prompt">
                         Region <br />
-                        <asp:TextBox ID="region" runat="server" Width="90%" Height="40px" CssClass="textbox"></asp:TextBox>
+                        <asp:TextBox ID="region" runat="server" Width="90%" Height="40px" CssClass="textbox" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         Province <br />
-                        <asp:TextBox ID="province" runat="server" Width="90%" Height="40px"></asp:TextBox>
+                        <asp:TextBox ID="province" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         City <br />
-                        <asp:TextBox ID="city" runat="server" Width="90%" Height="40px"></asp:TextBox>
+                        <asp:TextBox ID="city" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                 </div>
 
                 <div class="right">
                     <div class="prompt">
                         Barangay <br />
-                        <asp:TextBox ID="brgy" runat="server" Width="90%" Height="40px"></asp:TextBox>
+                        <asp:TextBox ID="brgy" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         Address <br />
-                        <asp:TextBox ID="addr" runat="server" Width="90%" Height="40px"></asp:TextBox>
+                        <asp:TextBox ID="addr" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         Location Number <br />
-                        <asp:TextBox ID="locnum" runat="server" Width="90%" Height="40px" TextMode="Number"></asp:TextBox>
+                        <asp:TextBox ID="locnum" runat="server" Width="90%" Height="40px" TextMode="Number" Enabled="false"></asp:TextBox>
                     </div>
                 </div>
             </div>
@@ -103,26 +104,26 @@
                 <div class="left">
                     <div class="prompt">
                         Event Name <br />
-                        <asp:TextBox ID="ev_name" runat="server" Width="90%" Height="40px"></asp:TextBox>
+                        <asp:TextBox ID="ev_name" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         Event Date <br />
-                        <asp:TextBox ID="ev_date" runat="server" Width="90%" Height="40px" TextMode="Date"></asp:TextBox>
+                        <asp:TextBox ID="ev_date" runat="server" Width="90%" Height="40px" TextMode="Date" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         Event Type <br />
-                        <asp:TextBox ID="ev_type" runat="server" Width="90%" Height="40px"></asp:TextBox>
+                        <asp:TextBox ID="ev_type" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                 </div>
 
                 <div class="right">
                     <div class="prompt">
                         PAX <br />
-                        <asp:TextBox ID="ev_pax" runat="server" Width="90%" Height="40px" TextMode="Number"></asp:TextBox>
+                        <asp:TextBox ID="ev_pax" runat="server" Width="90%" Height="40px" TextMode="Number" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         Team Name <br />
-                        <asp:TextBox ID="teamname" runat="server" Width="90%" Height="40px"></asp:TextBox>
+                        <asp:TextBox ID="teamname" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                 </div>
             </div>
@@ -235,10 +236,15 @@
             <center><hr style="width:95%;" /></center>
 
             <div class="content3">
-                Booking Status &nbsp&nbsp&nbsp&nbsp <asp:DropDownList ID="bookStatus" runat="server" CssClass="ddl" >
+                Discount <asp:DropDownList runat="server" ID="discount_ddl" CssClass="ddl">
+                        <asp:ListItem Value="0">None</asp:ListItem>
+                        <asp:ListItem Value="1">Loyalty Discount (5%)</asp:ListItem>
+                        <asp:ListItem Value="2">Partnership Discount (10%)</asp:ListItem>
+                    </asp:DropDownList><br /><br />
+                Booking Status <asp:DropDownList ID="bookStatus" runat="server" CssClass="ddl" >
                                     <asp:ListItem Value ="0">Disapproved</asp:ListItem>
                                     <asp:ListItem Value ="1">Approved</asp:ListItem>
-                               </asp:DropDownList><br /><br />
+                               </asp:DropDownList>
             </div>
 
             <div class="button-container">

@@ -37,7 +37,7 @@ h5 {
 }
 
 .event_details {
-    padding: 50px;
+    padding: 10px;
 }
 
 .container {
@@ -182,5 +182,6 @@ input[type="text"], input[type="email"], input[type="phone"], input[type="number
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
+    margin-left: 20px;
 }
 

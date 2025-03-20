@@ -321,6 +321,15 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.DropDownList DropDownList4;
 
         /// <summary>
+        /// discount_ddl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList discount_ddl;
+
+        /// <summary>
         /// bookStatus control.
         /// </summary>
         /// <remarks>
