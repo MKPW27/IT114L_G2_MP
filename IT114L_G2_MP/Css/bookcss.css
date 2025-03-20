@@ -19,13 +19,6 @@
     width: 100%;
 }
 
-.booking-input {
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-    width: 100%;
-}
-
 .booking-input p,.wide-booking-input p {
     font-family: "Poppins", sans-serif;
     margin-bottom: 5px;
@@ -83,7 +76,7 @@
     justify-content: center;
 }
 
-..submit input[type="button"] {
+.submit input[type="button"] {
     width: 40px;
 }
 
@@ -123,4 +116,83 @@
 }
 .test {
     height: 600px;
+}
+
+
+.booking-input {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.booking-container-a {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.colm {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    height: 400px;
+    width: 50%;
+    text-align: center;
+}
+
+.colm2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    height: 400px;
+    width: 50%;
+    justify-content: right;
+    text-align: center;
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 70px;
+    font-size: 23px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: right;
+}
+
+.items2 {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 23px;
+    padding-bottom: 20px;
+    align-items: center;
+    text-align: right;
+    margin-right: 70px;
+}
+
+
+.textbox {
+    font-family: "Poppins", sans-serif;
+    height: 40px;
+    width: 200px;
+    font-size: 18px;
+    padding-left: 10px;
+    text-align: start;
+
+    margin-left: 50px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.ddl {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 50px;
 }
