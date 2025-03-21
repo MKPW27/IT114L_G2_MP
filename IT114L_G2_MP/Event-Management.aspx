@@ -15,6 +15,8 @@
             </Columns>
         </asp:GridView>
         </center>
+
+        <asp:Label runat="server" ID="No_Events" style="text-align: center; margin: auto; font-size: 40px; font-weight: bold; color: gray;"></asp:Label>
     </div>
 
     <div class="event_details">
