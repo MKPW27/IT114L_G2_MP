@@ -70,6 +70,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\LightSyncAudio.mdf" />
+    <Content Include="App_Data\LightSyncAudio_log.ldf">
+      <DependentUpon>LightSyncAudio.mdf</DependentUpon>
+    </Content>
     <Content Include="Booking.aspx" />
     <Content Include="Client-Management.aspx" />
     <Content Include="Contact.aspx" />
@@ -92,6 +96,11 @@
     <Content Include="img\home-banner.jpg" />
     <Content Include="img\inner-banner 1.jpg" />
     <Content Include="img\smallLogo.svg" />
+    <Content Include="navIcons\account.png" />
+    <Content Include="navIcons\client.png" />
+    <Content Include="navIcons\equipment.png" />
+    <Content Include="navIcons\event.png" />
+    <Content Include="navIcons\payment.png" />
     <Content Include="Payment-Management.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="SignUp.aspx" />
@@ -217,9 +226,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

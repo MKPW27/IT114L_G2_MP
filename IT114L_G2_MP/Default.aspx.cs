@@ -12,7 +12,7 @@ namespace IT114L_G2_MP
 {
     public partial class Default : System.Web.UI.Page
     {
-        string connstr = $"Data Source=.\\SQLExpress; Initial Catalog=LSA; Integrated Security=SSPI;";
+        string connstr = $"Data Source=.\\SQLExpress; Initial Catalog=LightSyncAudio; Integrated Security=SSPI;";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -25,7 +25,7 @@ namespace IT114L_G2_MP
 
             using (SqlConnection conn = new SqlConnection(connstr))
             {
-                string query = "select acc_type, acc_id from accounts where uname = @username and pword = @password";
+                string query = "select acc_type, acc_id from accounts where acc_uname = @username and acc_pword = @password";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("@username", username);
@@ -45,7 +45,7 @@ namespace IT114L_G2_MP
 
                     if (accType == "staff")
                     {
-                        Response.Redirect("Event Management.aspx");
+                        Response.Redirect("Event-Management.aspx");
                     }
 
                     else if (accType == "customer")
