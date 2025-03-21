@@ -15,29 +15,41 @@ namespace IT114L_G2_MP
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            
-            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string query = "select count(*) from Accounts";
+            if (tb_password.Text == tb_confirm_password.Text)
+            {
+                string query = "select count(*) from Accounts";
+                int record_count = 0;
 
-            int record_count = 0;
+                SqlConnection conn = new SqlConnection(connstr);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                record_count = (int)cmd.ExecuteScalar();
+                record_count += 1;
 
-            SqlConnection conn = new SqlConnection(connstr);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(query, conn);
-            record_count = (int)cmd.ExecuteScalar();
-            record_count += 1;
+                string acc_id = $"{DateTime.Now.ToString("yyyyMMdd")}{record_count.ToString("D7")}";
 
-            string insertstr = $"insert into accounts values ('{DateTime.Now.ToString("yyyyMMdd")}{record_count.ToString("D7")}','{tb_username.Text}','{tb_confirm_password.Text}','customer')";
-            cmd = new SqlCommand(insertstr, conn);
-            cmd.ExecuteNonQuery();
+                string insertstr_accounts = $"insert into accounts values ('{acc_id}','{tb_username.Text}','{tb_confirm_password.Text}','customer')";
+                cmd = new SqlCommand(insertstr_accounts, conn);
+                cmd.ExecuteNonQuery();
 
-            conn.Close();
+                string insertstr_customer = $"insert into customer values ('{acc_id}','{tb_fname.Text}','{tb_lastname.Text}','{tb_email.Text}'," +
+                    $"'{tb_phone.Text}','{tb_buss_phone.Text}','{tb_comp_name.Text}','Unverified','Active')";
+                cmd = new SqlCommand(insertstr_customer, conn);
 
-            Response.Redirect("Default.aspx");
+                cmd.ExecuteNonQuery();
+
+                conn.Close();
+
+                Response.Redirect("Default.aspx");
+            }
+            else
+            {
+                Response.Write("<script>alert('Password does not match!');</script>");
+            }
         }
     }
 }

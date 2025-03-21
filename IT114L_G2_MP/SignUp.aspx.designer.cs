@@ -15,22 +15,22 @@ namespace IT114L_G2_MP
     {
 
         /// <summary>
-        /// TextBox1 control.
+        /// tb_fname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox tb_fname;
 
         /// <summary>
-        /// TextBox2 control.
+        /// tb_lastname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox tb_lastname;
 
         /// <summary>
         /// tb_username control.
@@ -60,40 +60,40 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox tb_confirm_password;
 
         /// <summary>
-        /// TextBox6 control.
+        /// tb_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox tb_email;
 
         /// <summary>
-        /// TextBox7 control.
+        /// tb_phone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox tb_phone;
 
         /// <summary>
-        /// TextBox8 control.
+        /// tb_buss_phone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox tb_buss_phone;
 
         /// <summary>
-        /// TextBox9 control.
+        /// tb_comp_name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox tb_comp_name;
 
         /// <summary>
         /// Button1 control.
