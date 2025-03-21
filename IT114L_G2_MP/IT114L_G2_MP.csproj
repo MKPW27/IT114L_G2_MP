@@ -76,6 +76,7 @@
     </Content>
     <Content Include="Booking.aspx" />
     <Content Include="Client-Management.aspx" />
+    <Content Include="Css\client.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Css\employee.css" />
     <Content Include="Css\login-signup.css" />

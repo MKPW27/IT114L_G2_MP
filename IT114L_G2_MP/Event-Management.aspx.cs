@@ -18,7 +18,7 @@ namespace IT114L_G2_MP
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadData();
+            //LoadData();
         }
 
         public void LoadData()
