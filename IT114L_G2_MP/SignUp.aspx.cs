@@ -15,6 +15,29 @@ namespace IT114L_G2_MP
         protected void Page_Load(object sender, EventArgs e)
         {
             
+            
+            
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string query = "select count(*) from Accounts";
+
+            int record_count = 0;
+
+            SqlConnection conn = new SqlConnection(connstr);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(query, conn);
+            record_count = (int)cmd.ExecuteScalar();
+            record_count += 1;
+
+            string insertstr = $"insert into accounts values ('{DateTime.Now.ToString("yyyyMMdd")}{record_count.ToString("D7")}','{tb_username.Text}','{tb_confirm_password.Text}','customer')";
+            cmd = new SqlCommand(insertstr, conn);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+
+            Response.Redirect("Default.aspx");
         }
     }
 }
