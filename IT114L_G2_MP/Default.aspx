@@ -1,20 +1,19 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CustomerMasterPage.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="IT114L_G2_MP.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Log_in.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="IT114L_G2_MP.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="Css/homepagecss.css" rel="stylesheet" />
+    <link href="css\login-signup.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <div class="banner-container">
-        <asp:Image runat="server" ImageUrl="~/img/home-banner.jpg" CssClass="home-banner" />
-    
-        <div class="overlay-content">
-            <asp:Image runat="server" ImageUrl="~/img/front-banner-logo.png" CssClass="home-banner-logo"/>
-            <asp:Button runat="server" Text="Book Now" CssClass="banner-button" PostBackUrl="~/Booking.aspx" />
+    <div class="page-container">
+        <div class="log-in">
+            <h1>Login To Your Account</h1>
+            <asp:TextBox ID="unameTB" runat="server" Placeholder="Username" CssClass="textbox"></asp:TextBox><br />
+            <asp:TextBox ID="pwordTB" runat="server" TextMode="Password" Placeholder="Password" CssClass="textbox"></asp:TextBox><br />
+            <asp:Button ID="Button1" runat="server" Text="Sign In" CssClass="button" OnClick="Button1_Click" />
+        </div>
+        <div class="sign-up">
+            <h2>New here?</h2>
+            <h4>Book your events now by signing up!</h4>
+            <a href="SignUp.aspx">Sign Up</a><br />
         </div>
     </div>
-
-
-
-    <div class="fill"></div> <!-- filler remove later -->
-
 </asp:Content>

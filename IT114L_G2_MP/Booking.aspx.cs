@@ -22,7 +22,7 @@ namespace IT114L_G2_MP
             string connstr = $"Data Source=.\\SQLExpress; Initial Catalog=LSA; Integrated Security=SSPI;";
             SqlConnection conn = new SqlConnection(connstr);
             conn.Open();
-            string insertstr = $"insert into Booking values ('000004','{name.Text}','{evtType.Text}',{numAttendees.Text},'{bookDate.Text}','{region.Text}'," +
+            string insertstr = $"insert into Booking values ('000005','{name.Text}','{evtType.Text}',{numAttendees.Text},'{bookDate.Text}','{region.Text}'," +
                 $"'{city.Text}','{province.Text}','{barangay.Text}','{address.Text}',{mh.Text},{TextBox1.Text},{TextBox2.Text},{TextBox3.Text},{TextBox4.Text}" +
                 $",{TextBox5.Text},{TextBox6.Text},{TextBox7.Text},{TextBox8.Text},{TextBox9.Text},{backline_type.SelectedValue},{led_wall_type.SelectedValue}" +
                 $",{DropDownList1.SelectedValue},{DropDownList2.SelectedValue},{DropDownList3.SelectedValue},{DropDownList4.SelectedValue})";

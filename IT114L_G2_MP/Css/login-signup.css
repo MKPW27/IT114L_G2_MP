@@ -1,0 +1,43 @@
+﻿body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+.page-container{
+    display: flex;
+}
+.log-in {
+    height: 100vh;
+    width: 80%;
+    text-align: center;
+    align-content: center;
+}
+.sign-up {
+    height: 100vh;
+    width: 20%;
+    text-align: center;
+    align-content: center;
+    background-color: #8fddff;
+}
+
+.textbox {
+    margin-top: 10px;
+    padding-left: 15px;
+    height: 40px;
+    width: 500px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+.button{
+    margin-top: 20px;
+    height: 40px;
+    width: 200px;
+    color: white;
+    background-color: #07b043;
+    border: 1px solid;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}

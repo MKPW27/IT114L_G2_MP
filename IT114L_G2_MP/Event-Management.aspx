@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StaffMasterPage.Master" AutoEventWireup="true" CodeBehind="Event Management.aspx.cs" Inherits="IT114L_G2_MP.Event_Management" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StaffMasterPage.Master" AutoEventWireup="true" CodeBehind="Event-Management.aspx.cs" Inherits="IT114L_G2_MP.Event_Management" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css\events.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <div class="gridviewcontainer"> 
         <div class="heading_container">
             <h3>My Events</h3>

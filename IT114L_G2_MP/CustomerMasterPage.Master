@@ -16,15 +16,16 @@
     <form id="form1" runat="server">
         <header class="navbar">
 
-            <asp:HyperLink ID="logolink" runat="server" NavigateUrl="~/Default.aspx"><asp:Image ID="smallLogo" runat="server" CssClass="hyperlink" ImageUrl="~/img/smallLogo.svg" /></asp:HyperLink>
+            <asp:HyperLink ID="logolink" runat="server" NavigateUrl="~/Booking.aspx"><asp:Image ID="smallLogo" runat="server" CssClass="hyperlink" ImageUrl="~/img/smallLogo.svg" /></asp:HyperLink>
 
             <nav> 
                 <ul class="navbar-items">
-                    <li class="nav-list"><asp:HyperLink ID="home" runat="server" NavigateUrl="~/Default.aspx" CssClass="hyperlink">Home</asp:HyperLink></li>
+                    <li class="nav-list"><asp:HyperLink ID="home" runat="server" NavigateUrl="~/Booking.aspx" CssClass="hyperlink">Home</asp:HyperLink></li>
                     <li class="nav-list"><asp:HyperLink ID="about" runat="server" CssClass="hyperlink" NavigateUrl="~/About.aspx">About Us</asp:HyperLink></li>
                     <li class="nav-list"><asp:HyperLink ID="services" runat="server" CssClass="hyperlink" NavigateUrl="~/Services.aspx">Services</asp:HyperLink></li>
                     <li class="nav-list"><asp:HyperLink ID="booking" runat="server" CssClass="hyperlink" NavigateUrl="~/Booking.aspx">My Booking</asp:HyperLink></li>
                     <li class="nav-list"><asp:HyperLink ID="contact" runat="server" CssClass="hyperlink" NavigateUrl="~/Contact.aspx">Contact Us</asp:HyperLink></li>
+                    <asp:Button runat="server" ID="logout" Text="Logout" OnClick="btnLogout_click"/>
                 </ul>
             </nav>
             <asp:Button ID="Button1" runat="server" Text="Book Now" CssClass="BookBtn" PostBackUrl="~/Booking.aspx" />
@@ -39,7 +40,7 @@
         <div class="container-fot">
             <div class="row-fot">
                 <div class="footer-col">
-                    <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Default.aspx"><asp:Image ID="Image2" runat="server" CssClass="fot-logo" ImageUrl="~/img/smallLogo.svg" /></asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Booking.aspx"><asp:Image ID="Image2" runat="server" CssClass="fot-logo" ImageUrl="~/img/smallLogo.svg" /></asp:HyperLink>
 
                 </div>
                 <div class="footer-col">
@@ -49,11 +50,11 @@
                 <div class="footer-col">
                     <h3>Link</h3>
                     <ul class="fot-items">
-                        <li class="fot-list"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx" CssClass="fot-link">Home</asp:HyperLink></li>
+                        <li class="fot-list"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Booking.aspx" CssClass="fot-link">Home</asp:HyperLink></li>
                         <li class="fot-list"><asp:HyperLink ID="HyperLink3" runat="server" CssClass="fot-link" NavigateUrl="~/About.aspx">About Us</asp:HyperLink></li>
                         <li class="fot-list"><asp:HyperLink ID="HyperLink4" runat="server" CssClass="fot-link" NavigateUrl="~/Services.aspx">Services</asp:HyperLink></li>
                         <li class="fot-list"><asp:HyperLink ID="HyperLink5" runat="server" CssClass="fot-link" NavigateUrl="~/Booking.aspx">My Booking</asp:HyperLink></li>
-                        <li class="fot-list"><asp:HyperLink ID="HyperLink6" runat="server" CssClass="fot-link" NavigateUrl="~/Booking.aspx">Contact Us</asp:HyperLink></li>
+                        <li class="fot-list"><asp:HyperLink ID="HyperLink6" runat="server" CssClass="fot-link" NavigateUrl="~/Contact.aspx">Contact Us</asp:HyperLink></li>
                     </ul>
                 </div>
                 <div class="footer-col">

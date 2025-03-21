@@ -13,5 +13,13 @@ namespace IT114L_G2_MP
         {
 
         }
+
+        protected void btnLogout_click(object sender, EventArgs e)
+        {
+            Session.Clear();  
+            Session.Abandon(); 
+
+            Response.Redirect("Default.aspx");
+        }
     }
 }
