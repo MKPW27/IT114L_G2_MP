@@ -3,7 +3,6 @@
     <link href="Css\employee.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class ="fill"></div>
 <div class="body-container">
     <div class="left-container">
         <h3 class="header-title">My Employees</h3>
@@ -77,7 +76,7 @@
             <p>ID</p>
             <div class="input-cols">
                 <asp:TextBox ID="EmpID" runat="server" CssClass="input-field"></asp:TextBox>
-                    <asp:Button ID="SearchBtn" runat="server" CssClass="btn" Text="Search" />
+                    <asp:Button ID="SearchBtn" runat="server" CssClass="btn btnSearch" Text="Search" />
             </div>
             <div class="input-cols">
                 <div class="input-group">
