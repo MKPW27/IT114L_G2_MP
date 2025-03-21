@@ -60,58 +60,31 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
-        /// Chk_Staff control.
+        /// EmpType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Chk_Staff;
+        protected global::System.Web.UI.WebControls.RadioButtonList EmpType;
 
         /// <summary>
-        /// Chk_Manager control.
+        /// EmpGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Chk_Manager;
+        protected global::System.Web.UI.WebControls.RadioButtonList EmpGender;
 
         /// <summary>
-        /// Chk_Male control.
+        /// EmpStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Chk_Male;
-
-        /// <summary>
-        /// Chk_Female control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Chk_Female;
-
-        /// <summary>
-        /// Chk_Active control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Chk_Active;
-
-        /// <summary>
-        /// Chk_Inactive control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Chk_Inactive;
+        protected global::System.Web.UI.WebControls.RadioButtonList EmpStatus;
 
         /// <summary>
         /// AddBtn control.
@@ -177,58 +150,31 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox EditEmail;
 
         /// <summary>
-        /// Chk_EditStaff control.
+        /// EditEmployee control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Chk_EditStaff;
+        protected global::System.Web.UI.WebControls.RadioButtonList EditEmployee;
 
         /// <summary>
-        /// Chk_EditManager control.
+        /// EditGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Chk_EditManager;
+        protected global::System.Web.UI.WebControls.RadioButtonList EditGender;
 
         /// <summary>
-        /// Chk_EditMale control.
+        /// EditStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Chk_EditMale;
-
-        /// <summary>
-        /// Chk_EditFemale control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Chk_EditFemale;
-
-        /// <summary>
-        /// Chk_EditActive control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Chk_EditActive;
-
-        /// <summary>
-        /// Chk_EditInactive control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Chk_EditInactive;
+        protected global::System.Web.UI.WebControls.RadioButtonList EditStatus;
 
         /// <summary>
         /// EditBtn control.

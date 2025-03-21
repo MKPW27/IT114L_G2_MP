@@ -66,9 +66,11 @@ edit-employee {
     margin-bottom: 10px;
 }
 
-    .checkbox-group input[type="checkbox"] {
+    .checkbox-group input[type="RadioButtonList"] {
         margin-right: 8px;
     }
+
+
 
 .input-field {
     font-family: "Poppins", sans-serif;

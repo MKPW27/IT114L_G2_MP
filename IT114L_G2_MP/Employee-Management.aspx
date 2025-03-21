@@ -42,22 +42,30 @@
                 <div class="checkbox-group">
                 
                     <p>Employee Type:</p>   
-                    <asp:CheckBox ID="Chk_Staff" runat="server" Text="Staff" /><br />
-                    <asp:CheckBox ID="Chk_Manager" runat="server" Text="Manager" />
+  
+                    <asp:RadioButtonList ID="EmpType" runat="server" CssClass="radio">
+                        <asp:ListItem Text=" Manager" Value="Manager"></asp:ListItem>
+                        <asp:ListItem Text=" Staff" Value="Staff"></asp:ListItem>
+                    </asp:RadioButtonList>
 
                 </div>
 
                 <div class="checkbox-group">
                     <p>Gender:</p>
-                    <asp:CheckBox ID="Chk_Male" runat="server" Text="Male" /><br />
-                    <asp:CheckBox ID="Chk_Female" runat="server" Text="Female" />
+                    <asp:RadioButtonList ID="EmpGender" runat="server" CssClass="radio">
+                        <asp:ListItem Text=" Male" Value="Male"></asp:ListItem>
+                        <asp:ListItem Text=" Female" Value="Female"></asp:ListItem>
+                    </asp:RadioButtonList>
                 </div>
             
             </div>
             <div class="checkbox-group">
                 <p>Status:</p>
-                <asp:CheckBox ID="Chk_Active" runat="server" Text="Active" /><br />
-                <asp:CheckBox ID="Chk_Inactive" runat="server" Text="Inactive" />
+
+                <asp:RadioButtonList ID="EmpStatus" runat="server" CssClass="radio">
+                    <asp:ListItem Text=" Active" Value="Active"></asp:ListItem>
+                    <asp:ListItem Text=" Inactive" Value="Inactive"></asp:ListItem>
+                </asp:RadioButtonList>
             </div>
             <div class="btn-container">
                 <asp:Button ID="AddBtn" runat="server" CssClass="btn" Text="Add" />
@@ -95,21 +103,28 @@
 
             <div class="checkbox-cols">
                 <div class="checkbox-group">
-                    <label>Employee Type:</label><br />
-                    <asp:CheckBox ID="Chk_EditStaff" runat="server" Text="Staff" /><br />
-                    <asp:CheckBox ID="Chk_EditManager" runat="server" Text="Manager" />
+                    <p>Employee Type:</p>
+                    <asp:RadioButtonList ID="EditEmployee" runat="server" CssClass="radio">
+                        <asp:ListItem Text=" Staff" Value="Staff"></asp:ListItem>
+                        <asp:ListItem Text=" Manager" Value="Manager"></asp:ListItem>
+                    </asp:RadioButtonList>
                 </div>
 
                 <div class="checkbox-group">
-                    <label>Gender:</label><br />
-                    <asp:CheckBox ID="Chk_EditMale" runat="server" Text="Male" /><br />
-                    <asp:CheckBox ID="Chk_EditFemale" runat="server" Text="Female" />
+                    <label>Gender:</label>
+                    <asp:RadioButtonList ID="EditGender" runat="server" CssClass="radio">
+                        <asp:ListItem Text=" Male" Value="Male"></asp:ListItem>
+                        <asp:ListItem Text=" Female" Value="Female"></asp:ListItem>
+                    </asp:RadioButtonList>
                 </div>
             </div>
             <div class="checkbox-group">
-                <label>Status:</label><br />
-                <asp:CheckBox ID="Chk_EditActive" runat="server" Text="Active" /><br />
-                <asp:CheckBox ID="Chk_EditInactive" runat="server" Text="Inactive" />
+                <p>Status:</p>
+                <asp:RadioButtonList ID="EditStatus" runat="server" CssClass="radio">
+                    <asp:ListItem Text=" Active" Value="Active"></asp:ListItem>
+                    <asp:ListItem Text=" Inactive" Value="Inactive"></asp:ListItem>
+                </asp:RadioButtonList>
+
             </div>
 
             <div class="btn-container">
