@@ -1,0 +1,66 @@
+﻿body {
+    font-family: "Poppins", sans-serif;
+}
+
+h3{
+    text-align: center;
+}
+
+h4{
+    font-weight: 400;
+}
+
+hr{
+    margin-bottom: 10px;
+}
+
+.package-container{
+    display: flex;
+    height: 500px;
+}
+
+.equipment-section {
+    padding: 10px;
+    width: 75%;
+    overflow: auto;
+}
+
+.equipmentRow {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.dropdown {
+    border-radius: 5px;
+    width: 25%;
+    height: 24px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.add-button {
+    border-radius: 5px;
+    background-color: beige;
+    color: black;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    width: 94%
+}
+
+.package-info-container{
+    width: 25%;
+    height: 1080px;
+    padding: 10px;
+}
+
+.textbox{
+    width: 95%;
+    height: 20px;
+}

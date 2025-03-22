@@ -81,6 +81,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Css\employee.css" />
     <Content Include="Css\login-signup.css" />
+    <Content Include="Css\packages.css" />
     <Content Include="Css\payment.css" />
     <Content Include="Css\signup.css" />
     <Content Include="Default.aspx" />

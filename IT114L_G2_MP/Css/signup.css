@@ -1,21 +1,21 @@
 ﻿/*
-    CssClass
-    su_FirstName
-    su_LastName
-    su_Username
-    su_Password
-    su_CfPassword
-    su_Email
-    su_Phone
-    su_BusNum
-    su_CompName
-    su_CreateAccountBtn
-    return-link
-*/
+     CssClass
+     su_FirstName
+     su_LastName
+     su_Username
+     su_Password
+     su_CfPassword
+     su_Email
+     su_Phone
+     su_BusNum
+     su_CompName
+     su_CreateAccountBtn
+     return-link
+ */
+
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
-
     background-image: url("/img/Signup-BG.png");
     background-size: cover;
     background-position: center;
@@ -76,7 +76,7 @@ body {
 
 
     /*Super Estetik Button sheeesh  */
-.su_CreateAccountBtn:hover {
+    .su_CreateAccountBtn:hover {
         background: #39a719;
     }
 
