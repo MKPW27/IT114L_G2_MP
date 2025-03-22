@@ -7,7 +7,7 @@
     <div class="payment-details-container">
         <div class="center">
             <span class="search-label">Enter Booking ID</span><br />
-            <asp:TextBox runat="server" ID="book_id_text" placeholder="Search Booking ID" CssClass="search-id"/> <asp:Button runat="server" ID="search" text="Search" CssClass="search-button"/>
+            <asp:TextBox runat="server" ID="book_id_text" placeholder=" Search Booking ID" CssClass="search-id"/> <asp:Button runat="server" ID="search" text="Search" CssClass="search-button"/>
             <br />
         </div>
 
