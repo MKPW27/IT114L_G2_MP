@@ -32,37 +32,39 @@ namespace IT114L_G2_MP
                 cmd.Parameters.AddWithValue("@password", password);
 
                 conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    string accType = reader["acc_type"].ToString();
-                    string accID = reader["acc_id"].ToString();
 
-                    Session["Username"] = username;
-                    Session["AccountType"] = accType;
-                    Session["ID"] = accID;
-
-                    if (accType == "staff")
+                    if (reader.Read())
                     {
-                        Response.Redirect("Event-Management.aspx");
-                    }
+                        string accType = reader["acc_type"].ToString();
+                        string accID = reader["acc_id"].ToString();
 
-                    else if (accType == "customer")
-                    {
-                        Response.Redirect("Home.aspx");
+                        Session["Username"] = username;
+                        Session["AccountType"] = accType;
+                        Session["ID"] = accID;
+
+                        if (accType == "staff")
+                        {
+                            Response.Redirect("Event-Management.aspx");
+                        }
+
+                        else if (accType == "customer")
+                        {
+                            Response.Redirect("Home.aspx");
+                        }
+                        else
+                        {
+                            Response.Write("<script>alert('Something went wrong on our end');</script>");
+                        }
                     }
                     else
                     {
-                        Response.Write("<script>alert('Something went wrong on our end');</script>");
+                        Response.Write("<script>alert('Please enter a username or password');</script>");
                     }
+                    reader.Close();
+                    conn.Close();
                 }
-                else
-                {
-                    Response.Write("<script>alert('Please enter a username or password');</script>");
-                }
-
-                conn.Close();
             }
         }
     }

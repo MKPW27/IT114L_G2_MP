@@ -1,0 +1,1 @@
+﻿select * from accounts A right join employee B on A.acc_id = B.emp_id

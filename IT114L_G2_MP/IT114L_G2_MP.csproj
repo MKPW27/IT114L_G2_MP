@@ -76,6 +76,7 @@
     </Content>
     <Content Include="Booking.aspx" />
     <Content Include="Client-Management.aspx" />
+    <Content Include="Create-Package.aspx" />
     <Content Include="Css\client.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Css\employee.css" />
@@ -96,12 +97,14 @@
     <Content Include="img\front-banner-logo.png" />
     <Content Include="img\home-banner.jpg" />
     <Content Include="img\inner-banner 1.jpg" />
+    <Content Include="navIcons\package-box.png" />
     <Content Include="img\smallLogo.svg" />
     <Content Include="navIcons\account.png" />
     <Content Include="navIcons\client.png" />
     <Content Include="navIcons\equipment.png" />
     <Content Include="navIcons\event.png" />
     <Content Include="navIcons\payment.png" />
+    <Content Include="Css\equipment.css" />
     <Content Include="Payment-Management.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="SignUp.aspx" />
@@ -135,6 +138,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Create-Package.aspx.cs">
+      <DependentUpon>Create-Package.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Create-Package.aspx.designer.cs">
+      <DependentUpon>Create-Package.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerMasterPage.Master.cs">
       <DependentUpon>CustomerMasterPage.Master</DependentUpon>

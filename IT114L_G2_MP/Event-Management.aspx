@@ -11,7 +11,7 @@
         <center>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="True" CssClass="gridview" ShowSelectButton="True">
             <Columns>
-                <asp:CommandField ShowSelectButton="True" />
+                <asp:CommandField ShowSelectButton="True"/>
             </Columns>
         </asp:GridView>
         </center>

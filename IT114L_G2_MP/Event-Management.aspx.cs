@@ -30,21 +30,25 @@ namespace IT114L_G2_MP
                 SqlDataAdapter da = new SqlDataAdapter(retrieve, conn);
 
                 conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    No_Events.Text = "";
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    GridView1.DataSource = dt;
-                    GridView1.DataBind();
+                    if (reader.Read())
+                    {
+                        No_Events.Text = "";
+                        DataTable dt = new DataTable();
+                        reader.Close();
+                        da.Fill(dt);
+                        GridView1.DataSource = dt;
+                        GridView1.DataBind();
+                    }
+                    else
+                    {
+                        No_Events.Text = "No Events";
+                    }
+                    reader.Close();
                 }
-                else
-                {
-                    No_Events.Text = "No Events";
-                }
+                conn.Close();
             }
-            
         }
     }
 }

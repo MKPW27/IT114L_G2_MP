@@ -7,12 +7,19 @@
 <div class="body-container">
     <div class="left-container">
         <h3 class="header-title">My Employees</h3>
-        <asp:GridView ID="Emp_GridView" runat="server" AutoGenerateColumns="True" CssClass="gridview">
-            <Columns>
-                <asp:CommandField ShowSelectButton="True" />
-            </Columns>
-        </asp:GridView>
+
+        <center>
+            <asp:GridView ID="Emp_GridView" runat="server" AutoGenerateColumns="True" CssClass="gridview" DataKeyNames="ID" OnRowCommand="Select_Row">
+                <Columns>
+                    <asp:CommandField ShowSelectButton="True" SelectText="Edit"/>
+                </Columns>
+            </asp:GridView>
+        </center>
+
+        <asp:Label runat="server" ID="No_EMP" Text=""></asp:Label>
     </div>
+
+
     <div class="right-container">
         <div class="form-container add-employee">
             <h3 class="header-title">Add Employee</h3>
@@ -31,11 +38,11 @@
             <div class="input-cols">
                 <div class="input-group">
                     <p>Birthdate</p>
-                    <asp:TextBox ID="TextBox1" runat="server" CssClass="input-field" TextMode="Date"></asp:TextBox>
+                    <asp:TextBox ID="Birthdate" runat="server" CssClass="input-field" TextMode="Date"></asp:TextBox>
                 </div>
                 <div class="input-group">
                     <p>Email</p>
-                    <asp:TextBox ID="TextBox2" runat="server" CssClass="input-field" TextMode="Email"></asp:TextBox>
+                    <asp:TextBox ID="Email" runat="server" CssClass="input-field" TextMode="Email"></asp:TextBox>
                 </div>
             </div>
             <div class="checkbox-cols">
@@ -68,7 +75,7 @@
                 </asp:RadioButtonList>
             </div>
             <div class="btn-container">
-                <asp:Button ID="AddBtn" runat="server" CssClass="btn" Text="Add" />
+                <asp:Button ID="AddBtn" runat="server" CssClass="btn" Text="Add" OnClick="AddBtn_Click" />
             </div>
         </div>
 
@@ -76,8 +83,8 @@
             <h3 class="header-title">Edit Employee</h3>
             <p>ID</p>
             <div class="input-cols">
-                <asp:TextBox ID="EmpID" runat="server" CssClass="input-field"></asp:TextBox>
-                    <asp:Button ID="SearchBtn" runat="server" CssClass="btn" Text="Search" />
+                <asp:TextBox ID="EmpID" runat="server" CssClass="input-field" MaxLength="15" TextMode="Phone"></asp:TextBox>
+                    <asp:Button ID="SearchBtn" runat="server" CssClass="btn" Text="Search" OnClick="SearchBtn_Click" />
             </div>
             <div class="input-cols">
                 <div class="input-group">
@@ -128,8 +135,8 @@
             </div>
 
             <div class="btn-container">
-                <asp:Button ID="EditBtn" runat="server" CssClass="btn" Text="Edit" />
-                <asp:Button ID="RemoveBtn" runat="server" CssClass="btn btn-red" Text="Remove" />
+                <asp:Button ID="EditBtn" runat="server" CssClass="btn" Text="Save" OnClick="EditBtn_Click" />
+                <asp:Button ID="RemoveBtn" runat="server" CssClass="btn btn-red" Text="Clear" OnClick="RemoveBtn_Click" />
             </div>
         </div>
     </div>

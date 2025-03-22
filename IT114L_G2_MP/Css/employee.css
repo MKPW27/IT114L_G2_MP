@@ -2,6 +2,28 @@
     font-family: "Poppins", sans-serif;
 }
 
+.gridview {
+    height: 20px;
+    width: 80%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+    .gridview th {
+        position: sticky;
+        top: 0;
+        background-color: #f8f8f8;
+        z-index: 2;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .gridview td, .gridview th {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
 
 .body-container {
     display: flex;
@@ -47,6 +69,8 @@ edit-employee {
 .input-cols {
     display: flex;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .input-group {
