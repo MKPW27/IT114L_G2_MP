@@ -15,22 +15,13 @@ namespace IT114L_G2_MP
     {
 
         /// <summary>
-        /// tb_fname control.
+        /// tb_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_fname;
-
-        /// <summary>
-        /// tb_lastname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_lastname;
+        protected global::System.Web.UI.WebControls.TextBox tb_email;
 
         /// <summary>
         /// tb_username control.
@@ -60,13 +51,31 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox tb_confirm_password;
 
         /// <summary>
-        /// tb_email control.
+        /// tb_fname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_email;
+        protected global::System.Web.UI.WebControls.TextBox tb_fname;
+
+        /// <summary>
+        /// tb_lastname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_lastname;
+
+        /// <summary>
+        /// tb_comp_name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_comp_name;
 
         /// <summary>
         /// tb_phone control.
@@ -85,15 +94,6 @@ namespace IT114L_G2_MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_buss_phone;
-
-        /// <summary>
-        /// tb_comp_name control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_comp_name;
 
         /// <summary>
         /// Button1 control.

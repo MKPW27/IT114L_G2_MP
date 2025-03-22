@@ -1,0 +1,93 @@
+﻿/*
+    CssClass
+    su_FirstName
+    su_LastName
+    su_Username
+    su_Password
+    su_CfPassword
+    su_Email
+    su_Phone
+    su_BusNum
+    su_CompName
+    su_CreateAccountBtn
+    return-link
+*/
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+
+    background-image: url("/img/Signup-BG.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.signup-container {
+    width: 500px;
+    height: 830px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    /*Outside*/
+    margin: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /*Inside*/
+    padding: 20px;
+    padding-left: 110px;
+    padding-right: 110px;
+    text-align: center;
+}
+
+    .signup-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+
+    .signup-container input {
+        width: 100%;
+        padding: 9px;
+        margin-top: 3px;
+        border: 1px solid #5A5A5A;
+        border-radius: 5px;
+    }
+
+.su_CreateAccountBtn {
+    width: 100%;
+    padding: 12px;
+    background: #12122d; /* Dark navy blue */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+
+    /*Super Estetik Button sheeesh  */
+.su_CreateAccountBtn:hover {
+        background: #39a719;
+    }
+
+.return-link {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #12122d;
+    text-decoration: none;
+}
+
+    .return-link:hover {
+        text-decoration: underline;
+    }

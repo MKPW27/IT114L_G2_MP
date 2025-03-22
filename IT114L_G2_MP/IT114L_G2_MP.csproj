@@ -82,6 +82,7 @@
     <Content Include="Css\employee.css" />
     <Content Include="Css\login-signup.css" />
     <Content Include="Css\payment.css" />
+    <Content Include="Css\signup.css" />
     <Content Include="Default.aspx" />
     <Content Include="Employee-Management.aspx" />
     <Content Include="Css\bookcss.css" />
@@ -97,6 +98,7 @@
     <Content Include="img\front-banner-logo.png" />
     <Content Include="img\home-banner.jpg" />
     <Content Include="img\inner-banner 1.jpg" />
+    <Content Include="img\Signup-BG.png" />
     <Content Include="navIcons\package-box.png" />
     <Content Include="img\smallLogo.svg" />
     <Content Include="navIcons\account.png" />
