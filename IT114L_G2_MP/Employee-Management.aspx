@@ -8,11 +8,13 @@
         <div class="evt-container-line">
             <h3 class="header-title">My Employees</h3>
         </div>
-        <asp:GridView ID="Emp_GridView" runat="server" AutoGenerateColumns="True" CssClass="gridview">
+        <asp:GridView ID="Emp_GridView" runat="server" AutoGenerateColumns="True" CssClass="gridview" DataKeyNames="ID"  OnRowCommand="Select_Row">
             <Columns>
                 <asp:CommandField ShowSelectButton="True" />
             </Columns>
         </asp:GridView>
+
+        <asp:Label ID="No_EMP" runat="server" Text=""></asp:Label>
     </div>
 
 
