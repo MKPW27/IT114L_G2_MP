@@ -69,12 +69,11 @@
         </div>
         
         <div class="evt-container-line">
-            <h3>Service Requirements</h3>
+            <h3>Create Your Package</h3>
         </div>
 
         <div class="container">
 
-            <p>Create Your Package:</p> <br />
             <div class ="booking-container-a">
                 
 

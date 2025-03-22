@@ -3,26 +3,23 @@
     <link href="Css\employee.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class ="fill"></div>
 <div class="body-container">
     <div class="left-container">
-        <h3 class="header-title">My Employees</h3>
-
-        <center>
-            <asp:GridView ID="Emp_GridView" runat="server" AutoGenerateColumns="True" CssClass="gridview" DataKeyNames="ID" OnRowCommand="Select_Row">
-                <Columns>
-                    <asp:CommandField ShowSelectButton="True" SelectText="Edit"/>
-                </Columns>
-            </asp:GridView>
-        </center>
-
-        <asp:Label runat="server" ID="No_EMP" Text=""></asp:Label>
+        <div class="evt-container-line">
+            <h3 class="header-title">My Employees</h3>
+        </div>
+        <asp:GridView ID="Emp_GridView" runat="server" AutoGenerateColumns="True" CssClass="gridview">
+            <Columns>
+                <asp:CommandField ShowSelectButton="True" />
+            </Columns>
+        </asp:GridView>
     </div>
 
 
     <div class="right-container">
         <div class="form-container add-employee">
-            <h3 class="header-title">Add Employee</h3>
+            <div class="evt-container-line"><h3 class="header-title">Add Employee</h3></div>
+            
             
             <div class="input-cols">
                 <div class="input-group">
@@ -80,11 +77,12 @@
         </div>
 
         <div class="form-container edit-employee">
+            <div class="evt-container-line"><h3 class="header-title">Edit Employee</h3></div>
             <h3 class="header-title">Edit Employee</h3>
             <p>ID</p>
             <div class="input-cols">
-                <asp:TextBox ID="EmpID" runat="server" CssClass="input-field" MaxLength="15" TextMode="Phone"></asp:TextBox>
-                    <asp:Button ID="SearchBtn" runat="server" CssClass="btn" Text="Search" OnClick="SearchBtn_Click" />
+                <asp:TextBox ID="EmpID" runat="server" CssClass="input-field"></asp:TextBox>
+                    <asp:Button ID="SearchBtn" runat="server" CssClass="btn btn-search" Text="Search" />
             </div>
             <div class="input-cols">
                 <div class="input-group">
@@ -112,8 +110,8 @@
                 <div class="checkbox-group">
                     <p>Employee Type:</p>
                     <asp:RadioButtonList ID="EditEmployee" runat="server" CssClass="radio">
-                        <asp:ListItem Text=" Staff" Value="Staff"></asp:ListItem>
                         <asp:ListItem Text=" Manager" Value="Manager"></asp:ListItem>
+                        <asp:ListItem Text=" Staff" Value="Staff"></asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
 
