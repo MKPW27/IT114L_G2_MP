@@ -171,21 +171,21 @@ header {
     padding-top: 10px;
 }
 
-    .fot-col-inder-row a {
-        color: #fff;
-        text-decoration: none;
-        padding: 10px;
-        outline: none;
-    }
+.fot-col-inder-row a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    outline: none;
+}
 
-        .fot-col-inder-row a i {
-            font-size: 26px;
-        }
+.fot-col-inder-row a i {
+    font-size: 26px;
+}
 
-        .fot-col-inder-row a :hover {
-            opacity: 0.7;
-        }
+.fot-col-inder-row a :hover {
+    opacity: 0.7;
+}
 
-    .fot-col-inder-row li :hover {
-        opacity: 0.7;
-    }
+.fot-col-inder-row li :hover {
+    opacity: 0.7;
+}
