@@ -4,13 +4,14 @@
 
 .body-container {
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     align-items: center;
     width: 100%;
     height: auto;
     gap: 20px;
     padding: 40px;
 }
+
 
 .form-container {
     background: #eee;
@@ -19,11 +20,29 @@
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(1, 0, 0, 0.2);
 }
+.left-container{
+    width: 60%;
+    height: 100%;
+}
+.right-container {
+    width: 40%;
+}
+.evt-container-line {
+    font-family: "Poppins", sans-serif;
+    border-bottom: 1px solid #333;
+    font-weight: 100;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.evt-container-line{
+    text-align:center;
+}
 
 .header-title {
     text-align: center;
     padding: 10px;
-    width: 100%; /* Ensures it spans the full width */
+    width: 100%; 
 }
 
 .gridview {
@@ -37,15 +56,60 @@
     padding-right: 40px;
 }
 
-    .gridview th {
-        position: sticky;
-        top: 0;
-        background-color: #f8f8f8;
-        z-index: 2;
-        border-bottom: 2px solid #ddd;
-    }
+.gridview th {
+    position: sticky;
+    top: 0;
+    background-color: #f8f8f8;
+    z-index: 2;
+    border-bottom: 2px solid #ddd;
+}
 
-    .gridview td, .gridview th {
-        padding: 10px;
-        border: 1px solid #ddd;
-    }
+.gridview td, .gridview th {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.input-group{
+    margin: 0 auto;
+    padding-inline:40px;
+}
+.input-field {
+    font-family: "Poppins", sans-serif;
+    height: 35px;
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 8px;
+    text-align: start;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.checkbox-group{
+    padding-top:10px
+}
+
+
+.btn-container {
+    display: flex;
+    gap: 20px;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    border-radius: 8px;
+    width: 150px;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    margin: 0;
+}
+
