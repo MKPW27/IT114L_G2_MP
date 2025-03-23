@@ -10,7 +10,6 @@
         <asp:Image runat="server" ImageUrl="~/img/about-banner.jpg" CssClass="home-banner"/>
         <div class="overlay-text">
             <h3>About Light Sync Audio</h3>
-            <p>Shimyshimyye shimyo shimiyohh</p>
         </div>
 
         <div class="overlay-content">
@@ -36,7 +35,10 @@
 
     <div class="body-content">
         <h3>Our <span class="red">History</span></h3>
-        <p>Before the arrival of European explorers, the Philippine archipelago was home to numerous indigenous tribes and kingdoms. These societies, such as the Rajahnates of Cebu and Butuan, the Sultanates of Sulu and Maguindanao, and the Kingdom of Tondo, had developed sophisticated cultures, trade networks, and political structures. Early Filipinos engaged in trade with neighboring regions such as China, India, and the Middle East.</p>
+        <p>
+            From a simple rental service to a leading events production provider, LightSyncAudio continues to grow, bringing unforgettable experiences to every event it touches. LightSyncAudio Lights and Sounds was founded in 2020 by Wil Vallo, a Computer Science student from Mapua Malayan Colleges Laguna. His passion for music led him to perform at major school events, local bars, and private gigs across Laguna and Manila. As a multi-instrumentalist, he had amassed a collection of professional audio and lighting equipment, but when the pandemic hit, his gear sat unused. Rather than letting it go to waste, he saw an opportunity—turning his passion into a business by offering rental services.
+
+        </p>
     </div>
 
     <div class="photo-container">
@@ -54,7 +56,7 @@
         <div class="timeline-content">
             <h3>2012–2014</h3>
             <p>
-               A week before the school year officially starts, he pondered on how to earn extra to be able to improve his entertainment room. During the previous semester, some of his friends in UP Diliman, especially his orgmates in UP ALCHEMES started borrowing his projector for class presentations and other events. It was a Eureka! moment. Why not turn a not so good thing to a good thing, turning luxury into something profitable. On June 1, 2012, WABS Printing & Equipment rentals was launched on Facebook. The initial list of services includes rentals of his existing bedroom equipment as well as printing paper works for students and promotional materials for organizations. By connecting personally to the clients, he had an overview of what students and organizations need. This gave the enterprise an idea on which equipment to be acquired.
+                In its first few years, LightSyncAudio steadily built a reputation, securing bookings for intimate gatherings, corporate functions, and small-scale private events. With growing demand, Wil reinvested in state-of-the-art equipment, expanding both his inventory and his team. This allowed the company to handle multiple events in a day. As word spread, the company grew its community, onboarding more than 20 employees who helped deliver exceptional event experiences. By this time, LightSyncAudio was capable of handling regional expos, beauty pageants, weddings, and live band performances.
             </p>
         </div>
     </div>
@@ -64,7 +66,7 @@
         <div class="timeline-content">
             <h3>2014-2019</h3>
             <p>
-               On October 30, 2012, the trade name WABS Lights and Sounds was registered with the DTI. The enterprise then went through ups and downs due to bad investments, logistical problems and lack of funding. By committing to the core values of Service, Humility, Professionalism and Excellence, clients kept on coming back. On January 30, 2014, against all odds at the age of 22, he Officially Registered WABS Lights and Sounds on the Barangay, Municipal and National levels. Soon after, he acquired a new centre of operations in Diliman, Quezon City right at the heart of Metro Manila.
+               By 2024, LightSyncAudio had expanded its reach across Region IV, further upgrading its inventory to meet the needs of larger-scale productions. With over 50 employees, the company could now cater to major events, including political rallies, grand fiestas, large-scale concerts, and high-profile pageants.
             </p>
         </div>
     </div>
@@ -72,9 +74,9 @@
         <div class="timeline-entry">
         <asp:Image runat="server" ImageUrl="~/img/timeline-img2.png" CssClass="timeline-img"/>
         <div class="timeline-content">
-            <h3>Pressent</h3>
+            <h3>Present</h3>
             <p>
-              Now on its 8th year of operation, the enterprise continues to provide affordable quality service while improving both equipment and technical expertise. All these to be the nation’s number one choice in providing the latest in the events industry.
+              With its growing success, LightSyncAudio took a major step forward in 2025 by allocating a budget to develop its official website. Designed to enhance customer experience, the website will allow clients to book services seamlessly, customize event requirements, and receive instant quotations—all with just a few clicks. The system is currently in its early development phase, with a projected launch in the second quarter of the year. This digital transformation will streamline the booking process and reinforce LightSyncAudio’s commitment to innovation and customer convenience.
             </p>
         </div>
     </div>

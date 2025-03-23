@@ -24,7 +24,6 @@
                     <li class="nav-list"><asp:HyperLink ID="about" runat="server" CssClass="hyperlink" NavigateUrl="~/About.aspx">About Us</asp:HyperLink></li>
                     <li class="nav-list"><asp:HyperLink ID="services" runat="server" CssClass="hyperlink" NavigateUrl="~/Services.aspx">Services</asp:HyperLink></li>
                     <li class="nav-list"><asp:HyperLink ID="booking" runat="server" CssClass="hyperlink" NavigateUrl="~/Booking.aspx">Book Now</asp:HyperLink></li>
-                    <li class="nav-list"><asp:HyperLink ID="mybooking" runat="server" CssClass="hyperlink" >My Booking</asp:HyperLink></li>
                     <li class="nav-list"><asp:HyperLink ID="contact" runat="server" CssClass="hyperlink" NavigateUrl="~/Contact.aspx">Contact Us</asp:HyperLink></li>
                 </ul>
             </nav>
