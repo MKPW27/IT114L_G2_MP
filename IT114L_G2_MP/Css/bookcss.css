@@ -156,6 +156,18 @@ body {
     width: 100%;
 }
 
+.input.date {
+    position: relative;
+    padding-right: 5px; 
+}
+
+    .input.date::-webkit-calendar-picker-indicator {
+        filter: invert(1); 
+        cursor: pointer;
+        padding-right: 10px; 
+    }
+
+
 .wide-input {
     width: 100%;
 }
