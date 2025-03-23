@@ -13,11 +13,10 @@
             </asp:GridView>
         </div>
 
-
         <asp:Label ID="No_Client" runat="server" Text=""></asp:Label>
     </div>
 
-    <div>
+    <div class="verification-container">
         <h3>Verify Account</h3>
         ID: <asp:TextBox ID="acc_id_tb" runat="server"></asp:TextBox> <br />
         Name: <asp:TextBox ID="acc_name_tb" runat="server"></asp:TextBox> <br />

@@ -26,32 +26,32 @@ namespace IT114L_G2_MP
         {
             using (SqlConnection conn = new SqlConnection(connstr))
             {
-                string retrieve = "select acc_id as ID, user_fname as First_Name, user_lname as Last_Name, user_email as Email, user_phone_num as Phone, user_verification as Verfied, user_status as Status from customer";
-                SqlCommand cmd = new SqlCommand(retrieve, conn);
-                SqlDataAdapter da2 = new SqlDataAdapter(retrieve, conn);
+        //        string retrieve = "select acc_id as ID, user_fname as First_Name, user_lname as Last_Name, user_email as Email, user_phone_num as Phone, user_verification as Verfied, user_status as Status from customer";
+        //        SqlCommand cmd = new SqlCommand(retrieve, conn);
+        //        SqlDataAdapter da2 = new SqlDataAdapter(retrieve, conn);
 
-                conn.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
+        //        conn.Open();
+        //        using (SqlDataReader reader = cmd.ExecuteReader())
+        //        {
 
-                    if (reader.Read())
-                    {
-                        No_Client.Text = "";
-                        DataTable dt = new DataTable();
-                        reader.Close();
-                        da2.Fill(dt);
-                        client_table.DataSource = dt;
-                        client_table.DataBind();
+        //            if (reader.Read())
+        //            {
+        //                No_Client.Text = "";
+        //                DataTable dt = new DataTable();
+        //                reader.Close();
+        //                da2.Fill(dt);
+        //                client_table.DataSource = dt;
+        //                client_table.DataBind();
 
-                    }
-                    else
-                    {
-                        No_Client.Text = "No Employees";
-                    }
+        //            }
+        //            else
+        //            {
+        //                No_Client.Text = "No Employees";
+        //            }
 
-                }
-                conn.Close();
-            }
+        //        }
+        //        conn.Close();
+          }
         }
         public void Select_Row(object sender, GridViewCommandEventArgs e)
         {
