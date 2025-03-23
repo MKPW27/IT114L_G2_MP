@@ -15,13 +15,12 @@
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
 }
+
 .home-banner {
     width: 100%;
     height: 450px;
     object-fit: cover;
 }
-
-
 
 .overlay-content {
     position: absolute;
@@ -37,27 +36,6 @@
 .home-banner-logo {
     max-width: 80%; 
     display: block;
-}
-
-.banner-button {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    padding: 15px 35px;
-    margin-top: 10px;
-    margin-right: 40px;
-    background: #B02B2D;
-    border: none;
-    color: white;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border-radius: 8px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.banner-button:hover {
-    background: #A51518;
-    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4);
 }
 
 .fill {

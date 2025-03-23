@@ -77,6 +77,7 @@
     <Content Include="Booking.aspx" />
     <Content Include="Client-Management.aspx" />
     <Content Include="Create-Package.aspx" />
+    <Content Include="Css\about.css" />
     <Content Include="Css\client.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Css\employee.css" />
@@ -96,10 +97,15 @@
     <Content Include="Equipment-Management.aspx" />
     <Content Include="Event-Management.aspx" />
     <Content Include="img\About Light Sync Audio.jpg" />
+    <Content Include="img\About1.png" />
+    <Content Include="img\About2.png" />
+    <Content Include="img\About3.png" />
     <Content Include="img\front-banner-logo.png" />
     <Content Include="img\home-banner.jpg" />
-    <Content Include="img\inner-banner 1.jpg" />
+    <Content Include="img\about-banner.jpg" />
     <Content Include="img\Signup-BG.png" />
+    <Content Include="img\timeline-img1.png" />
+    <Content Include="img\timeline-img2.png" />
     <Content Include="navIcons\package-box.png" />
     <Content Include="img\smallLogo.svg" />
     <Content Include="navIcons\account.png" />
