@@ -13,9 +13,7 @@
         </div>
 
         <div class="overlay-content">
-            
             <div class="cards-container">
-                
                 <div class="card mission">
                     <div class="evt-container-line"></div>
                     <h3>MISSION</h3>
