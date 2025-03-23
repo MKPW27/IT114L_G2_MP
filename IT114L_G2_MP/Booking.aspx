@@ -76,57 +76,58 @@
 
             <div class ="booking-container-a">
                 
+                <div class="booking-input-container"> 
+                    <div class="colm">
+                        <h3>Lights</h3> <br />
+                        <center><hr style="width: 90%; margin-bottom: 10px;"/> </center>
 
-                <div class="colm">
-                    <h3>Lights</h3> <br />
-                    <center><hr style="width: 90%; margin-bottom: 10px;"/> </center>
+                        <div class="items">
+                            Moving Heads <asp:TextBox runat="server" ID="mh" CssClass="textbox" TextMode="Number"/>
+                        </div>
+                        <div class="items">
+                            PAR Lights <asp:TextBox runat="server" ID="TextBox1" CssClass="textbox" TextMode="Number"/>
+                        </div>
+                        <div class="items">
+                            Blinders <asp:TextBox runat="server" ID="TextBox2" CssClass="textbox" TextMode="Number"/>
+                        </div>
+                        <div class="items">
+                            Follow Spot <asp:TextBox runat="server" ID="TextBox3" CssClass="textbox" TextMode="Number"/>
+                        </div>
+                        <div class="items">
+                            Striplight <asp:TextBox runat="server" ID="TextBox4" CssClass="textbox" TextMode="Number"/>
+                        </div>
 
-                    <div class="items">
-                        Moving Heads <asp:TextBox runat="server" ID="mh" CssClass="textbox" TextMode="Number"/>
                     </div>
-                    <div class="items">
-                        PAR Lights <asp:TextBox runat="server" ID="TextBox1" CssClass="textbox" TextMode="Number"/>
-                    </div>
-                    <div class="items">
-                        Blinders <asp:TextBox runat="server" ID="TextBox2" CssClass="textbox" TextMode="Number"/>
-                    </div>
-                    <div class="items">
-                        Follow Spot <asp:TextBox runat="server" ID="TextBox3" CssClass="textbox" TextMode="Number"/>
-                    </div>
-                    <div class="items">
-                        Striplight <asp:TextBox runat="server" ID="TextBox4" CssClass="textbox" TextMode="Number"/>
-                    </div>
+                    <div class="colm">
+                        <h3>Sounds</h3> <br />
+                        <center><hr style="width: 90%; margin-bottom: 10px;"/> </center>
 
+                        <div class="items">
+                            Subwoofers <asp:TextBox runat="server" ID="TextBox5" CssClass="textbox" TextMode="Number"/>
+                        </div>
+                        <div class="items">
+                            House Speakers <asp:TextBox runat="server" ID="TextBox6" CssClass="textbox" TextMode="Number"/>
+                        </div>
+                        <div class="items">
+                            Monitors <asp:TextBox runat="server" ID="TextBox7" CssClass="textbox" TextMode="Number"/>
+                        </div>
+                        <div class="items">
+                            Wired Microphone <asp:TextBox runat="server" ID="TextBox8" CssClass="textbox" TextMode="Number"/>
+                        </div>
+                        <div class="items">
+                            Wireless Microphone <asp:TextBox runat="server" ID="TextBox9" CssClass="textbox" TextMode="Number"/>
+                        </div>
+                        <div class="items">
+                            Backline <asp:DropDownList ID="backline_type" runat="server" CssClass="ddl">
+                                        <asp:ListItem Value="0">Select</asp:ListItem>
+                                        <asp:ListItem Value="1">Basic</asp:ListItem>
+                                        <asp:ListItem Value="2">Pro</asp:ListItem>
+                                     </asp:DropDownList>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="colm">
-                    <h3>Sounds</h3> <br />
-                    <center><hr style="width: 90%; margin-bottom: 10px;"/> </center>
-
-                    <div class="items">
-                        Subwoofers <asp:TextBox runat="server" ID="TextBox5" CssClass="textbox" TextMode="Number"/>
-                    </div>
-                    <div class="items">
-                        House Speakers <asp:TextBox runat="server" ID="TextBox6" CssClass="textbox" TextMode="Number"/>
-                    </div>
-                    <div class="items">
-                        Monitors <asp:TextBox runat="server" ID="TextBox7" CssClass="textbox" TextMode="Number"/>
-                    </div>
-                    <div class="items">
-                        Wired Microphone <asp:TextBox runat="server" ID="TextBox8" CssClass="textbox" TextMode="Number"/>
-                    </div>
-                    <div class="items">
-                        Wireless Microphone <asp:TextBox runat="server" ID="TextBox9" CssClass="textbox" TextMode="Number"/>
-                    </div>
-                    <div class="items">
-                        Backline <asp:DropDownList ID="backline_type" runat="server" CssClass="ddl">
-                                    <asp:ListItem Value="0">Select</asp:ListItem>
-                                    <asp:ListItem Value="1">Basic</asp:ListItem>
-                                    <asp:ListItem Value="2">Pro</asp:ListItem>
-                                 </asp:DropDownList>
-                    </div>
-
-                </div>
-        </div>
+            </div>
                 <div class="colm2">
                     <h3>Others</h3> <br />
                     <center><hr style="width: 90%; margin-bottom: 10px;"/> </center>
