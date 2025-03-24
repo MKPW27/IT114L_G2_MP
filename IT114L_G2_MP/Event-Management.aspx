@@ -27,6 +27,7 @@
     <div class="event_details">
         <div class="heading_container">
             <h3>Event Details</h3>
+            <div class="evt-container-line"></div>
         </div>
         
         <div class="container">
@@ -63,7 +64,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <div class="container">
@@ -137,17 +137,23 @@
             <center><hr style="width:95%;" /></center>
 
             <div class="content3">
-                Discount <asp:DropDownList runat="server" ID="discount_ddl" CssClass="ddl">
+                <div class="dropdown-group">
+                    <label for="discount_ddl">Discount</label>
+                    <asp:DropDownList runat="server" ID="discount_ddl" CssClass="ddl">
                         <asp:ListItem Value="0">None</asp:ListItem>
                         <asp:ListItem Value="1">Loyalty Discount (5%)</asp:ListItem>
                         <asp:ListItem Value="2">Partnership Discount (10%)</asp:ListItem>
-                    </asp:DropDownList><br /><br />
-
-                Booking Status <asp:DropDownList ID="bookStatus" runat="server" CssClass="ddl" >
-                                    <asp:ListItem Value ="0">Pending</asp:ListItem>
-                                    <asp:ListItem Value ="1">Approved</asp:ListItem>
-                                    <asp:ListItem Value ="2">Disapproved</asp:ListItem>
-                               </asp:DropDownList>
+                    </asp:DropDownList>
+                </div>
+                
+                <div class="dropdown-group">
+                    <label for="bookStatus">Booking Status</label>
+                    <asp:DropDownList ID="bookStatus" runat="server" CssClass="ddl">
+                        <asp:ListItem Value="0">Pending</asp:ListItem>
+                        <asp:ListItem Value="1">Approved</asp:ListItem>
+                        <asp:ListItem Value="2">Disapproved</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
             </div>
 
             <div class="button-container">
@@ -158,5 +164,5 @@
                 </center>
             </div>
         </div>
+    </div>
 </asp:Content>
-
