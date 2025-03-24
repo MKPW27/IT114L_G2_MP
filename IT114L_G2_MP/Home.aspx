@@ -95,7 +95,7 @@
                     <div class="testimonial-content">
                         <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                         <p>LightSync Audio provided exceptional service for our corporate event. The sound quality was impeccable, and the lighting created the perfect atmosphere. Highly recommended!</p>
-                        <div class="testimonial-rating">
+                        <div class="testimonial-rating pad">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -154,7 +154,7 @@
                             <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1640951613773-54706e06851d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" AlternateText="mc" />
                         </div>
                         <div class="author-info">
-                            <h4>MC</h4>
+                            <h4>Mikael</h4>
                             <p>Festival Organizer</p>
                         </div>
                     </div>
