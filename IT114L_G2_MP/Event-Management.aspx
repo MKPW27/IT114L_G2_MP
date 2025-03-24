@@ -126,8 +126,7 @@
                     </div>
                     <div class="prompt">
                         Team Name <br />
-                        <asp:DropDownList ID="teamname" runat="server" Width="90%" Height="40px" ></asp:DropDownList>
-
+                        <asp:TextBox ID="teamname" runat="server" Width="90%" Height="40px"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         Package ID <br />
@@ -147,7 +146,7 @@
                 Booking Status <asp:DropDownList ID="bookStatus" runat="server" CssClass="ddl" >
                                     <asp:ListItem Value ="0">Pending</asp:ListItem>
                                     <asp:ListItem Value ="1">Approved</asp:ListItem>
-                                    <asp:ListItem Value ="1">Disapproved</asp:ListItem>
+                                    <asp:ListItem Value ="2">Disapproved</asp:ListItem>
                                </asp:DropDownList>
             </div>
 
@@ -159,3 +158,4 @@
             </div>
         </div>
 </asp:Content>
+
