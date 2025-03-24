@@ -22,7 +22,6 @@
                     <label>New User?</label>
                     <a href="SignUp.aspx">Sign Up</a><br />
                 </div>
-
             </div>
         </div>
     </div>

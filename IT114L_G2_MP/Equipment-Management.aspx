@@ -9,14 +9,21 @@
                 <h3 class="header-title">My Equipment</h3>
             </div>
 
-            <asp:GridView ID="Equ_GridView" runat="server" AutoGenerateColumns="True" CssClass="gridview" DataKeyNames="ID">
+            <asp:GridView ID="gvEquipments" runat="server" AutoGenerateColumns="True" CssClass="gridview" ShowHeaderWhenEmpty="True" DataKeyNames="equip_id">
                 <Columns>
-                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:CommandField ShowSelectButton="True" SelectText="Edit" />
+                    <asp:BoundField DataField="equip_id" HeaderText="Package ID" ReadOnly="True" />
+                    <asp:BoundField DataField="equip_type" HeaderText="Package Name" ReadOnly="True" />
+                    <asp:BoundField DataField="equip_brand" HeaderText="Package Name" ReadOnly="True" />
+                    <asp:BoundField DataField="equip_model" HeaderText="Package Name" ReadOnly="True" />
+                    <asp:BoundField DataField="equip_ppd" HeaderText="Package Name" ReadOnly="True" />
+                    <asp:BoundField DataField="equip_qty" HeaderText="Package Name" ReadOnly="True" />
                 </Columns>
             </asp:GridView>
 
             <asp:Label ID="No_Equ" runat="server" Text=""></asp:Label>
         </div>
+
         <div class="right-container">
             <div class="form-container">
                 <div class="evt-container-line">

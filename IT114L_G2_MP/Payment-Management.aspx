@@ -9,7 +9,7 @@
             <span class="search-label"><p>Enter Booking ID</p></span>
             <div class="search-container">
                 <asp:TextBox runat="server" ID="book_id_text" placeholder=" Search Booking ID" CssClass="search-id"/> 
-                <asp:Button runat="server" ID="search" text="Search" CssClass="search-button"/>
+                <asp:Button runat="server" ID="search" text="Search" CssClass="search-button" OnClick="search_Click"/>
             </div>
         </div>
 
@@ -19,23 +19,23 @@
         </div>
         <div class="detail-container">
             <div class="item">
-                First Name <br />
-                <asp:TextBox runat="server" ID="TextBox1" Enabled="false" CssClass="detail-tb"/>
+                Customer Name <br />
+                <asp:TextBox runat="server" ID="name" Enabled="false" CssClass="detail-tb"/>
             </div>
             <div class="item">
-                Last Name <br />
-                <asp:TextBox runat="server" ID="TextBox2" Enabled="false" CssClass="detail-tb"/>
+                Event Name <br />
+                <asp:TextBox runat="server" ID="eventname" Enabled="false" CssClass="detail-tb"/>
             </div>
         </div>
 
         <div class="detail-container">
             <div class="item">
-                Event Name <br />
-                <asp:TextBox runat="server" ID="TextBox3" Enabled="false" CssClass="detail-tb"/>
+                Event Date <br />
+                <asp:TextBox runat="server" ID="eventdate" Enabled="false" CssClass="detail-tb"/>
             </div>
             <div class="item">
-                Date <br />
-                <asp:TextBox runat="server" ID="TextBox4" Enabled="false" CssClass="detail-tb"/>
+                Package <br />
+                <asp:TextBox runat="server" ID="package" Enabled="false" CssClass="detail-tb"/>
             </div>
         </div>
         </div>
@@ -51,7 +51,7 @@
             <div class="item">
                 Total Service Charge
                 <br />
-                <asp:TextBox runat="server" ID="TextBox5" Enabled="false" CssClass="detail-tb" />
+                <asp:TextBox runat="server" ID="total" Enabled="false" CssClass="detail-tb" />
             </div>
             <div class="item">
                 Discount
@@ -68,12 +68,12 @@
             <div class="item">
                 Downpayment
                 <br />
-                <asp:TextBox runat="server" ID="TextBox6" Enabled="false" CssClass="detail-tb" />
+                <asp:TextBox runat="server" ID="downpayment" Enabled="false" CssClass="detail-tb" />
             </div>
             <div class="item">
                 Balance
                 <br />
-                <asp:TextBox runat="server" ID="TextBox7" Enabled="false" CssClass="detail-tb" />
+                <asp:TextBox runat="server" ID="balance" Enabled="false" CssClass="detail-tb" />
             </div>
         </div>
 
