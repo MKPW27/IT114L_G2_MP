@@ -23,32 +23,32 @@ namespace IT114L_G2_MP
 
         public void LoadData()
         {
-            //using (SqlConnection conn = new SqlConnection(connstr))
-            //{
-            //    string retrieve = "select booking_id as ID, event_name as Event_Name, event_date as Date, event_pax as PAX from booking";
-            //    SqlCommand cmd = new SqlCommand(retrieve, conn);
-            //    SqlDataAdapter da = new SqlDataAdapter(retrieve, conn);
+            using (SqlConnection conn = new SqlConnection(connstr))
+            {
+                string retrieve = "select booking_id as ID, event_name as Event_Name, event_date as Date, event_pax as PAX from booking";
+                SqlCommand cmd = new SqlCommand(retrieve, conn);
+                SqlDataAdapter da = new SqlDataAdapter(retrieve, conn);
 
-            //    conn.Open();
-            //    using (SqlDataReader reader = cmd.ExecuteReader())
-            //    {
-            //        if (reader.Read())
-            //        {
-            //            No_Events.Text = "";
-            //            DataTable dt = new DataTable();
-            //            reader.Close();
-            //            da.Fill(dt);
-            //            GridView1.DataSource = dt;
-            //            GridView1.DataBind();
-            //        }
-            //        else
-            //        {
-            //            No_Events.Text = "No Events";
-            //        }
-            //        reader.Close();
-            //    }
-            //    conn.Close();
-            //}
+                conn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        No_Events.Text = "";
+                        DataTable dt = new DataTable();
+                        reader.Close();
+                        da.Fill(dt);
+                        GridView1.DataSource = dt;
+                        GridView1.DataBind();
+                    }
+                    else
+                    {
+                        No_Events.Text = "No Events";
+                    }
+                    reader.Close();
+                }
+                conn.Close();
+            }
         }
     }
 }

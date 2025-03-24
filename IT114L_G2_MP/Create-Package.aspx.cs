@@ -264,7 +264,7 @@ namespace IT114L_G2_MP
                 // Check if equip_id is valid before inserting
                 if (!string.IsNullOrEmpty(equip_id))
                 {
-                    string insertstr = "INSERT INTO Package_Items (package_id, equip_id, equip_qty) VALUES (@PackageID, @EquipID, @Quantity)";
+                    string insertstr = "INSERT INTO Package_Items VALUES (@PackageID, @EquipID, @Quantity)";
 
                     using (SqlCommand cmd = new SqlCommand(insertstr, conn))
                     {
@@ -294,7 +294,6 @@ namespace IT114L_G2_MP
 
         public void ClearDDL()
         {
-            packageID.Text = "";
             package_name.Text = "";
 
             ddlItemBrand.Items.Clear();

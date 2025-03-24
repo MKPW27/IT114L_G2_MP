@@ -1,34 +1,57 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StaffMasterPage.Master" AutoEventWireup="true" CodeBehind="Equipment-Management.aspx.cs" Inherits="IT114L_G2_MP.Equipment_Management" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="css\equipment.css" rel="stylesheet" />
+    <link href="Css\equipment.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    Select Equipment Type<asp:RequiredFieldValidator ID="rfv_equipType" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_type" />
-    <asp:DropDownList ID="equip_type" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddl_typeChange">
-        <asp:ListItem Value="0">-- Select Equipment Type --</asp:ListItem>
-        <asp:ListItem Value="Lights">Lights</asp:ListItem>
-        <asp:ListItem Value="Sounds">Sounds</asp:ListItem>
-        <asp:ListItem Value="Others">Others</asp:ListItem>
-    </asp:DropDownList><br />
-    Enter Brand<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_brand" />
-    <asp:TextBox ID="equip_brand" runat="server" CssClass="textbox"></asp:TextBox><br />
+    <div class="body-container">
+        <div class="left-container">
+            <div class="evt-container-line">
+                <h3 class="header-title">My Equipment</h3>
+            </div>
 
-    Enter Model<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_model" />
-    <asp:TextBox ID="equip_model" runat="server" CssClass="textbox"></asp:TextBox><br />
+            <asp:GridView ID="Equ_GridView" runat="server" AutoGenerateColumns="True" CssClass="gridview" DataKeyNames="ID">
+                <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                </Columns>
+            </asp:GridView>
 
-    Date of Acquisation<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_acq" />
-    <asp:TextBox ID="equip_acq" runat="server" TextMode="Date" CssClass="textbox"></asp:TextBox><br />
+            <asp:Label ID="No_Equ" runat="server" Text=""></asp:Label>
+        </div>
+        <div class="right-container">
+            <div class="form-container">
+                <div class="evt-container-line">
+                    <h3 class="header-title">Equipment Type</h3>
+                </div>
+                Select Equipment Type<asp:RequiredFieldValidator ID="rfv_equipType" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_type" /><br />
+                <asp:DropDownList ID="equip_type" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddl_typeChange" CssClass="input-field">
+                    <asp:ListItem Value="0">-- Select Equipment Type --</asp:ListItem>
+                    <asp:ListItem Value="Lights">Lights</asp:ListItem>
+                    <asp:ListItem Value="Sounds">Sounds</asp:ListItem>
+                    <asp:ListItem Value="Others">Others</asp:ListItem>
+                </asp:DropDownList><br />
+                Enter Brand<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_brand" /><br />
+                <asp:TextBox ID="equip_brand" runat="server" CssClass="input-field"></asp:TextBox><br />
 
-    Enter Quantity<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_quant" />
-    <asp:TextBox ID="equip_quant" runat="server" TextMode="Number" CssClass="textbox"></asp:TextBox><br />
+                Enter Model<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_model" /><br />
+                <asp:TextBox ID="equip_model" runat="server" CssClass="input-field"></asp:TextBox><br />
 
-    Enter Price Per Day<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_ppd" />
-    <asp:TextBox ID="equip_ppd" runat="server" TextMode="Number" CssClass="textbox"></asp:TextBox><br />
+                Date of Acquisation<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_acq" /><br />
+                <asp:TextBox ID="equip_acq" runat="server" TextMode="Date" CssClass="input-field"></asp:TextBox><br />
 
-    Enter Equipment Function<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_purpose" />
-    <asp:DropDownList ID="equip_purpose" runat="server" AutoPostBack="true">
-        <asp:ListItem Value="0">-- Select Equipment Type --</asp:ListItem>
-    </asp:DropDownList>
+                Enter Quantity<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_quant" /><br />
+                <asp:TextBox ID="equip_quant" runat="server" TextMode="Number" CssClass="input-field"></asp:TextBox><br />
 
-    <asp:Button ID="submit" runat="server" Text="Submit" OnClick="submit_Click" />
+                Enter Price Per Day<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_ppd" /><br />
+                <asp:TextBox ID="equip_ppd" runat="server" TextMode="Number" CssClass="input-field"></asp:TextBox><br />
+
+                Enter Equipment Function<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_purpose" /><br />
+                <asp:DropDownList ID="equip_purpose" runat="server" AutoPostBack="true" CssClass="input-field">
+                    <asp:ListItem Value="0">-- Select Equipment Type --</asp:ListItem>
+                </asp:DropDownList>
+                <div class="btn-container">
+                    <asp:Button ID="submit" runat="server" Text="Submit" OnClick="submit_Click" CssClass="btn"/>
+                </div>
+            </div>
+        </div>
+    </div>
 </asp:Content>

@@ -11,38 +11,107 @@ namespace IT114L_G2_MP
 {
     public partial class WebForm5 : System.Web.UI.Page
     {
+        string connStr = $"Data Source=.\\SQLExpress; Initial Catalog=LightSyncAudio; Integrated Security=SSPI;";
         protected void Page_Load(object sender, EventArgs e)
         {
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None; //not connected
-            
+            if (!IsPostBack)
+            {
+                LoadPackages();
+            }
+        }
+        private void LoadPackages()
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string query = "SELECT package_id, package_name FROM Packages";
+                SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                ddlPackages.DataSource = dt;
+                ddlPackages.DataTextField = "package_name";
+                ddlPackages.DataValueField = "package_id";
+                ddlPackages.DataBind();
+                ddlPackages.Items.Insert(0, new ListItem("-- Select a Package --", "0"));
+            }
+        }
+        protected void ddlPackages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string packageID = ddlPackages.SelectedValue;
+            if (packageID != "0")
+            {
+                LoadPackageContents(packageID);
+            }
+            else
+            {
+                gvPackageContents.DataSource = null;
+                gvPackageContents.DataBind();
+            }
+        }
+
+        private void LoadPackageContents(string packageID)
+        {
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string query = @"
+                SELECT pi.equip_id, e.equip_brand, e.equip_model, pi.equip_qty
+                FROM Package_Items pi
+                JOIN Equipments e ON pi.equip_id = e.equip_id
+                WHERE pi.package_id = @PackageID";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@PackageID", packageID);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                gvPackageContents.DataSource = dt;
+                gvPackageContents.DataBind();
+            }
         }
 
         protected void submit_Click(object sender, EventArgs e)
         {
-            string connstr = $"Data Source=.\\SQLExpress; Initial Catalog=LSA; Integrated Security=SSPI;";
-            SqlConnection conn = new SqlConnection(connstr);
+            string accID = Session["ID"].ToString();
+
+            SqlConnection conn = new SqlConnection(connStr);
+
+            int record_count = 0;
+            string query = "select count(*) from Booking";
             conn.Open();
-            string insertstr = $"insert into Booking values ('000005','{name.Text}','{evtType.Text}',{numAttendees.Text},'{bookDate.Text}','{region.Text}'," +
-                $"'{city.Text}','{province.Text}','{barangay.Text}','{address.Text}',{mh.Text},{TextBox1.Text},{TextBox2.Text},{TextBox3.Text},{TextBox4.Text}" +
-                $",{TextBox5.Text},{TextBox6.Text},{TextBox7.Text},{TextBox8.Text},{TextBox9.Text},{backline_type.SelectedValue},{led_wall_type.SelectedValue}" +
-                $",{DropDownList1.SelectedValue},{DropDownList2.SelectedValue},{DropDownList3.SelectedValue},{DropDownList4.SelectedValue})";
-            SqlCommand cmd = new SqlCommand(insertstr, conn);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            record_count = (int)cmd.ExecuteScalar();
+            record_count += 1;
+
+            string insertstr = $"insert into Booking values ('{record_count.ToString("D15")}','{accID}','','{name.Text}','{evtType.Text}',{numAttendees.Text},'{bookDate.Text}','{ddlPackages.SelectedValue}')";
+            cmd = new SqlCommand(insertstr, conn);
             cmd.ExecuteNonQuery();
+
+            insertstr = $"insert into LocationTBL values ('{record_count.ToString("D15")}','{region.Text}','{province.Text}','{city.Text}','{barangay.Text}','{address.Text}')";
+            cmd = new SqlCommand(insertstr, conn);
+            cmd.ExecuteNonQuery();
+
             conn.Close();
+
+            clearPrompt();
         }
-        //Inputs & ID names & TextMode Defualt = none
-        //Event Name = name  
-        //Event Type = evtType  
-        //Number of Attendees = numAttendees | number
-        //Event Date = bookDate | date
-        //Region = region 
-        //City = city
-        //Province = province
-        //Barangay = barangay
-        //Address = address
-        //Lights and Sounds Package = package
-        //Specific Service Options = specificService | CheckBoxList
 
-
+        public void clearPrompt()
+        {
+            name.Text = "";
+            evtType.Text = "";
+            numAttendees.Text = "";
+            bookDate.Text = "";
+            region.Text = "";
+            city.Text = "";
+            province.Text = "";
+            barangay.Text = "";
+            address.Text = "";
+            ddlPackages.SelectedValue = "0";
+            CheckBox1.Checked = false;
+            LoadPackageContents("");
+        }
     }
 }

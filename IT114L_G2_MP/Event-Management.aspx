@@ -127,114 +127,12 @@
                         Team Name <br />
                         <asp:TextBox ID="teamname" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <h4>Package Information</h4>
-            <center><hr style="width:95%"/></center>
-            
-            <div class="package_content">
-                <div class="box1">
-                    <h5>Lights</h5>
-                    <center><hr style="width:70%; margin-bottom: 40px;"/></center>
-                    
-                    <div class="items">
-                        Moving Heads <asp:TextBox ID="mh" runat="server" Width="201" TextMode="Number"></asp:TextBox>
-                    </div>
-                    <div class="items">
-                        PAR Lights <asp:TextBox ID="pl" runat="server" Width="201" TextMode="Number"></asp:TextBox>
-                    </div>
-                    <div class="items">
-                        Blinders <asp:TextBox ID="bl" runat="server" Width="201" TextMode="Number"></asp:TextBox>
-                    </div>
-                    <div class="items">
-                        Followspot <asp:TextBox ID="fs" runat="server" Width="201" TextMode="Number"></asp:TextBox>
-                    </div>
-                    <div class="items">
-                        Striplight <asp:TextBox ID="sl" runat="server" Width="201" TextMode="Number"></asp:TextBox>
-                    </div>
-                </div>
-            
-                <div class="box1">
-                    
-                    <h5>Sounds</h5>
-                    <center><hr style="width:70%; margin-bottom: 40px;"/></center>
-
-                    <div class="items">
-                        Subwoofers <asp:TextBox ID="sw" runat="server" Width="201" TextMode="Number"></asp:TextBox>
-                    </div>
-                    <div class="items">
-                        House Speakers <asp:TextBox ID="hs" runat="server" Width="201" TextMode="Number"></asp:TextBox>
-                    </div>
-                    <div class="items">
-                        Monitors <asp:TextBox ID="ms" runat="server" Width="201" TextMode="Number"></asp:TextBox>
-                    </div>
-                    <div class="items">
-                        Wired Microphone <asp:TextBox ID="wdm" runat="server" Width="201" TextMode="Number"></asp:TextBox>
-                    </div>
-                    <div class="items">
-                        Wireless Microphone <asp:TextBox ID="wlm" runat="server" Width="201" TextMode="Number"></asp:TextBox>
-                    </div>
-                    <div class="items">
-                        Backline <asp:DropDownList ID="backline_type" runat="server" CssClass="ddl">
-                                    <asp:ListItem Value="0">Select</asp:ListItem>
-                                    <asp:ListItem Value="1">Basic</asp:ListItem>
-                                    <asp:ListItem Value="2">Pro</asp:ListItem>
-                                 </asp:DropDownList>
+                    <div class="prompt">
+                        Package ID <br />
+                        <asp:TextBox ID="packageid" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                 </div>
             </div>
-            
-            <div class="box2">
-                <h5>Others</h5>
-                <center><hr style="width:40%; margin-bottom: 40px;"/></center>
-
-                <div class="items">
-                    LED Wall <asp:DropDownList ID="led_wall_type" runat="server" CssClass="ddl">
-                                    <asp:ListItem Value="0">Select</asp:ListItem>
-                                    <asp:ListItem Value="1">Small</asp:ListItem>
-                                    <asp:ListItem Value="2">Large</asp:ListItem>
-                             </asp:DropDownList>
-                </div>
-                <div class="items">
-                    Stage   <asp:DropDownList ID="DropDownList1" runat="server" CssClass="ddl">
-                                <asp:ListItem Value="0">Select</asp:ListItem>
-                                <asp:ListItem Value="1">Small (16' x 12')</asp:ListItem>
-                                <asp:ListItem Value="2">Medium (32' x 24')</asp:ListItem>
-                                <asp:ListItem Value="3">Large (40' x 30')</asp:ListItem>
-                            </asp:DropDownList>
-                </div>
-                <div class="items">
-                    Roofing <asp:DropDownList ID="DropDownList2" runat="server" CssClass="ddl">
-                                <asp:ListItem Value="0">Select</asp:ListItem>
-                                <asp:ListItem Value="1">Small (20' x 16')</asp:ListItem>
-                                <asp:ListItem Value="2">Medium (40' x 32')</asp:ListItem>
-                                <asp:ListItem Value="3">Large (48' x 40')</asp:ListItem>
-                            </asp:DropDownList>
-                </div>
-                <div class="items">
-                    Multimedia  <asp:DropDownList ID="DropDownList3" runat="server" CssClass="ddl">
-                                    <asp:ListItem Value="0">Select</asp:ListItem>
-                                    <asp:ListItem Value="1">Basic (2 cameras)</asp:ListItem>
-                                    <asp:ListItem Value="2">Pro (10 cameras)</asp:ListItem>
-                                </asp:DropDownList>
-                </div>
-                <div class="items">
-                    Communication Headset   <asp:DropDownList ID="DropDownList4" runat="server" CssClass="ddl">
-                                                <asp:ListItem Value="0">Select</asp:ListItem>
-                                                <asp:ListItem Value="1">2 Headsets</asp:ListItem>
-                                                <asp:ListItem Value="2">5 Headsets</asp:ListItem>
-                                                <asp:ListItem Value="3">10 Headsets</asp:ListItem>
-                                                <asp:ListItem Value="4">15 Headsets</asp:ListItem>
-                                                <asp:ListItem Value="5">20 Headsets</asp:ListItem>
-                                            </asp:DropDownList>
-                </div>
-            </div>
-
-
-
             <center><hr style="width:95%;" /></center>
 
             <div class="content3">

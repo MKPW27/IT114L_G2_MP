@@ -15,6 +15,24 @@ namespace IT114L_G2_MP
     {
 
         /// <summary>
+        /// Equ_GridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView Equ_GridView;
+
+        /// <summary>
+        /// No_Equ control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label No_Equ;
+
+        /// <summary>
         /// rfv_equipType control.
         /// </summary>
         /// <remarks>
