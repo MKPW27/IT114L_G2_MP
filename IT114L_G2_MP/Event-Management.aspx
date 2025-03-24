@@ -6,6 +6,7 @@
     <div class="gridviewcontainer"> 
         <div class="heading_container">
             <h3>My Events</h3>
+             <div class="evt-container-line"></div>
         </div>
 
         <center>
