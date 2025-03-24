@@ -75,8 +75,8 @@
                         <asp:ListItem Text=" Inactive" Value="Inactive"></asp:ListItem>
                     </asp:RadioButtonList>
                 </div>
-                <div class="btn-container">
-                    <asp:Button ID="AddBtn" runat="server" CssClass="btn" Text="Add" OnClick="AddBtn_Click" />
+                <div class="btn-container ">
+                    <asp:Button ID="AddBtn" runat="server" CssClass="btn btn-add" Text="Add" OnClick="AddBtn_Click" />
                 </div>
             </div>
 

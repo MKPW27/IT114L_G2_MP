@@ -75,7 +75,7 @@
                     <asp:Button runat="server" Text="Learn More" CssClass="secondary-button" PostBackUrl="~/About.aspx" />
                 </div>
                 <div class="about-image">
-                    <asp:Image runat="server" ImageUrl="~/img/about-image.jpg" AlternateText="About Us" CssClass="about-img" />
+                    <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1438557068880-c5f474830377?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" AlternateText="About Us" CssClass="about-img" />
                 </div>
             </div>
         </div>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <asp:Image runat="server" ImageUrl="~/img/testimonial1.jpg" AlternateText="wil" />
+                            <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1640960543409-dbe56ccc30e2?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" AlternateText="ea" />
                         </div>
                         <div class="author-info">
                             <h4>Will</h4>
@@ -128,7 +128,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <asp:Image runat="server" ImageUrl="~/img/testimonial2.jpg" AlternateText="ea" />
+                                                        <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" AlternateText="wil" />
                         </div>
                         <div class="author-info">
                             <h4>Earl</h4>
@@ -151,7 +151,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <asp:Image runat="server" ImageUrl="~/img/testimonial3.jpg" AlternateText="mc" />
+                            <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1640951613773-54706e06851d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" AlternateText="mc" />
                         </div>
                         <div class="author-info">
                             <h4>MC</h4>
