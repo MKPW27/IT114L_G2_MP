@@ -15,6 +15,33 @@ namespace IT114L_G2_MP
     {
 
         /// <summary>
+        /// package_name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox package_name;
+
+        /// <summary>
+        /// createNew control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button createNew;
+
+        /// <summary>
+        /// packageID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox packageID;
+
+        /// <summary>
         /// ddlItemType control.
         /// </summary>
         /// <remarks>
@@ -51,30 +78,39 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.DropDownList ddlItemQty;
 
         /// <summary>
-        /// btnAddMoreItems control.
+        /// addbtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddMoreItems;
+        protected global::System.Web.UI.WebControls.Button addbtn;
 
         /// <summary>
-        /// TextBox1 control.
+        /// clearbtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.Button clearbtn;
 
         /// <summary>
-        /// TextBox2 control.
+        /// gvPackages control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.GridView gvPackages;
+
+        /// <summary>
+        /// gvEquipment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvEquipment;
     }
 }

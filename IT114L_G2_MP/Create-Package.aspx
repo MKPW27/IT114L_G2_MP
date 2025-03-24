@@ -1,70 +1,83 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StaffMasterPage.Master" AutoEventWireup="true" CodeBehind="Create-Package.aspx.cs" Inherits="IT114L_G2_MP.Create_Package" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css\packages.css" rel="stylesheet" />
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="package-container">
-        <div class="equipment-section">
-            <h3>Items</h3>
-            <hr />
-            <div class="equipmentRow">
-                <asp:DropDownList ID="ddlItemType" runat="server" CssClass="dropdown" AutoPostBack="true" OnSelectedIndexChanged="ddlItemType_SelectedIndexChanged"></asp:DropDownList>
-                <asp:DropDownList ID="ddlItemBrand" runat="server" CssClass="dropdown" AutoPostBack="true" OnSelectedIndexChanged="ddlItemBrand_SelectedIndexChanged"></asp:DropDownList>
-                <asp:DropDownList ID="ddlItemModel" runat="server" CssClass="dropdown" AutoPostBack="true" OnSelectedIndexChanged="ddlItemModel_SelectedIndexChanged"></asp:DropDownList>
-                <asp:DropDownList ID="ddlItemQty" runat="server" CssClass="dropdown"> </asp:DropDownList>
-                <button type="button" class="delete-btn" onclick="removeRow(this)">❌</button>
+    <div class="page">
+        <div class="create-package-container">
+            <div class="left-container">
+                <div class="package-information">
+                    <center><h2>Package Information</h2></center>
+                    <asp:TextBox runat="server" ID="package_name" placeholder="Package Name" CssClass="textbox" MaxLength="44"></asp:TextBox>
+                    <asp:Button runat="server" ID="createNew" Text="Create New" OnClick="createNew_Click" />
+                    <asp:TextBox runat="server" ID="packageID" placeholder="Package ID" CssClass="textbox" MaxLength="50" Enabled="false"></asp:TextBox>
+                </div>
+
+                <div class="select-package-container">
+                    <center><h2>Select Equipment</h2></center>
+                    <asp:DropDownList ID="ddlItemType" runat="server" AutoPostBack="true" CssClass="ddl" OnSelectedIndexChanged="ddlItemType_SelectedIndexChanged">
+                        <asp:ListItem Value="0">-- Select Type --</asp:ListItem>
+                        <asp:ListItem Value="Lights">Lights</asp:ListItem>
+                        <asp:ListItem Value="Sounds">Sounds</asp:ListItem>
+                        <asp:ListItem Value="Others">Others</asp:ListItem>
+                    </asp:DropDownList>
+
+                    <asp:DropDownList ID="ddlItemBrand" runat="server" AutoPostBack="true" CssClass="ddl" OnSelectedIndexChanged="ddlItemBrand_SelectedIndexChanged">
+                        <asp:ListItem Value="0">-- Select Brand --</asp:ListItem>
+                    </asp:DropDownList>
+
+                    <asp:DropDownList ID="ddlItemModel" runat="server" AutoPostBack="true" CssClass="ddl" OnSelectedIndexChanged="ddlItemModel_SelectedIndexChanged">
+                        <asp:ListItem Value="0">-- Select Model --</asp:ListItem>
+                    </asp:DropDownList>
+
+                    <asp:DropDownList ID="ddlItemQty" runat="server" AutoPostBack="true" CssClass="ddl">
+                        <asp:ListItem Value="0">-- Select Quantity --</asp:ListItem>
+                    </asp:DropDownList>
+
+                    <asp:Button ID="addbtn" runat="server" Text="Add" CssClass="button" OnClick="addbtn_Click"/>
+                    <asp:Button ID="clearbtn" runat="server" Text="Clear" CssClass="button" OnClick="clearbtn_Click" />
+                </div>
+
+                <div class="select-package_gridview">
+                    <center><h2>Package Lists</h2></center>
+                    <asp:GridView ID="gvPackages" runat="server" AutoGenerateColumns="False" CssClass="gridview" ShowHeaderWhenEmpty="True" OnSelectedIndexChanged="gvPackages_SelectedIndexChanged" OnRowDeleting="gvPackages_RowDeleting" DataKeyNames="package_id">
+                        <Columns>
+                            <asp:CommandField ShowSelectButton="True" SelectText="View" />
+                            <asp:BoundField DataField="package_id" HeaderText="Package ID" ReadOnly="True" />
+                            <asp:BoundField DataField="package_name" HeaderText="Package Name" ReadOnly="True" />
+                            <asp:CommandField ShowDeleteButton="True" DeleteText="Delete" />
+                        </Columns>
+                    </asp:GridView>
+                </div>
             </div>
-            <asp:Button ID="btnAddMoreItems" runat="server" Text="Add More" CssClass="add-button" OnClientClick="addMoreRows('ItemContainer'); return false;" />
+
+            <div class="view-package-items-container">
+                <center><h2>Package Content</h2></center>
+                <asp:GridView ID="gvEquipment" runat="server" AutoGenerateColumns="False"
+                    CssClass="gridview" ShowHeaderWhenEmpty="True" OnRowCommand="gvEquipment_RowCommand">
+                    <Columns>
+                        <asp:BoundField DataField="Type" HeaderText="Type" />
+                        <asp:BoundField DataField="Brand" HeaderText="Brand" />
+                        <asp:BoundField DataField="Model" HeaderText="Model" />
+                        <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:LinkButton ID="btnDelete" runat="server" 
+                                    CommandName="DeleteItem" 
+                                    CommandArgument="<%# Container.DataItemIndex %>"
+                                    Text="Delete" 
+                                    CssClass="delete-button" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+            </div>
         </div>
-        
-        <div class="package-info-container">
-            <center><h3>Package Information</h3></center>
-            <hr />
 
-            <div class="input-container">
-                <h4>Package ID</h4>
-                <asp:TextBox ID="TextBox1" runat="server" CssClass="textbox"></asp:TextBox>
-            </div>
+        <div class="view-available-packages-container">
 
-            <div class="input-container">
-                <h4>Name</h4>
-                <asp:TextBox ID="TextBox2" runat="server" CssClass="textbox"></asp:TextBox>
-            </div>
         </div>
     </div>
-
-    <script>
-        function addMoreRows(containerId) {
-            var container = document.getElementById(containerId);
-            var lastRow = container.lastElementChild;
-            var dropdowns = lastRow.getElementsByTagName("select");
-
-            for (var i = 0; i < dropdowns.length; i++) {
-                if (dropdowns[i].value === "0") {
-                    alert("Please select all values before adding a new row.");
-                    return;
-                }
-            }
-
-            var newRow = lastRow.cloneNode(true);
-            var newDropdowns = newRow.getElementsByTagName("select");
-
-            for (var i = 0; i < newDropdowns.length; i++) {
-                newDropdowns[i].value = "0";
-            }
-
-            container.appendChild(newRow);
-        }
-
-        function removeRow(button) {
-            var row = button.parentNode;
-            var container = row.parentNode;
-
-            if (container.children.length > 1) {
-                container.removeChild(row);
-            } else {
-                alert("At least one row is required.");
-            }
-        }
-    </script>
 </asp:Content>
