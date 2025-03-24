@@ -1,69 +1,228 @@
-﻿body {
+﻿/* Main Styles */
+body {
     font-family: "Poppins", sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url("https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-.page{
-    height: 1080px;
-    width: 1920px;
+.package-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.create-package-container{
+/* Equipment Section */
+.equipment-section {
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .equipment-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .equipment-section h3 {
+        margin: 0 0 15px 0;
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, #B02B2D 0%, rgba(176, 43, 45, 0.5) 50%, transparent 100%);
+    margin: 15px 0 25px 0;
+}
+
+/* Equipment Row */
+.equipmentRow {
     display: flex;
-    height: 720px;
-    padding-top: 15px;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(40, 40, 40, 0.5);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
-.select-package-container {
-    width: 40%;
-    margin-left: 40px;
-    margin-right: 40px;
-}
+    .equipmentRow:hover {
+        background-color: rgba(50, 50, 50, 0.7);
+    }
 
-.view-package-items-container{
-    width: 80%
-}
-
-.view-available-packages-container{
-    width: 100%;
-}
-
-.ddl {
-    height: 30px;
-    width: 80%;
-    margin: 10px;
-}
-
-.gridview {
-    height: 20px;
-    width: 80%;
-    text-align: center;
+/* Dropdown Styling */
+.dropdown {
     font-family: "Poppins", sans-serif;
-    width: 100%;
-    border-collapse: collapse;
-    padding-left: 40px;
-    padding-right: 40px;
+    height: 45px;
+    flex: 1;
+    min-width: 150px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0 15px;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23B02B2D' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    padding-right: 30px;
 }
 
-    .gridview th {
-        position: sticky;
-        top: 0;
-        background-color: #f8f8f8;
-        z-index: 2;
-        border-bottom: 2px solid #ddd;
+    .dropdown:focus {
+        border-color: #B02B2D;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(176, 43, 45, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: rgba(40, 40, 40, 0.9);
     }
 
-    .gridview td, .gridview th {
-        padding: 10px;
-        border: 1px solid #ddd;
-    }
-
-.button{
-    height: 30px;
-    width: 90px;
+/* Delete Button */
+.delete-btn {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+    padding: 5px;
 }
 
-.textbox{
-    height: 30px;
+    .delete-btn:hover {
+        transform: scale(1.2);
+        color: #ff6666;
+    }
+
+/* Add Button */
+.add-button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 30px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #B02B2D, #8C1D1F);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(176, 43, 45, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
     width: 200px;
-    margin: auto;
 }
+
+    .add-button:hover {
+        background: linear-gradient(135deg, #8C1D1F, #B02B2D);
+        box-shadow: 0 8px 20px rgba(176, 43, 45, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .add-button:active {
+        transform: translateY(0);
+        box-shadow: 0 3px 10px rgba(176, 43, 45, 0.4);
+    }
+
+/* Package Info Container */
+.package-info-container {
+    background-color: rgba(30, 30, 30, 0.7);
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .package-info-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .package-info-container h3 {
+        margin: 0 0 15px 0;
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+/* Input Container */
+.input-container {
+    margin-bottom: 20px;
+}
+
+    .input-container h4 {
+        margin: 0 0 10px 0;
+        font-weight: 500;
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+.textbox {
+    font-family: "Poppins", sans-serif;
+    height: 45px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding-left: 15px;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+    .textbox:focus {
+        border-color: #B02B2D;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(176, 43, 45, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: rgba(40, 40, 40, 0.9);
+    }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .package-container {
+        padding: 15px;
+    }
+
+    .equipmentRow {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .delete-btn {
+        align-self: flex-end;
+    }
+}
+    .add-button {
+        width: 100%;
+    }
+}
+}}}

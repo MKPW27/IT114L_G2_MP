@@ -15,6 +15,21 @@
             <asp:Label ID="No_Client" runat="server" Text=""></asp:Label>
         </div>
 
+<<<<<<< HEAD
+        <asp:Label ID="No_Client" runat="server" Text=""></asp:Label>
+    </div>
+
+    <div class="verification-container">
+        <h3>Verify Account</h3>
+        ID: <asp:TextBox ID="acc_id_tb" runat="server"></asp:TextBox> <br />
+        Name: <asp:TextBox ID="acc_name_tb" runat="server"></asp:TextBox> <br />
+        <asp:RadioButtonList ID="verification" runat="server">
+            <asp:ListItem Value="Verified">Verified</asp:ListItem>
+            <asp:ListItem Value="Unverified">Unverified</asp:ListItem>
+        </asp:RadioButtonList>
+        <asp:Button ID="save_btn" runat="server" Text="Save" OnClick="save_btn_Click" />
+        <asp:Button ID="clear_btn" runat="server" Text="Clear" OnClick="clear_btn_Click" />
+=======
         <div class="form-container right-container">
             <div class="evt-container-line"><h3>Verify Account</h3></div>
             <div class="input-group">
@@ -36,5 +51,6 @@
                 </div>
             </div>
         </div>
+>>>>>>> 7a4896e9cb733531726cb85856793a4e4f3c934e
     </div>
 </asp:Content>

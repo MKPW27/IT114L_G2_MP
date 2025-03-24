@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CustomerMasterPage.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="IT114L_G2_MP.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="Css/about.css" rel="stylesheet" />
+    <link href="css/about.css" rel="stylesheet" />
 
 </asp:Content>
 

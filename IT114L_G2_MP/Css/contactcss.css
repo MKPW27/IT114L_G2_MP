@@ -4,6 +4,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background: var(--light-gray)
 }
 
 :root {
@@ -19,7 +20,7 @@ body {
 .contact-section {
     background-color: var(--white);
     color: #333;
-    padding: 70px 0;
+    padding: 90px 0;
 }
 
     .contact-section h2 {
