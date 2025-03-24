@@ -15,13 +15,13 @@ namespace IT114L_G2_MP
     {
 
         /// <summary>
-        /// Equ_GridView control.
+        /// gvEquipments control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView Equ_GridView;
+        protected global::System.Web.UI.WebControls.GridView gvEquipments;
 
         /// <summary>
         /// No_Equ control.

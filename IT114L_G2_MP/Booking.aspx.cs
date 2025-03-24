@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace IT114L_G2_MP
 {
@@ -85,11 +86,27 @@ namespace IT114L_G2_MP
             record_count = (int)cmd.ExecuteScalar();
             record_count += 1;
 
-            string insertstr = $"insert into Booking values ('{record_count.ToString("D15")}','{accID}','','{name.Text}','{evtType.Text}',{numAttendees.Text},'{bookDate.Text}','{ddlPackages.SelectedValue}')";
+            string insertstr = $"insert into Booking values ('{record_count.ToString("D15")}','{accID}','','{name.Text}','{evtType.Text}',{numAttendees.Text},'{bookDate.Text}','{ddlPackages.SelectedValue}','Pending')";
             cmd = new SqlCommand(insertstr, conn);
             cmd.ExecuteNonQuery();
 
             insertstr = $"insert into LocationTBL values ('{record_count.ToString("D15")}','{region.Text}','{province.Text}','{city.Text}','{barangay.Text}','{address.Text}')";
+            cmd = new SqlCommand(insertstr, conn);
+            cmd.ExecuteNonQuery();
+
+            decimal price = 0;
+            string retrieve = "select package_price from Packages where package_id = @ID";
+
+            cmd = new SqlCommand(retrieve, conn);
+            cmd.Parameters.AddWithValue("@ID", ddlPackages.SelectedValue);
+            object result = cmd.ExecuteScalar();
+            if (result != null)
+            {
+                 price = Convert.ToDecimal(result.ToString());
+            }
+            
+
+            insertstr = $"insert into Payment values ('{record_count.ToString("D15")}',0,0,{price},{price})";
             cmd = new SqlCommand(insertstr, conn);
             cmd.ExecuteNonQuery();
 

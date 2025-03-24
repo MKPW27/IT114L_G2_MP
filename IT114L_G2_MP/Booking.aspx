@@ -65,7 +65,6 @@
                 <p>Address</p>
                 <asp:TextBox ID="address" runat="server" CssClass="wide-input" ></asp:TextBox>
             </div>
-
         </div>
         
         <div class="evt-container-line">

@@ -33,13 +33,13 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.Label No_Events;
 
         /// <summary>
-        /// bookingID control.
+        /// booking_ID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox bookingID;
+        protected global::System.Web.UI.WebControls.TextBox booking_ID;
 
         /// <summary>
         /// custname control.
@@ -132,15 +132,6 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox addr;
 
         /// <summary>
-        /// locnum control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox locnum;
-
-        /// <summary>
         /// ev_name control.
         /// </summary>
         /// <remarks>
@@ -183,7 +174,7 @@ namespace IT114L_G2_MP
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox teamname;
+        protected global::System.Web.UI.WebControls.DropDownList teamname;
 
         /// <summary>
         /// packageid control.
