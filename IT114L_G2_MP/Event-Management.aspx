@@ -152,8 +152,9 @@
 
             <div class="button-container">
                 <center>
+                                        <asp:Button ID="save_btn" runat="server" Text="Save" CssClass="button" BackColor="Green" ForeColor="White" Type="Submit"/>
+
                     <asp:Button ID="delete_btn" runat="server" Text="Delete" CssClass="button" BackColor="Red" ForeColor="White" Type="Clear"/>
-                    <asp:Button ID="save_btn" runat="server" Text="Save" CssClass="button" BackColor="Green" ForeColor="White" Type="Submit"/>
                 </center>
             </div>
         </div>
