@@ -99,9 +99,11 @@
     <Content Include="img\About1.png" />
     <Content Include="img\About2.png" />
     <Content Include="img\About3.png" />
+    <Content Include="img\Design-BG.png" />
     <Content Include="img\front-banner-logo.png" />
     <Content Include="img\home-banner.jpg" />
     <Content Include="img\about-banner.jpg" />
+    <Content Include="img\Login-BG.png" />
     <Content Include="img\Signup-BG.png" />
     <Content Include="img\timeline-img1.png" />
     <Content Include="img\timeline-img2.png" />
