@@ -6,7 +6,7 @@
     <div class="body-container">
         <div class="form-container">
             
-            <h3>My Clients</h3>
+            <h3>MY CLIENTS</h3>
                 <center><hr style="width:100%; margin-bottom: 20px;"/></center>
                 <asp:GridView ID="client_table" runat="server" AutoGenerateColumns="True" CssClass="gridview" DataKeyNames="ID" OnRowCommand="Select_Row">
                     <Columns>
@@ -19,7 +19,7 @@
     </div>
 
     <div class="verification-container">
-        <h3>Verify Account</h3>
+        <h3>VERIFY ACCOUNT</h3>
         <center><hr style="width:100%; margin-bottom: 20px;"/></center>
         ID: <asp:TextBox ID="acc_id_tb" runat="server" CssClass="input-field"></asp:TextBox> <br />
         Name: <asp:TextBox ID="acc_name_tb" runat="server" CssClass="input-field"></asp:TextBox> <br />

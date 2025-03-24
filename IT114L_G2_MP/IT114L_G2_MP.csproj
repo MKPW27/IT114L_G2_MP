@@ -103,6 +103,7 @@
     <Content Include="img\front-banner-logo.png" />
     <Content Include="img\home-banner.jpg" />
     <Content Include="img\about-banner.jpg" />
+    <Content Include="img\Login-BG.png" />
     <Content Include="img\Signup-BG.png" />
     <Content Include="img\timeline-img1.png" />
     <Content Include="img\timeline-img2.png" />
