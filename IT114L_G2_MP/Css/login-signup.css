@@ -1,42 +1,92 @@
 ﻿body {
     font-family: "Poppins", sans-serif;
     margin: 0;
+    background-image: url("/img/Login-BG.png");
 }
 
-.page-container{
+.page-container {
     display: flex;
-}
-.log-in {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    width: 350px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.sign-up {
-    background-color: rgba(255, 255, 255, 0.9);
+.signup {
+    padding-top: 14px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+    .signup a {
+        text-decoration: none;
+    }
+
+.log-in-container {
+    display: flex;
+    width: 360px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    /*Outside*/
+    margin-top: 30px;
+    margin-right: 55px;
+    margin-bottom: 10px;
+    /*Inside*/
     padding: 20px;
-    border-radius: 10px;
-    margin-left: 30px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    width: 250px;
+    padding-left: 110px;
+    padding-right: 110px;
 }
 
-.textbox {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    .log-in-container h1 {
+        font-size: 32px;
+        margin-bottom: 5rem;
+        text-align: center;
+        color: #1a1a1a;
+    }
+
+
+    .log-in-container label {
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+        color: #5a5a5a;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .log-in-container a {
+        padding-left: 40px;
+    }
+
+.log-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.button {
-    width: 100%;
-    padding: 12px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
+.btn {
+    width: 350px;
+    height: 45px;
+    padding: 9px;
+    background: #12122d;
+    border-radius: 15px;
     cursor: pointer;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #5A5A5A;
+    border-radius: 12px;
 }

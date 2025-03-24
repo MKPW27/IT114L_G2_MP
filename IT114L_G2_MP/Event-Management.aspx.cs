@@ -61,7 +61,7 @@ namespace IT114L_G2_MP
                     ev_type.Text = reader["event_type"].ToString();
                     ev_pax.Text = reader["event_pax"].ToString();
                     packageid.Text = reader["package_id"].ToString();
-                    //bookStatus.SelectedValue = reader["booking_status"].ToString();
+                    bookStatus.SelectedValue = reader["event_status"].ToString();
                     //discount_ddl.SelectedValue = reader["booking_discount"].ToString();
                 }
                 reader.Close();
