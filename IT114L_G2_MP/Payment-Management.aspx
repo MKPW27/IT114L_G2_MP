@@ -4,16 +4,18 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="payment-details-container">
+    <div class="package-container">
         <div class="center">
-            <span class="search-label">Enter Booking ID</span><br />
-            <asp:TextBox runat="server" ID="book_id_text" placeholder=" Search Booking ID" CssClass="search-id"/> <asp:Button runat="server" ID="search" text="Search" CssClass="search-button"/>
-            <br />
+            <span class="search-label"><p>Enter Booking ID</p></span>
+            <div class="search-container">
+                <asp:TextBox runat="server" ID="book_id_text" placeholder=" Search Booking ID" CssClass="search-id"/> 
+                <asp:Button runat="server" ID="search" text="Search" CssClass="search-button"/>
+            </div>
         </div>
 
         <div class="center">
             <h3>Customer-Event Information</h3>
-            <center><hr style="width:70%; margin-bottom: 20px;"/></center>
+            <center><hr style="width:100%; margin-bottom: 20px;"/></center>
         </div>
         <div class="detail-container">
             <div class="item">
@@ -36,19 +38,24 @@
                 <asp:TextBox runat="server" ID="TextBox4" Enabled="false" CssClass="detail-tb"/>
             </div>
         </div>
-
+        </div>
+    <div class="package-container">
         <div class="center">
             <h3>Service Charge Breakdown</h3>
-            <center><hr style="width:70%; margin-bottom: 20px;"/></center>
+            <center>
+                <hr style="width: 100%; margin-bottom: 20px;" />
+            </center>
         </div>
 
         <div class="detail-container">
             <div class="item">
-                Total Service Charge <br />
-                <asp:TextBox runat="server" ID="TextBox5" Enabled="false" CssClass="detail-tb"/>
+                Total Service Charge
+                <br />
+                <asp:TextBox runat="server" ID="TextBox5" Enabled="false" CssClass="detail-tb" />
             </div>
             <div class="item">
-                Discount <br />
+                Discount
+                <br />
                 <asp:DropDownList runat="server" ID="discount_ddl" CssClass="ddl">
                     <asp:ListItem Value="0">None</asp:ListItem>
                     <asp:ListItem Value="1">Loyalty Discount (5%)</asp:ListItem>
@@ -59,17 +66,20 @@
 
         <div class="detail-container">
             <div class="item">
-                Downpayment <br />
-                <asp:TextBox runat="server" ID="TextBox6" Enabled="false" CssClass="detail-tb"/>
+                Downpayment
+                <br />
+                <asp:TextBox runat="server" ID="TextBox6" Enabled="false" CssClass="detail-tb" />
             </div>
             <div class="item">
-                Balance <br />
-                <asp:TextBox runat="server" ID="TextBox7" Enabled="false" CssClass="detail-tb"/>
+                Balance
+                <br />
+                <asp:TextBox runat="server" ID="TextBox7" Enabled="false" CssClass="detail-tb" />
             </div>
         </div>
 
         <center>
-            <asp:Button runat="server" ID="paid" Text="Paid" Enabled="false" CssClass="paid"/>
+            <asp:Button runat="server" ID="paid" Text="Paid" Enabled="false" CssClass="paid" />
         </center>
     </div>
+
 </asp:Content>
