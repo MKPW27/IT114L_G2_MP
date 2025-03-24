@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StaffMasterPage.Master" AutoEventWireup="true" CodeBehind="Create-Package.aspx.cs" Inherits="IT114L_G2_MP.Create_Package" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="css\packages.css" rel="stylesheet" />
+    <link href="css/packages.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -11,7 +12,9 @@
                 <div class="package-information">
                     <center><h2>Package Information</h2></center>
                     <asp:TextBox runat="server" ID="package_name" placeholder="Package Name" CssClass="textbox" MaxLength="44"></asp:TextBox>
-                    <asp:Button runat="server" ID="createNew" Text="Create New" OnClick="createNew_Click" />
+                    <div class="button-container">
+                        <asp:Button runat="server" ID="createNew" Text="Create New" OnClick="createNew_Click" CssClass="button" />
+                    </div>
                     <asp:TextBox runat="server" ID="packageID" placeholder="Package ID" CssClass="textbox" MaxLength="50" Enabled="false"></asp:TextBox>
                 </div>
 
@@ -36,8 +39,10 @@
                         <asp:ListItem Value="0">-- Select Quantity --</asp:ListItem>
                     </asp:DropDownList>
 
-                    <asp:Button ID="addbtn" runat="server" Text="Add" CssClass="button" OnClick="addbtn_Click"/>
-                    <asp:Button ID="clearbtn" runat="server" Text="Clear" CssClass="button" OnClick="clearbtn_Click" />
+                    <div class="button-container">
+                        <asp:Button ID="addbtn" runat="server" Text="Add" CssClass="button" OnClick="addbtn_Click"/>
+                        <asp:Button ID="clearbtn" runat="server" Text="Clear" CssClass="button" OnClick="clearbtn_Click" />
+                    </div>
                 </div>
 
                 <div class="select-package_gridview">
@@ -77,7 +82,7 @@
         </div>
 
         <div class="view-available-packages-container">
-
         </div>
     </div>
 </asp:Content>
+

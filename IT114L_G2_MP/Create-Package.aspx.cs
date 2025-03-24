@@ -53,19 +53,19 @@ namespace IT114L_G2_MP
         }
         private void LoadPackages()
         {
-            using (SqlConnection conn = new SqlConnection(connstr))
-            {
-                string query = "SELECT package_id, package_name FROM Packages";
-                SqlDataAdapter da = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
+            //using (SqlConnection conn = new SqlConnection(connstr))
+            //{
+            //    string query = "SELECT package_id, package_name FROM Packages";
+            //    SqlDataAdapter da = new SqlDataAdapter(query, conn);
+            //    DataTable dt = new DataTable();
 
-                conn.Open();
-                da.Fill(dt);
-                conn.Close();
+            //    conn.Open();
+            //    da.Fill(dt);
+            //    conn.Close();
 
-                gvPackages.DataSource = dt;
-                gvPackages.DataBind();
-            }
+            //    gvPackages.DataSource = dt;
+            //    gvPackages.DataBind();
+            //}
         }
         protected void gvEquipment_RowCommand(object sender, GridViewCommandEventArgs e)
         {

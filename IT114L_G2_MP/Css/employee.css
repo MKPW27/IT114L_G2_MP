@@ -23,6 +23,7 @@ body {
 .left-container {
     flex: 1;
     min-width: 300px;
+
 }
 
 .right-container {
