@@ -1,7 +1,31 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Log_in.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="IT114L_G2_MP.Default" %>
+﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Log_in.Master" AutoEventWireup="true" 
+     CodeBehind="Default.aspx.cs" Inherits="IT114L_G2_MP.Default" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="css\login-signup.css" rel="stylesheet" />
+    <link href="css/login-signup.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url('../Images/Design-BG.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Keep your existing container styles */
+        .page-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+    </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="page-container">
         <div class="log-in">
