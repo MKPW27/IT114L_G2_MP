@@ -20,6 +20,54 @@ namespace IT114L_G2_MP
         {
            LoadData();
         }
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (GridView1.SelectedRow != null)
+            {
+                // Get Booking ID from selected row (adjust index if necessary)
+                string bookingID = GridView1.SelectedRow.Cells[1].Text;
+
+                // Load event details
+                LoadEventDetails(bookingID);
+            }
+        }
+        private void LoadEventDetails(string bookingID)
+        {
+            using (SqlConnection conn = new SqlConnection(connstr))
+            {
+                string query = "SELECT * FROM booking a join customer b on a.cust_id = b.acc_id join locationtbl c on a.booking_id = c.booking_id join Payment d on a.booking_id = d.booking_id WHERE a.booking_id = @bookingID";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@bookingID", bookingID);
+
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    // Assign values to textboxes
+                    booking_ID.Text = reader["booking_id"].ToString();
+                    custname.Text = $"{reader["user_fname"].ToString()} {reader["user_lname"].ToString()}";
+                    custemail.Text = reader["user_email"].ToString();
+                    b_number.Text = reader["user_business_num"].ToString();
+                    compname.Text = reader["user_company_name"].ToString();
+                    p_number.Text = reader["user_phone_num"].ToString();
+                    region.Text = reader["event_region"].ToString();
+                    province.Text = reader["event_province"].ToString();
+                    city.Text = reader["event_city"].ToString();
+                    brgy.Text = reader["event_barangay"].ToString();
+                    addr.Text = reader["event_address"].ToString();
+                    ev_name.Text = reader["event_name"].ToString();
+                    ev_date.Text = Convert.ToDateTime(reader["event_date"]).ToString("yyyy-MM-dd");
+                    ev_type.Text = reader["event_type"].ToString();
+                    ev_pax.Text = reader["event_pax"].ToString();
+                    packageid.Text = reader["package_id"].ToString();
+                    //bookStatus.SelectedValue = reader["booking_status"].ToString();
+                    //discount_ddl.SelectedValue = reader["booking_discount"].ToString();
+                }
+                reader.Close();
+                conn.Close();
+            }
+        }
 
         public void LoadData()
         {

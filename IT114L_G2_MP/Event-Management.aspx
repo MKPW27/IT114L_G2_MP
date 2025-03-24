@@ -9,9 +9,13 @@
         </div>
 
         <center>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="True" CssClass="gridview" ShowSelectButton="True">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="gridview" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" EnableViewState="true">
             <Columns>
-                <asp:CommandField ShowSelectButton="True"/>
+                <asp:CommandField ShowSelectButton="True" />
+                <asp:BoundField DataField="ID" HeaderText="Booking ID" />
+                <asp:BoundField DataField="Event_Name" HeaderText="Event Name" />
+                <asp:BoundField DataField="Date" HeaderText="Event Date" />
+                <asp:BoundField DataField="PAX" HeaderText="PAX" />
             </Columns>
         </asp:GridView>
         </center>
@@ -31,7 +35,7 @@
                 <div class="left">
                     <div class="prompt">
                         Booking ID <br />
-                        <asp:TextBox ID="bookingID" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
+                        <asp:TextBox ID="booking_ID" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         Customer Name <br />
@@ -90,10 +94,6 @@
                         Address <br />
                         <asp:TextBox ID="addr" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
-                    <div class="prompt">
-                        Location Number <br />
-                        <asp:TextBox ID="locnum" runat="server" Width="90%" Height="40px" TextMode="Number" Enabled="false"></asp:TextBox>
-                    </div>
                 </div>
             </div>
         </div>
@@ -125,7 +125,8 @@
                     </div>
                     <div class="prompt">
                         Team Name <br />
-                        <asp:TextBox ID="teamname" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
+                        <asp:DropDownList ID="teamname" runat="server" Width="90%" Height="40px" ></asp:DropDownList>
+
                     </div>
                     <div class="prompt">
                         Package ID <br />
@@ -141,9 +142,11 @@
                         <asp:ListItem Value="1">Loyalty Discount (5%)</asp:ListItem>
                         <asp:ListItem Value="2">Partnership Discount (10%)</asp:ListItem>
                     </asp:DropDownList><br /><br />
+
                 Booking Status <asp:DropDownList ID="bookStatus" runat="server" CssClass="ddl" >
-                                    <asp:ListItem Value ="0">Disapproved</asp:ListItem>
+                                    <asp:ListItem Value ="0">Pending</asp:ListItem>
                                     <asp:ListItem Value ="1">Approved</asp:ListItem>
+                                    <asp:ListItem Value ="1">Disapproved</asp:ListItem>
                                </asp:DropDownList>
             </div>
 

@@ -29,7 +29,7 @@ namespace IT114L_G2_MP
         {
             string selectedPackageID = gvPackages.SelectedDataKey.Value.ToString();
             packageID.Text = selectedPackageID;
-            displayAtGrid(); // Reload the Package Content GridView with the selected package items
+            displayAtGrid(); 
         }
         protected void gvPackages_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
@@ -46,8 +46,8 @@ namespace IT114L_G2_MP
                 conn.Close();
             }
 
-            LoadPackages(); // Refresh packages list after deletion
-            gvEquipment.DataSource = null; // Clear package content
+            LoadPackages(); 
+            gvEquipment.DataSource = null; 
             gvEquipment.DataBind();
             ClearDDL();
         }
@@ -243,6 +243,9 @@ namespace IT114L_G2_MP
                 string package_id = packageID.Text;
                 string equip_id = null;
 
+                decimal price = 0;
+                decimal equip_ppd = 0;
+
                 string retrieve = "SELECT equip_id FROM Equipments WHERE equip_brand = @Brand AND equip_type = @Type AND equip_model = @Model";
 
                 conn.Open();
@@ -275,6 +278,33 @@ namespace IT114L_G2_MP
                         cmd.ExecuteNonQuery();
                     }
 
+                    using (SqlCommand cmd = new SqlCommand("select equip_ppd from Equipments where equip_id = @ID", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@ID", equip_id);
+
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            equip_ppd = Convert.ToDecimal(result.ToString());
+                        }
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand("select package_price from Packages where package_id = @ID", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@ID", package_id);
+
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            price = Convert.ToDecimal(result.ToString());
+                        }
+                        price += equip_ppd * Convert.ToInt16(ddlItemQty.SelectedValue);
+
+                        SqlCommand cmd2 = new SqlCommand("update Packages set package_price = @price where package_id = @ID", conn);
+                        cmd2.Parameters.AddWithValue("@ID", package_id);
+                        cmd2.Parameters.AddWithValue("@price", price);
+                        cmd2.ExecuteNonQuery();
+                    }
                     displayAtGrid();
                 }
                 else
@@ -317,7 +347,7 @@ namespace IT114L_G2_MP
                 record_count = (int)cmd.ExecuteScalar();
                 record_count += 1;
 
-                string insertstr = $"insert into Packages values ('{package_name.Text}{record_count.ToString("D5")}','{package_name.Text}')";
+                string insertstr = $"insert into Packages values ('{package_name.Text}{record_count.ToString("D5")}','{package_name.Text}',0)";
                 cmd = new SqlCommand(insertstr, conn);
                 cmd.ExecuteNonQuery();
 
