@@ -9,15 +9,16 @@
                 <h3 class="header-title">My Equipment</h3>
             </div>
 
-            <asp:GridView ID="gvEquipments" runat="server" AutoGenerateColumns="True" CssClass="gridview" ShowHeaderWhenEmpty="True" DataKeyNames="equip_id">
+            <asp:GridView ID="gvEquipments" runat="server" AutoGenerateColumns="False" CssClass="gridview" ShowHeaderWhenEmpty="True" DataKeyNames="equip_id">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" SelectText="Edit" />
-                    <asp:BoundField DataField="equip_id" HeaderText="Package ID" ReadOnly="True" />
-                    <asp:BoundField DataField="equip_type" HeaderText="Package Name" ReadOnly="True" />
-                    <asp:BoundField DataField="equip_brand" HeaderText="Package Name" ReadOnly="True" />
-                    <asp:BoundField DataField="equip_model" HeaderText="Package Name" ReadOnly="True" />
-                    <asp:BoundField DataField="equip_ppd" HeaderText="Package Name" ReadOnly="True" />
-                    <asp:BoundField DataField="equip_qty" HeaderText="Package Name" ReadOnly="True" />
+                    <asp:BoundField DataField="equip_id" HeaderText="ID" ReadOnly="True" />
+                    <asp:BoundField DataField="equip_type" HeaderText="Type" ReadOnly="True" />
+                    <asp:BoundField DataField="equip_brand" HeaderText="Brand" ReadOnly="True" />
+                    <asp:BoundField DataField="equip_model" HeaderText="Model" ReadOnly="True" />
+                    <asp:BoundField DataField="equip_funct" HeaderText="Purpose" ReadOnly="True" />
+                    <asp:BoundField DataField="equip_qty" HeaderText="Qty" ReadOnly="True" />
+                    <asp:BoundField DataField="equip_ppd" HeaderText="Rent Price" ReadOnly="True" />
                 </Columns>
             </asp:GridView>
 

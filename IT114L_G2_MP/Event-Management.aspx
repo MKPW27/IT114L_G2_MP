@@ -17,6 +17,8 @@
                 <asp:BoundField DataField="Event_Name" HeaderText="Event Name" />
                 <asp:BoundField DataField="Date" HeaderText="Event Date" />
                 <asp:BoundField DataField="PAX" HeaderText="PAX" />
+                <asp:BoundField DataField="team_name" HeaderText="Team" />
+                <asp:BoundField DataField="STATUS" HeaderText="Status" />
             </Columns>
         </asp:GridView>
         </center>
@@ -36,7 +38,7 @@
             <div class="content">
                 <div class="left">
                     <div class="prompt">
-                        Booking ID <br />
+                        Booking ID<br />
                         <asp:TextBox ID="booking_ID" runat="server" Width="90%" Height="40px" Enabled="false"></asp:TextBox>
                     </div>
                     <div class="prompt">
@@ -126,7 +128,10 @@
                     </div>
                     <div class="prompt">
                         Team Name <br />
-                        <asp:TextBox ID="teamname" runat="server" Width="90%" Height="40px"></asp:TextBox>
+                        <div class="dropdown-group">
+                            <asp:DropDownList runat="server" ID="teamDDL" CssClass="team">
+                            </asp:DropDownList>
+                        </div>
                     </div>
                     <div class="prompt">
                         Package ID <br />
@@ -153,14 +158,15 @@
                         <asp:ListItem Value="Pending">Pending</asp:ListItem>
                         <asp:ListItem Value="Approved">Approved</asp:ListItem>
                         <asp:ListItem Value="Disapproved">Disapproved</asp:ListItem>
+                        <asp:ListItem Value="Finished">Finished</asp:ListItem>
                     </asp:DropDownList>
                 </div>
             </div>
 
             <div class="button-container">
                 <center>
-                    <asp:Button ID="delete_btn" runat="server" Text="Clear" CssClass="button" BackColor="Red" ForeColor="White" Type="Clear"/>
-                    <asp:Button ID="save_btn" runat="server" Text="Save" CssClass="button" BackColor="Green" ForeColor="White" Type="Submit"/>
+                    <asp:Button ID="clear_btn" runat="server" Text="Clear" CssClass="button" BackColor="Red" ForeColor="White" Type="Clear" OnClick="clear_btn_Click"/>
+                    <asp:Button ID="save_btn" runat="server" Text="Save" CssClass="button" BackColor="Green" ForeColor="White" Type="Submit" OnClick="save_btn_Click"/>
                 </center>
             </div>
         </div>

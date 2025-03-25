@@ -84,6 +84,7 @@
     <Content Include="Css\packages.css" />
     <Content Include="Css\payment.css" />
     <Content Include="Css\signup.css" />
+    <Content Include="Css\team.css" />
     <Content Include="Default.aspx" />
     <Content Include="Employee-Management.aspx" />
     <Content Include="Css\bookcss.css" />
@@ -115,9 +116,11 @@
     <Content Include="navIcons\event.png" />
     <Content Include="navIcons\payment.png" />
     <Content Include="Css\equipment.css" />
+    <Content Include="navIcons\team.png" />
     <Content Include="Payment-Management.aspx" />
     <Content Include="Services.aspx" />
     <Content Include="SignUp.aspx" />
+    <Content Include="Team-Management.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -233,6 +236,13 @@
     </Compile>
     <Compile Include="StaffMasterPage.Master.designer.cs">
       <DependentUpon>StaffMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Team-Management.aspx.cs">
+      <DependentUpon>Team-Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Team-Management.aspx.designer.cs">
+      <DependentUpon>Team-Management.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

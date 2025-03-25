@@ -18,7 +18,10 @@ namespace IT114L_G2_MP
         
         protected void Page_Load(object sender, EventArgs e)
         {
-           LoadData();
+            if (!IsPostBack)
+            {
+                LoadData();
+            }
         }
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -60,6 +63,7 @@ namespace IT114L_G2_MP
                     packageid.Text = reader["package_id"].ToString();
                     bookStatus.SelectedValue = reader["event_status"].ToString();
                     discount_ddl.SelectedValue = reader["booking_discount"].ToString();
+                    teamDDL.SelectedValue = reader["team_name"].ToString();
                 }
                 reader.Close();
                 conn.Close();
@@ -68,53 +72,78 @@ namespace IT114L_G2_MP
 
         public void LoadData()
         {
-            //using (SqlConnection conn = new SqlConnection(connstr))
-            //{
-            //    string retrieve = "select booking_id as ID, event_name as Event_Name, event_date as Date, event_pax as PAX from booking";
-            //    SqlCommand cmd = new SqlCommand(retrieve, conn);
-            //    SqlDataAdapter da = new SqlDataAdapter(retrieve, conn);
-
-            //    conn.Open();
-            //    using (SqlDataReader reader = cmd.ExecuteReader())
-            //    {
-            //        if (reader.Read())
-            //        {
-            //            No_Events.Text = "";
-            //            DataTable dt = new DataTable();
-            //            reader.Close();
-            //            da.Fill(dt);
-            //            GridView1.DataSource = dt;
-            //            GridView1.DataBind();
-            //        }
-            //        else
-            //        {
-            //            No_Events.Text = "No Events";
-            //        }
-            //        reader.Close();
-            //    }
-            //    conn.Close();
-            //}
-        }
-
-        protected void save_btn_Click(object sender, EventArgs e)
-        {
             using (SqlConnection conn = new SqlConnection(connstr))
             {
-                string update = "update Booking set event_status = @status where booking_id = @bookingID; update Payment set booking_discount = @discount where booking_id = @bookingID";
+                string retrieve = "select a.booking_id as ID, a.event_name as Event_Name, a.event_date as Date, a.event_pax as PAX, a.event_status as STATUS, a.team_name from booking a";
+                SqlCommand cmd = new SqlCommand(retrieve, conn);
+                SqlDataAdapter da = new SqlDataAdapter(retrieve, conn);
+
                 conn.Open();
-                using (SqlCommand cmd = new SqlCommand(update, conn))
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    cmd.Parameters.AddWithValue("@discount", discount_ddl.SelectedValue);
-                    cmd.Parameters.AddWithValue("@status", bookStatus.SelectedValue);
-                    cmd.Parameters.AddWithValue("@bookingID", booking_ID.Text);
-                    cmd.ExecuteNonQuery();
-                    ClearInput();
+                    if (reader.Read())
+                    {
+                        No_Events.Text = "";
+                        DataTable dt = new DataTable();
+                        reader.Close();
+                        da.Fill(dt);
+                        GridView1.DataSource = dt;
+                        GridView1.DataBind();
+                    }
+                    else
+                    {
+                        No_Events.Text = "No Events";
+                    }
+                    reader.Close();
+                }
+
+                retrieve = "select team_name from Team";
+                cmd = new SqlCommand(retrieve, conn);
+
+                teamDDL.Items.Clear();
+                teamDDL.Items.Add(new ListItem("None", ""));
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        teamDDL.Items.Add(new ListItem(reader["team_name"].ToString(), reader["team_name"].ToString()));
+                    }
                 }
                 conn.Close();
             }
         }
 
-        protected void delete_btn_Click(object sender, EventArgs e)
+        protected void save_btn_Click(object sender, EventArgs e)
+        {
+            if (booking_ID.Text != "")
+            {
+                using (SqlConnection conn = new SqlConnection(connstr))
+                {
+                    string update = "update Booking set event_status = @status, team_name = @teamID where booking_id = @bookingID; update Payment set booking_discount = @discount where booking_id = @bookingID";
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(update, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@discount", discount_ddl.SelectedValue);
+                        cmd.Parameters.AddWithValue("@status", bookStatus.SelectedValue);
+                        cmd.Parameters.AddWithValue("@bookingID", booking_ID.Text);
+                        cmd.Parameters.AddWithValue("@teamID", teamDDL.SelectedValue);
+                        cmd.ExecuteNonQuery();
+                        ClearInput();
+                    }
+                    conn.Close();
+
+                    Response.Write("<script>alert('Booking updated!');</script>");
+
+                    LoadData();
+                }
+            }
+            else
+            {
+                Response.Write("<script>alert('Please select an event');</script>");
+            }
+        }
+
+        protected void clear_btn_Click(object sender, EventArgs e)
         {
             ClearInput();
         }

@@ -54,6 +54,14 @@
                 <asp:TextBox runat="server" ID="total" Enabled="false" CssClass="detail-tb" />
             </div>
             <div class="item">
+                Team Professional Fee
+                <br />
+                <asp:TextBox runat="server" ID="team_pf" Enabled="false" CssClass="detail-tb" />
+            </div>
+        </div>
+
+        <div class="detail-container">
+            <div class="item">
                 Discount
                 <br />
                 <asp:DropDownList runat="server" ID="discount_ddl" CssClass="ddl">
@@ -62,14 +70,14 @@
                     <asp:ListItem Value="0.1">Partnership Discount (10%)</asp:ListItem>
                 </asp:DropDownList>
             </div>
-        </div>
-
-        <div class="detail-container">
             <div class="item">
-                Downpayment
+                Down Payment
                 <br />
                 <asp:TextBox runat="server" ID="downpayment" Enabled="false" CssClass="detail-tb" />
             </div>
+        </div>
+
+        <div class="detail-container">
             <div class="item">
                 Balance
                 <br />
@@ -78,7 +86,7 @@
         </div>
 
         <center>
-            <asp:Button runat="server" ID="paid" Text="Paid" Enabled="false" CssClass="paid" />
+            <asp:Button runat="server" ID="paid" Text="Paid" Enabled="false" CssClass="paid" OnClick="paid_Click" />
         </center>
     </div>
 
