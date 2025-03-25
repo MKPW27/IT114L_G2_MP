@@ -65,6 +65,19 @@
     width: 100%;
 }
 
+/* body color*/
+
+.history-section {
+    padding: 80px 0;
+    background-color: #1a1a1a;
+}
+
+.timeline-section {
+    padding-top: 15px;
+    background-color: #121212;
+}
+
+
 .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -125,12 +138,17 @@
 }
 
 .body-content h3{
-    font-size: 30px;
+    font-size: 35px;
     padding-bottom: 30px;
+    color:white;
 }
+
+
 
 .body-content p {
     text-align: start;
+    font-size: 18px;
+    color:white;
 }
 
 .body-content .red {
@@ -183,7 +201,10 @@
 .timeline-content {
     flex: 1; 
 }
+.timeline-entry p{
+    color:white;
 
+}
 .timeline-content h3 {
     font-size: 20px;
     color: gray;

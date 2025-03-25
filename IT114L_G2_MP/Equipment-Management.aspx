@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/StaffMasterPage.Master" AutoEventWireup="true" CodeBehind="Equipment-Management.aspx.cs" Inherits="IT114L_G2_MP.Equipment_Management" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="Css\equipment.css" rel="stylesheet" />
+    <link href="css\equipment.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="body-container">
-        <div class="left-container">
+        <div class="left-container form-container">
             <div class="evt-container-line">
                 <h3 class="header-title">My Equipment</h3>
             </div>
@@ -45,7 +45,7 @@
                 <asp:TextBox ID="equip_model" runat="server" CssClass="input-field"></asp:TextBox><br />
 
                 Date of Acquisation<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_acq" /><br />
-                <asp:TextBox ID="equip_acq" runat="server" TextMode="Date" CssClass="input-field"></asp:TextBox><br />
+                <asp:TextBox ID="equip_acq" runat="server" TextMode="Date" CssClass="input-field date"></asp:TextBox><br />
 
                 Enter Quantity<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="equip_quant" /><br />
                 <asp:TextBox ID="equip_quant" runat="server" TextMode="Number" CssClass="input-field"></asp:TextBox><br />

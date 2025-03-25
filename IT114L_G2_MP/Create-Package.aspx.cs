@@ -21,8 +21,8 @@ namespace IT114L_G2_MP
         {
             if (!IsPostBack)
             {
-                BindEmptyGrid();
-                LoadPackages();
+               // BindEmptyGrid();
+                //LoadPackages();
             }
         }
         protected void gvPackages_SelectedIndexChanged(object sender, EventArgs e)

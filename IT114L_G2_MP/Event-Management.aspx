@@ -6,6 +6,7 @@
     <div class="gridviewcontainer"> 
         <div class="heading_container">
             <h3>My Events</h3>
+             <div class="evt-container-line"></div>
         </div>
 
         <center>
@@ -26,6 +27,7 @@
     <div class="event_details">
         <div class="heading_container">
             <h3>Event Details</h3>
+            <div class="evt-container-line"></div>
         </div>
         
         <div class="container">
@@ -62,7 +64,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <div class="container">
@@ -125,8 +126,7 @@
                     </div>
                     <div class="prompt">
                         Team Name <br />
-                        <asp:DropDownList ID="teamname" runat="server" Width="90%" Height="40px" ></asp:DropDownList>
-
+                        <asp:TextBox ID="teamname" runat="server" Width="90%" Height="40px"></asp:TextBox>
                     </div>
                     <div class="prompt">
                         Package ID <br />
@@ -137,25 +137,31 @@
             <center><hr style="width:95%;" /></center>
 
             <div class="content3">
-                Discount <asp:DropDownList runat="server" ID="discount_ddl" CssClass="ddl">
-                        <asp:ListItem Value="">None</asp:ListItem>
-                        <asp:ListItem Value="0.05">Loyalty Discount (5%)</asp:ListItem>
-                        <asp:ListItem Value="0.1">Partnership Discount (10%)</asp:ListItem>
-                    </asp:DropDownList><br /><br />
-
-                Booking Status <asp:DropDownList ID="bookStatus" runat="server" CssClass="ddl" >
-                                    <asp:ListItem Value ="">Empty</asp:ListItem>
-                                    <asp:ListItem Value ="Pending">Pending</asp:ListItem>
-                                    <asp:ListItem Value ="Approved">Approved</asp:ListItem>
-                                    <asp:ListItem Value ="Disapproved">Disapproved</asp:ListItem>
-                               </asp:DropDownList>
+                <div class="dropdown-group">
+                    <label for="discount_ddl">Discount</label>
+                    <asp:DropDownList runat="server" ID="discount_ddl" CssClass="ddl">
+                        <asp:ListItem Value="0">None</asp:ListItem>
+                        <asp:ListItem Value="1">Loyalty Discount (5%)</asp:ListItem>
+                        <asp:ListItem Value="2">Partnership Discount (10%)</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+                
+                <div class="dropdown-group">
+                    <label for="bookStatus">Booking Status</label>
+                    <asp:DropDownList ID="bookStatus" runat="server" CssClass="ddl">
+                        <asp:ListItem Value="0">Pending</asp:ListItem>
+                        <asp:ListItem Value="1">Approved</asp:ListItem>
+                        <asp:ListItem Value="2">Disapproved</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
             </div>
 
             <div class="button-container">
                 <center>
-                    <asp:Button ID="delete_btn" runat="server" Text="Clear" CssClass="button" BackColor="Red" ForeColor="White" Type="Clear" OnClick="delete_btn_Click"/>
-                    <asp:Button ID="save_btn" runat="server" Text="Save" CssClass="button" BackColor="Green" ForeColor="White" Type="Submit" OnClick="save_btn_Click"/>
+                    <asp:Button ID="delete_btn" runat="server" Text="Delete" CssClass="button" BackColor="Red" ForeColor="White" Type="Clear"/>
+                    <asp:Button ID="save_btn" runat="server" Text="Save" CssClass="button" BackColor="Green" ForeColor="White" Type="Submit"/>
                 </center>
             </div>
         </div>
+    </div>
 </asp:Content>
