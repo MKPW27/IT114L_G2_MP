@@ -46,14 +46,14 @@
                 <asp:Image runat="server" ImageUrl="~/img/About1.png" CssClass="big-photo"/>
                 <div class="small-photos">
                     <asp:Image runat="server" ImageUrl="~/img/About2.png"/>
-                    <asp:Image runat="server" ImageUrl="~/img/About3.png"/>
+                    <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1678967630352-c40c4b2960b8?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
                 </div>
             </div>
         </div>
 
             <div class="timeline-section">
         <div class="timeline-entry">
-            <asp:Image runat="server" ImageUrl="~/img/timeline-img1.png" CssClass="timeline-img"/>
+            <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1546961329-78bef0414d7c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" CssClass="timeline-img"/>
             <div class="timeline-content">
                 <h3>2012–2014</h3>
                 <p>
@@ -63,7 +63,7 @@
         </div>
 
         <div class="timeline-entry">
-            <asp:Image runat="server" ImageUrl="~/img/timeline-img2.png" CssClass="timeline-img"/>
+            <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" CssClass="timeline-img"/>
             <div class="timeline-content">
                 <h3>2014-2019</h3>
                 <p>
@@ -73,7 +73,7 @@
         </div>
 
             <div class="timeline-entry">
-            <asp:Image runat="server" ImageUrl="~/img/timeline-img2.png" CssClass="timeline-img"/>
+            <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" CssClass="timeline-img"/>
             <div class="timeline-content">
                 <h3>Present</h3>
                 <p>
