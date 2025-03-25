@@ -19,41 +19,41 @@
         <!--------------------------------------------| EMAIL -->
         <label>Email</label>
         <br />
-        <asp:TextBox ID="tb_email" runat="server" TextMode="Email" CssClass="su_Email"></asp:TextBox><br />
+        <asp:TextBox ID="tb_email" runat="server" TextMode="Email" CssClass="su_Email" width="96%"></asp:TextBox><br />
 
         <!--------------------------------------------| USERNAME -->
         <br />
         <label>Username</label>
         <br />
-        <asp:TextBox ID="tb_username" runat="server" CssClass="su_Username"></asp:TextBox><br />
+        <asp:TextBox ID="tb_username" runat="server" CssClass="su_Username" width="96%"></asp:TextBox><br />
 
         <!--------------------------------------------| PASSWORD -->
         <br />
         <label>Password</label>
         <br />
-        <asp:TextBox ID="tb_password" runat="server" CssClass="su_Password"></asp:TextBox><br />
+        <asp:TextBox ID="tb_password" runat="server" CssClass="su_Password" width="96%"></asp:TextBox><br />
 
         <!--------------------------------------------| CONFIRM PASSWORD -->
         <br />
         <label>Confirm Password</label>
         <br />
-        <asp:TextBox ID="tb_confirm_password" runat="server" CssClass="su_CfPassword"></asp:TextBox><br />
+        <asp:TextBox ID="tb_confirm_password" runat="server" CssClass="su_CfPassword" width="96%"></asp:TextBox><br />
 
          <!--------------------------------------------| FIRST AND LAST NAME -->
         <table class="form-table">
             <tr>
                 <!-- First Name -->
-                <td>
+                <td width="50%">
                     <br />
                     <label CssClass="su_FirstNameLabel">First Name</label><br />
-                    <asp:TextBox ID="tb_fname" runat="server" CssClass="su_FirstName"></asp:TextBox><br />
+                    <asp:TextBox ID="tb_fname" runat="server" CssClass="su_FirstName" width="90%"></asp:TextBox><br />
                 </td>
 
                 <!-- Last Name -->
-                <td>
+                <td width="50%">
                     <br />
                     <asp:Label ID="lbl_fname" runat="server" CssClass="su_LastNameLabel" Text="Last Name:"></asp:Label>
-                    <asp:TextBox ID="tb_lastname" runat="server" CssClass="su_LastName"></asp:TextBox><br />
+                    <asp:TextBox ID="tb_lastname" runat="server" CssClass="su_LastName" width="90%"></asp:TextBox><br />
                 </td>
             </tr>
         </table>
@@ -64,19 +64,19 @@
         <br />
         <label>Company Name</label>
         <br />
-        <asp:TextBox ID="tb_comp_name" runat="server" CssClass="su_CompName"></asp:TextBox><br />
+        <asp:TextBox ID="tb_comp_name" runat="server" CssClass="su_CompName" width="96%"></asp:TextBox><br />
 
         <!--------------------------------------------| PHONE NUMBER -->
         <br />
         <label>Phone</label>
         <br />
-        <asp:TextBox ID="tb_phone" runat="server" MaxLength="11" TextMode="Phone" CssClass="su_Phone"></asp:TextBox><br />
+        <asp:TextBox ID="tb_phone" runat="server" MaxLength="11" TextMode="Phone" CssClass="su_Phone" width="96%"></asp:TextBox><br />
 
         <!--------------------------------------------| BUSINESS NUMBER -->
         <br />
         <label>Business Number</label>
         <br />
-        <asp:TextBox ID="tb_buss_phone" runat="server" MaxLength="11" TextMode="Phone" CssClass="su_BusNum"></asp:TextBox><br />
+        <asp:TextBox ID="tb_buss_phone" runat="server" MaxLength="11" TextMode="Phone" CssClass="su_BusNum" width="96%"></asp:TextBox><br />
 
         <!--------------------------------------------| CREATE ACCOUNT BUTTON -->
         <div class="Div_for_button_na_hindi_macenter">
