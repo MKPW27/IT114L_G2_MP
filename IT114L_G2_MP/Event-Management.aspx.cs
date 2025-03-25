@@ -131,6 +131,9 @@ namespace IT114L_G2_MP
                         ClearInput();
                     }
                     conn.Close();
+
+                    Response.Write("<script>alert('Booking updated!');</script>");
+
                     LoadData();
                 }
             }

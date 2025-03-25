@@ -9,29 +9,25 @@
             <div class="left-container">
                 <div class="package-information">
                     <center>
-                        <h2>Create New Team</h2>
+                        <h2>My Team</h2>
                     </center>
-                    <asp:TextBox runat="server" ID="teamname" placeholder="Team Name" CssClass="textbox" MaxLength="44"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="teamname" placeholder="Team Name" CssClass="textbox" MaxLength="100"></asp:TextBox>
+                    <asp:TextBox runat="server" ID="team_pf" placeholder="Team Professional Fee" CssClass="textbox" MaxLength="9" TextMode="Number"></asp:TextBox>
+
                     <div class="button-container">
                         <asp:Button runat="server" ID="createNew" Text="Create New" OnClick="createNew_Click" CssClass="button" />
+                        <asp:Button runat="server" ID="saveBtn" Text="Save Changes" OnClick="save_Click" CssClass="button" />
                     </div>
-                    <asp:TextBox runat="server" ID="teamID" placeholder="Package ID" CssClass="textbox" MaxLength="50" Enabled="false"></asp:TextBox>
-                </div>
-
-                <div class="select-package-container">
+                    
                     <center>
                         <h2>Select Employee</h2>
                     </center>
-                    <asp:DropDownList ID="ddlEmp" runat="server" AutoPostBack="true" CssClass="ddl">
+                    <asp:DropDownList ID="ddlEmp" runat="server" AutoPostBack="true" CssClass="ddl" Enabled="false">
                         <asp:ListItem Value="">-- Select Employee --</asp:ListItem>
                     </asp:DropDownList>
 
-                    <asp:DropDownList ID="ddlRole" runat="server" AutoPostBack="true" CssClass="ddl" OnSelectedIndexChanged="ddlItemType_SelectedIndexChanged">
-                        <asp:ListItem Value="">-- Select Role --</asp:ListItem>
-                    </asp:DropDownList>
-
                     <div class="button-container">
-                        <asp:Button ID="addbtn" runat="server" Text="Add" CssClass="button" OnClick="addbtn_Click"/>
+                        <asp:Button ID="addbtn" runat="server" Text="Add" CssClass="button" OnClick="addbtn_Click" Enabled="false"/>
                     </div>
                 </div>
 
@@ -43,6 +39,7 @@
                         <Columns>
                             <asp:CommandField ShowSelectButton="True" SelectText="View" />
                             <asp:BoundField DataField="team_name" HeaderText="Team Name" ReadOnly="True" />
+                            <asp:BoundField DataField="team_tf" HeaderText="Professional Fee" ReadOnly="True" />
                             <asp:CommandField ShowDeleteButton="True" DeleteText="Delete" />
                         </Columns>
                     </asp:GridView>
@@ -53,11 +50,11 @@
                 <center>
                     <h2>Team Content</h2>
                 </center>
-                <asp:GridView ID="gvNewTeam" runat="server" AutoGenerateColumns="False" CssClass="gridview" ShowHeaderWhenEmpty="True" OnRowCommand="gvEquipment_RowCommand">
+                <asp:GridView ID="gvNewTeam" runat="server" AutoGenerateColumns="False" CssClass="gridview" ShowHeaderWhenEmpty="True" OnRowCommand="gvPackage_RowCommand">
                     <Columns>
-                        <asp:BoundField DataField="ID" HeaderText="ID" />
-                        <asp:BoundField DataField="Name" HeaderText="Name" />
-                        <asp:BoundField DataField="Role" HeaderText="Role" />
+                        <asp:BoundField DataField="emp_id" HeaderText="ID" />
+                        <asp:BoundField DataField="emp_fname" HeaderText="First Name" />
+                        <asp:BoundField DataField="emp_lname" HeaderText="Last Name" />
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:LinkButton ID="btnDelete" runat="server"

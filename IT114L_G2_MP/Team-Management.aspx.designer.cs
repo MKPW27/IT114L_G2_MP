@@ -24,6 +24,15 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox teamname;
 
         /// <summary>
+        /// team_pf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox team_pf;
+
+        /// <summary>
         /// createNew control.
         /// </summary>
         /// <remarks>
@@ -33,13 +42,13 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.Button createNew;
 
         /// <summary>
-        /// teamID control.
+        /// saveBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox teamID;
+        protected global::System.Web.UI.WebControls.Button saveBtn;
 
         /// <summary>
         /// ddlEmp control.
@@ -49,15 +58,6 @@ namespace IT114L_G2_MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlEmp;
-
-        /// <summary>
-        /// ddlRole control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRole;
 
         /// <summary>
         /// addbtn control.

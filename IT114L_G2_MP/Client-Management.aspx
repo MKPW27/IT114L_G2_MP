@@ -8,9 +8,16 @@
             
             <h3>MY CLIENTS</h3>
                 <center><hr style="width:100%; margin-bottom: 20px;"/></center>
-                <asp:GridView ID="client_table" runat="server" AutoGenerateColumns="True" CssClass="gridview" DataKeyNames="ID" OnRowCommand="Select_Row">
+                <asp:GridView ID="client_table" runat="server" AutoGenerateColumns="False" CssClass="gridview" DataKeyNames="acc_id" OnRowCommand="Select_Row">
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" SelectText="Edit"/>
+                        <asp:BoundField DataField="acc_id" HeaderText="ID"/>
+                        <asp:BoundField DataField="user_fname" HeaderText="ID"/>
+                        <asp:BoundField DataField="user_lname" HeaderText="ID"/>
+                        <asp:BoundField DataField="user_email" HeaderText="ID"/>
+                        <asp:BoundField DataField="user_phone_num" HeaderText="ID"/>
+                        <asp:BoundField DataField="user_verification" HeaderText="ID"/>
+                        <asp:BoundField DataField="user_status" HeaderText="ID"/>
                     </Columns>
                 </asp:GridView>
             <asp:Label ID="No_Client" runat="server" Text=""></asp:Label>

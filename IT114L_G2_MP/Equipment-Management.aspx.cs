@@ -21,7 +21,27 @@ namespace IT114L_G2_MP
         }
         public void LoadGrid()
         {
+            using (SqlConnection conn = new SqlConnection(connstr))
+            {
+                string retrieve = "select * from Equipments";
+                SqlCommand cmd = new SqlCommand(retrieve, conn);
+                SqlDataAdapter da2 = new SqlDataAdapter(retrieve, conn);
 
+                conn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        DataTable dt = new DataTable();
+                        reader.Close();
+                        da2.Fill(dt);
+                        gvEquipments.DataSource = dt;
+                        gvEquipments.DataBind();
+
+                    }
+                }
+                conn.Close();
+            }
         }
         protected void ddl_typeChange(object sender, EventArgs e)
         {

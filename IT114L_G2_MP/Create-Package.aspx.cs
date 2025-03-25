@@ -35,21 +35,28 @@ namespace IT114L_G2_MP
         {
             string packageIDToDelete = gvPackages.DataKeys[e.RowIndex].Value.ToString();
 
-            using (SqlConnection conn = new SqlConnection(connstr))
+            try
             {
-                string deleteQuery = "DELETE FROM Packages WHERE package_id = @PackageID";
-                SqlCommand cmd = new SqlCommand(deleteQuery, conn);
-                cmd.Parameters.AddWithValue("@PackageID", packageIDToDelete);
+                using (SqlConnection conn = new SqlConnection(connstr))
+                {
+                    string deleteQuery = "DELETE FROM Packages WHERE package_id = @PackageID";
+                    SqlCommand cmd = new SqlCommand(deleteQuery, conn);
+                    cmd.Parameters.AddWithValue("@PackageID", packageIDToDelete);
 
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+
+                LoadPackages();
+                gvEquipment.DataSource = null;
+                gvEquipment.DataBind();
+                ClearDDL();
             }
-
-            LoadPackages(); 
-            gvEquipment.DataSource = null; 
-            gvEquipment.DataBind();
-            ClearDDL();
+            catch (System.Data.SqlClient.SqlException)
+            {
+                Response.Write("<script>alert('Package is currently being used');</script>");
+            }
         }
         private void LoadPackages()
         {
@@ -338,23 +345,30 @@ namespace IT114L_G2_MP
 
         protected void createNew_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connstr))
+            if (packageID.Text.Trim() != "")
             {
-                int record_count = 0;
-                string query = "select count(*) from Packages";
-                conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
-                record_count = (int)cmd.ExecuteScalar();
-                record_count += 1;
+                using (SqlConnection conn = new SqlConnection(connstr))
+                {
+                    int record_count = 0;
+                    string query = "select count(*) from Packages";
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    record_count = (int)cmd.ExecuteScalar();
+                    record_count += 1;
 
-                string insertstr = $"insert into Packages values ('{package_name.Text}{record_count.ToString("D5")}','{package_name.Text}',0)";
-                cmd = new SqlCommand(insertstr, conn);
-                cmd.ExecuteNonQuery();
+                    string insertstr = $"insert into Packages values ('{package_name.Text}{record_count.ToString("D5")}','{package_name.Text}',0)";
+                    cmd = new SqlCommand(insertstr, conn);
+                    cmd.ExecuteNonQuery();
 
-                packageID.Text = $"{package_name.Text}{record_count.ToString("D5")}";
-                createNew.Enabled = false;
+                    packageID.Text = $"{package_name.Text}{record_count.ToString("D5")}";
+                    createNew.Enabled = false;
 
-                conn.Close();
+                    conn.Close();
+                }
+            }
+            else
+            {
+                Response.Write("<script>alert('Please create or select a package.');</script>");
             }
         }
     }        

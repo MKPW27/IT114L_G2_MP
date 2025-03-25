@@ -33,6 +33,15 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// logolink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink logolink;
+
+        /// <summary>
         /// smallLogo control.
         /// </summary>
         /// <remarks>

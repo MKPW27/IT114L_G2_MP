@@ -8,9 +8,14 @@
             <div class="evt-container-line">
                 <h3 class="header-title">My Employees</h3>
             </div>
-            <asp:GridView ID="Emp_GridView" runat="server" AutoGenerateColumns="True" CssClass="gridview" DataKeyNames="ID" OnRowCommand="Select_Row">
+            <asp:GridView ID="Emp_GridView" runat="server" AutoGenerateColumns="False" CssClass="gridview" DataKeyNames="emp_id" OnRowCommand="Select_Row">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
+                    <asp:BoundField DataField="emp_id" HeaderText="ID" />
+                    <asp:BoundField DataField="emp_fname" HeaderText="First Name" />
+                    <asp:BoundField DataField="emp_lname" HeaderText="Last Name" />
+                    <asp:BoundField DataField="EMP_email" HeaderText="Email" />
+                    <asp:BoundField DataField="emp_status" HeaderText="Status" />
                 </Columns>
             </asp:GridView>
 

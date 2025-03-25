@@ -78,6 +78,15 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox total;
 
         /// <summary>
+        /// team_pf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox team_pf;
+
+        /// <summary>
         /// discount_ddl control.
         /// </summary>
         /// <remarks>
