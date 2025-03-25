@@ -15,6 +15,24 @@ namespace IT114L_G2_MP
     {
 
         /// <summary>
+        /// ddlPackages control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPackages;
+
+        /// <summary>
+        /// gvPackageContents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvPackageContents;
+
+        /// <summary>
         /// name control.
         /// </summary>
         /// <remarks>
@@ -94,24 +112,6 @@ namespace IT114L_G2_MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox address;
-
-        /// <summary>
-        /// ddlPackages control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPackages;
-
-        /// <summary>
-        /// gvPackageContents control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvPackageContents;
 
         /// <summary>
         /// CheckBox1 control.

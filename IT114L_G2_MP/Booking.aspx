@@ -5,6 +5,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="booking-con">
+        <div class="evt-container-line">
+            <h3>Select Package</h3>
+        </div>
+        <div class="container">
+            <asp:DropDownList ID="ddlPackages" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPackages_SelectedIndexChanged" CssClass="form-control">
+            </asp:DropDownList>
+
+            <asp:GridView ID="gvPackageContents" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered">
+                <Columns>
+                    <asp:BoundField DataField="equip_id" HeaderText="Equipment ID" />
+                    <asp:BoundField DataField="equip_brand" HeaderText="Brand" />
+                    <asp:BoundField DataField="equip_model" HeaderText="Model" />
+                    <asp:BoundField DataField="equip_qty" HeaderText="Quantity" />
+                </Columns>
+            </asp:GridView>
+        </div>
 
         <div class="evt-container-line">
             <h3>Event Details</h3>
@@ -66,25 +82,6 @@
                 <asp:TextBox ID="address" runat="server" CssClass="wide-input" ></asp:TextBox>
             </div>
         </div>
-        
-        <div class="evt-container-line">
-            <h3>Service Package</h3>
-        </div>
-
-        <div class="container">
-            <asp:DropDownList ID="ddlPackages" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPackages_SelectedIndexChanged" CssClass="form-control">
-            </asp:DropDownList>
-
-            <asp:GridView ID="gvPackageContents" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered">
-                <Columns>
-                    <asp:BoundField DataField="equip_id" HeaderText="Equipment ID" />
-                    <asp:BoundField DataField="equip_brand" HeaderText="Brand" />
-                    <asp:BoundField DataField="equip_model" HeaderText="Model" />
-                    <asp:BoundField DataField="equip_qty" HeaderText="Quantity" />
-                </Columns>
-            </asp:GridView>
-        </div>
-
 
         <div class="evt-container-line"></div>
         <div class="bold booking-input">
