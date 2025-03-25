@@ -55,7 +55,7 @@
                 <div class="footer-col">
                     <h3>Link</h3>
                     <ul class="fot-items">
-                        <li class="fot-list"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Booking.aspx" CssClass="fot-link">Home</asp:HyperLink></li>
+                        <li class="fot-list"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx" CssClass="fot-link">Home</asp:HyperLink></li>
                         <li class="fot-list"><asp:HyperLink ID="HyperLink3" runat="server" CssClass="fot-link" NavigateUrl="~/About.aspx">About Us</asp:HyperLink></li>
                         <li class="fot-list"><asp:HyperLink ID="HyperLink4" runat="server" CssClass="fot-link" NavigateUrl="~/Services.aspx">Services</asp:HyperLink></li>
                         <li class="fot-list"><asp:HyperLink ID="HyperLink5" runat="server" CssClass="fot-link" NavigateUrl="~/Booking.aspx">My Booking</asp:HyperLink></li>

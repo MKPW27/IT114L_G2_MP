@@ -12,11 +12,36 @@ namespace IT114L_G2_MP
 {
     public partial class Equipment_Management : System.Web.UI.Page
     {
-        string connstr = $"Data Source=.\\SQLExpress; Initial Catalog=LightSyncAudio; Integrated Security=SSPI;";
+        string connstr = "Data Source=.\\SQLExpress; Initial Catalog=LightSyncAudio; Integrated Security=SSPI;";
         protected void Page_Load(object sender, EventArgs e)
         {
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             equip_acq.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            LoadGrid();
+        }
+        public void LoadGrid()
+        {
+            using (SqlConnection conn = new SqlConnection(connstr))
+            {
+                string retrieve = "select * from Equipments";
+                SqlCommand cmd = new SqlCommand(retrieve, conn);
+                SqlDataAdapter da2 = new SqlDataAdapter(retrieve, conn);
+
+                conn.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        DataTable dt = new DataTable();
+                        reader.Close();
+                        da2.Fill(dt);
+                        gvEquipments.DataSource = dt;
+                        gvEquipments.DataBind();
+
+                    }
+                }
+                conn.Close();
+            }
         }
         protected void ddl_typeChange(object sender, EventArgs e)
         {
@@ -85,7 +110,6 @@ namespace IT114L_G2_MP
                 record_count += 1;
 
                 string insertstr = $"insert into equipments values ('{id}{record_count.ToString("D13")}','{brand}','{model}',{ppd},{qty},'{acq}','{fuct}','{type}')";
-                
 
                 cmd = new SqlCommand(insertstr, conn);
                 cmd.ExecuteNonQuery();

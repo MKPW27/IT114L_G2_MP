@@ -70,12 +70,12 @@
                         <h2>About LightSync Audio</h2>
                         <p>Your premier audio and lighting equipment provider</p>
                     </div>
-                    <p>Founded in 2010, LightSync Audio has been providing top-quality sound and lighting equipment for events of all sizes. Our mission is to deliver exceptional audio-visual experiences through cutting-edge technology and unparalleled service.</p>
-                    <p>With a team of experienced professionals and a vast inventory of premium equipment, we're committed to making your event shine. From intimate gatherings to large-scale productions, we have the expertise and resources to exceed your expectations.</p>
+                    <p>From a simple rental service to a leading events production provider, LightSyncAudio continues to grow, bringing unforgettable experiences to every event it touches. LightSyncAudio Lights and Sounds was founded in 2020 by Wil Vallo, a Computer Science student from Mapua Malayan Colleges Laguna. His passion for music led him to perform at major school events, local bars, and private gigs across Laguna and Manila. </p>
+                    <p>As a multi-instrumentalist, he had amassed a collection of professional audio and lighting equipment, but when the pandemic hit, his gear sat unused. Rather than letting it go to waste, he saw an opportunity—turning his passion into a business by offering rental services.</p>
                     <asp:Button runat="server" Text="Learn More" CssClass="secondary-button" PostBackUrl="~/About.aspx" />
                 </div>
                 <div class="about-image">
-                    <asp:Image runat="server" ImageUrl="~/img/about-image.jpg" AlternateText="About Us" CssClass="about-img" />
+                    <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1438557068880-c5f474830377?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" AlternateText="About Us" CssClass="about-img" />
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
                     <div class="testimonial-content">
                         <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                         <p>LightSync Audio provided exceptional service for our corporate event. The sound quality was impeccable, and the lighting created the perfect atmosphere. Highly recommended!</p>
-                        <div class="testimonial-rating">
+                        <div class="testimonial-rating pad">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -105,7 +105,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <asp:Image runat="server" ImageUrl="~/img/testimonial1.jpg" AlternateText="wil" />
+                            <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1640960543409-dbe56ccc30e2?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" AlternateText="ea" />
                         </div>
                         <div class="author-info">
                             <h4>Will</h4>
@@ -128,7 +128,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <asp:Image runat="server" ImageUrl="~/img/testimonial2.jpg" AlternateText="ea" />
+                                                        <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" AlternateText="wil" />
                         </div>
                         <div class="author-info">
                             <h4>Earl</h4>
@@ -151,10 +151,10 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="author-image">
-                            <asp:Image runat="server" ImageUrl="~/img/testimonial3.jpg" AlternateText="mc" />
+                            <asp:Image runat="server" ImageUrl="https://images.unsplash.com/photo-1640951613773-54706e06851d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" AlternateText="mc" />
                         </div>
                         <div class="author-info">
-                            <h4>MC</h4>
+                            <h4>Mikael</h4>
                             <p>Festival Organizer</p>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
                     <div class="stat-icon">
                         <i class="fas fa-award"></i>
                     </div>
-                    <div class="stat-number">10+</div>
+                    <div class="stat-number">5+</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
             </div>

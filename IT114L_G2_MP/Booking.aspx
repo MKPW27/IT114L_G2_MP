@@ -4,13 +4,37 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="booking-con">
+<<<<<<< HEAD
+=======
+        <div class="evt-container-line">
+            <h3>Select Package</h3>
+        </div>
+        <div class="container">
+            <asp:DropDownList ID="ddlPackages" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPackages_SelectedIndexChanged" CssClass="form-control">
+            </asp:DropDownList>
+
+            <asp:GridView ID="gvPackageContents" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered">
+                <Columns>
+                    <asp:BoundField DataField="equip_id" HeaderText="Equipment ID" />
+                    <asp:BoundField DataField="equip_brand" HeaderText="Brand" />
+                    <asp:BoundField DataField="equip_model" HeaderText="Model" />
+                    <asp:BoundField DataField="equip_qty" HeaderText="Quantity" />
+                </Columns>
+            </asp:GridView>
+        </div>
+
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada
         <div class="evt-container-line">
             <h3>Event Details</h3>
         </div>
         <div class="container">
             <div class="booking-input-container">
                 <div class="booking-input">
+<<<<<<< HEAD
                     <p>Event Name <span class="required">*</span></p>
+=======
+                    <p>Event Name</p><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="name" ValidationGroup="bookingVal"></asp:RequiredFieldValidator> 
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada
                     <asp:TextBox ID="name" runat="server" CssClass="input"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvName" runat="server" 
                         ControlToValidate="name" 
@@ -21,7 +45,11 @@
                     </asp:RequiredFieldValidator>
                 </div>
                 <div class="booking-input">
+<<<<<<< HEAD
                     <p>Event Type <span class="required">*</span></p>
+=======
+                    <p>Event Type</p><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="evtType" ValidationGroup="bookingVal"></asp:RequiredFieldValidator>
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada
                     <asp:TextBox ID="evtType" runat="server" CssClass="input"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvEventType" runat="server" 
                         ControlToValidate="evtType" 
@@ -35,7 +63,11 @@
 
             <div class="booking-input-container">
                 <div class="booking-input">
+<<<<<<< HEAD
                     <p>Number of Attendees <span class="required">*</span></p>
+=======
+                    <p>Number of Attendees</p><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ControlToValidate="numAttendees" ValidationGroup="bookingVal"></asp:RequiredFieldValidator>
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada
                     <asp:TextBox ID="numAttendees" runat="server" CssClass="input" TextMode="Number"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvAttendees" runat="server" 
                         ControlToValidate="numAttendees" 
@@ -143,6 +175,7 @@
                 </asp:RequiredFieldValidator>
             </div>
         </div>
+<<<<<<< HEAD
         
         <div class="evt-container-line">
             <h3>Service Package</h3>
@@ -172,6 +205,8 @@
                 </Columns>
             </asp:GridView>
         </div>
+=======
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada
 
         <div class="evt-container-line"></div>
         <div class="bold booking-input">

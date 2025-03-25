@@ -15,7 +15,7 @@ namespace IT114L_G2_MP
         string connstr = $"Data Source=.\\SQLExpress; Initial Catalog=LightSyncAudio; Integrated Security=SSPI;";
         protected void Page_Load(object sender, EventArgs e)
         {
-            //displayAtGrid();
+            displayAtGrid();
         }
         public void clearAddInput()
         {
@@ -92,7 +92,7 @@ namespace IT114L_G2_MP
         {
             using (SqlConnection conn = new SqlConnection(connstr))
             {
-                string retrieve = "select emp_id as ID, emp_fname as First_Name, emp_lname as Last_Name, emp_email as Email, emp_status as Status from Employee";
+                string retrieve = "select emp_id, emp_fname, emp_lname, emp_email, emp_status from Employee";
                 SqlCommand cmd = new SqlCommand(retrieve, conn);
                 SqlDataAdapter da2 = new SqlDataAdapter(retrieve, conn);
 
@@ -121,41 +121,47 @@ namespace IT114L_G2_MP
         }
         protected void AddBtn_Click(object sender, EventArgs e)
         {
-            string fname = $"{FirstName.Text}";
-            string lname = $"{LastName.Text}";
-            string bdate = $"{Birthdate.Text}";
-            string email = Email.Text;
-            string type = EmpType.Text;
-            string status = EmpStatus.Text;
-            string gender = EmpGender.Text;
+            if (FirstName.Text.Trim() != "" && LastName.Text.Trim() != "" && Email.Text.Trim() != "" && EmpType.SelectedIndex != -1 && EmpGender.SelectedIndex != -1 && EmpStatus.SelectedIndex != -1) {
+                string fname = $"{FirstName.Text}";
+                string lname = $"{LastName.Text}";
+                string bdate = $"{Birthdate.Text}";
+                string email = Email.Text;
+                string type = EmpType.Text;
+                string status = EmpStatus.Text;
+                string gender = EmpGender.Text;
 
-            string username = $"{Email.Text}";
-            string password = $"{fname.ToLower()}{lname.ToLower()}";
-            string query = "select count(*) from Accounts";
-            int record_count = 0;
+                string username = $"{Email.Text}";
+                string password = $"{fname.ToLower()}{lname.ToLower()}";
+                string query = "select count(*) from Accounts";
+                int record_count = 0;
 
-            SqlConnection conn = new SqlConnection(connstr);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(query, conn);
-            record_count = (int)cmd.ExecuteScalar();
-            record_count += 1;
+                SqlConnection conn = new SqlConnection(connstr);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                record_count = (int)cmd.ExecuteScalar();
+                record_count += 1;
 
-            string acc_id = $"{DateTime.Now.ToString("yyyyMMdd")}{record_count.ToString("D7")}";
+                string acc_id = $"{DateTime.Now.ToString("yyyyMMdd")}{record_count.ToString("D7")}";
 
-            string insertstr_accounts = $"insert into accounts values ('{acc_id}','{username}','{password}','staff')";
-            cmd = new SqlCommand(insertstr_accounts, conn);
-            cmd.ExecuteNonQuery();
+                string insertstr_accounts = $"insert into accounts values ('{acc_id}','{username}','{password}','staff')";
+                cmd = new SqlCommand(insertstr_accounts, conn);
+                cmd.ExecuteNonQuery();
 
-            insertstr_accounts = $"insert into employee values ('{acc_id}','{fname}','{lname}','{email}','{type}','{status}','{gender}','{bdate}')";
-            cmd = new SqlCommand(insertstr_accounts, conn);
-            cmd.ExecuteNonQuery();
+                insertstr_accounts = $"insert into employee values ('{acc_id}','{fname}','{lname}','{email}','{type}','{status}','{gender}','{bdate}','')";
+                cmd = new SqlCommand(insertstr_accounts, conn);
+                cmd.ExecuteNonQuery();
 
-            conn.Close();
+                conn.Close();
 
-            Response.Write($"<script>alert('New employee ({fname} {lname}) was added!');</script>");
+                Response.Write($"<script>alert('New employee ({fname} {lname}) was added!');</script>");
 
-            clearAddInput();
-            displayAtGrid();
+                clearAddInput();
+                displayAtGrid();
+            }
+            else
+            {
+                Response.Write("<script>alert('Please fill up the Add Employee section.');</script>");
+            }
         }
 
         protected void SearchBtn_Click(object sender, EventArgs e)
@@ -211,19 +217,25 @@ namespace IT114L_G2_MP
         protected void EditBtn_Click(object sender, EventArgs e)
         {
             string empID = EmpID.Text;
-            using (SqlConnection conn = new SqlConnection(connstr))
-            {
-                string updatestr = $"update Employee set emp_fname = '{EditFirstName.Text}', emp_lname = '{EditLastName.Text}', emp_email = '{EditEmail.Text}'," +
-                    $"emp_acc_type = '{EditEmployee.Text}', emp_status = '{EditStatus.Text}', emp_gender = '{EditGender.Text}', emp_bdate = '{EditBirthdate.Text}' where emp_id = '{empID}'";
-                SqlCommand cmd = new SqlCommand(updatestr, conn);
-                conn.Open();
-                cmd.ExecuteNonQuery();
-                conn.Close();
-            }
-            Response.Write($"<script>alert('Employee edited!');</script>");
+            if (empID.Trim() != "" && EditGender.SelectedIndex != -1 && EditStatus.SelectedIndex != -1 && EditFirstName.Text.Trim() != "" && EditLastName.Text.Trim() != "" && EditEmployee.SelectedIndex != -1) {
+                using (SqlConnection conn = new SqlConnection(connstr))
+                {
+                    string updatestr = $"update Employee set emp_fname = '{EditFirstName.Text}', emp_lname = '{EditLastName.Text}', emp_email = '{EditEmail.Text}'," +
+                        $"emp_acc_type = '{EditEmployee.Text}', emp_status = '{EditStatus.Text}', emp_gender = '{EditGender.Text}', emp_bdate = '{EditBirthdate.Text}' where emp_id = '{empID}'";
+                    SqlCommand cmd = new SqlCommand(updatestr, conn);
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+                Response.Write($"<script>alert('Employee edited!');</script>");
 
-            displayAtGrid();
-            clearEditInput();
+                displayAtGrid();
+                clearEditInput();
+            }
+            else
+            {
+                Response.Write($"<script>alert('Please Select an Employee!');</script>");
+            }
         }
 
         protected void RemoveBtn_Click(object sender, EventArgs e)

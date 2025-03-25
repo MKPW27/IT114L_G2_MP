@@ -15,6 +15,33 @@ namespace IT114L_G2_MP
     {
 
         /// <summary>
+        /// ddlPackages control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPackages;
+
+        /// <summary>
+        /// gvPackageContents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvPackageContents;
+
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
         /// name control.
         /// </summary>
         /// <remarks>
@@ -24,13 +51,21 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox name;
 
         /// <summary>
+<<<<<<< HEAD
         /// rfvName control.
+=======
+        /// RequiredFieldValidator2 control.
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvName;
+=======
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada
 
         /// <summary>
         /// evtType control.
@@ -42,13 +77,21 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox evtType;
 
         /// <summary>
+<<<<<<< HEAD
         /// rfvEventType control.
+=======
+        /// RequiredFieldValidator3 control.
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEventType;
+=======
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada
 
         /// <summary>
         /// numAttendees control.
@@ -186,6 +229,7 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox address;
 
         /// <summary>
+<<<<<<< HEAD
         /// rfvAddress control.
         /// </summary>
         /// <remarks>
@@ -222,6 +266,8 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.GridView gvPackageContents;
 
         /// <summary>
+=======
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada
         /// CheckBox1 control.
         /// </summary>
         /// <remarks>

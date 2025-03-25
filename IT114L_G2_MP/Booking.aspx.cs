@@ -28,6 +28,7 @@ namespace IT114L_G2_MP
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None; //not connected
             if (!IsPostBack)
             {
+<<<<<<< HEAD
                 try
                 {
                     LoadPackages();
@@ -41,6 +42,9 @@ namespace IT114L_G2_MP
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "dbError",
                         "alert('Unable to connect to the database. Please try again later or contact support.');", true);
                 }
+=======
+                //LoadPackages();
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada
             }
         }
         private void LoadPackages()

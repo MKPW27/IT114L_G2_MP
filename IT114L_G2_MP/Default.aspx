@@ -18,6 +18,7 @@
         </div>
         
         <div class="log-in-container">
+<<<<<<< HEAD
             <div class="log-in">
                 <div class="logo-section">
                     <!-- You can add your logo here -->
@@ -37,10 +38,29 @@
                 <div class="signup">
                     <label>New User?</label>
                     <a href="SignUp.aspx">Create an account</a>
+=======
+            <div class="left-container">
+                <asp:Image ID="Image1" runat="server" CssClass="banner-bg" ImageUrl="~/img/Design-BG.png" />
+                <asp:Image ID="Image2" runat="server" CssClass="logo" ImageUrl="~/img/smallLogo.svg" />
+            </div>
+            <div class="right-container">
+                <div class="login">
+                    <h1>Log In</h1>
+                    <label>Username</label>
+                    <asp:TextBox ID="unameTB" runat="server" CssClass="input"></asp:TextBox>
+                    <label>Password</label>
+                    <asp:TextBox ID="pwordTB" runat="server" TextMode="Password" CssClass="input"></asp:TextBox>
+                    <asp:Button ID="Button1" runat="server" Text="Sign In" CssClass="btn" OnClick="Button1_Click" />
+                    <div class="signup">
+                        <label>New User?</label>
+                        <a href="SignUp.aspx">Sign Up</a>
+                    </div>
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada
                 </div>
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
@@ -69,3 +89,7 @@
         });
     </script>
 </asp:Content>
+=======
+
+</asp:Content>
+>>>>>>> a45862c84db21254114dcd9e2c3a93af9d835ada

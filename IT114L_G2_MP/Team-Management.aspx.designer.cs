@@ -11,71 +11,17 @@ namespace IT114L_G2_MP
 {
 
 
-    public partial class Payment_Management
+    public partial class Team_Management
     {
 
         /// <summary>
-        /// book_id_text control.
+        /// teamname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox book_id_text;
-
-        /// <summary>
-        /// search control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button search;
-
-        /// <summary>
-        /// name control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox name;
-
-        /// <summary>
-        /// eventname control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox eventname;
-
-        /// <summary>
-        /// eventdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox eventdate;
-
-        /// <summary>
-        /// package control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox package;
-
-        /// <summary>
-        /// total control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox total;
+        protected global::System.Web.UI.WebControls.TextBox teamname;
 
         /// <summary>
         /// team_pf control.
@@ -87,39 +33,57 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox team_pf;
 
         /// <summary>
-        /// discount_ddl control.
+        /// createNew control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList discount_ddl;
+        protected global::System.Web.UI.WebControls.Button createNew;
 
         /// <summary>
-        /// downpayment control.
+        /// saveBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox downpayment;
+        protected global::System.Web.UI.WebControls.Button saveBtn;
 
         /// <summary>
-        /// balance control.
+        /// ddlEmp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox balance;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEmp;
 
         /// <summary>
-        /// paid control.
+        /// addbtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button paid;
+        protected global::System.Web.UI.WebControls.Button addbtn;
+
+        /// <summary>
+        /// gvTeams control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvTeams;
+
+        /// <summary>
+        /// gvNewTeam control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvNewTeam;
     }
 }

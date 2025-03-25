@@ -14,7 +14,7 @@ namespace IT114L_G2_MP
         string connstr = $"Data Source=.\\SQLExpress; Initial Catalog=LightSyncAudio; Integrated Security=SSPI;";
         protected void Page_Load(object sender, EventArgs e)
         {
-            //displayAtGrid();
+            displayAtGrid();
         }
         public void clearInputFields()
         {
@@ -26,7 +26,7 @@ namespace IT114L_G2_MP
         {
             using (SqlConnection conn = new SqlConnection(connstr))
             {
-                string retrieve = "select acc_id as ID, user_fname as First_Name, user_lname as Last_Name, user_email as Email, user_phone_num as Phone, user_verification as Verfied, user_status as Status from customer";
+                string retrieve = "select acc_id, user_fname, user_lname, user_email, user_phone_num, user_verification, user_status from customer";
                 SqlCommand cmd = new SqlCommand(retrieve, conn);
                 SqlDataAdapter da2 = new SqlDataAdapter(retrieve, conn);
 
