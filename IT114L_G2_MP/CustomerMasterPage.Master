@@ -16,10 +16,13 @@
 <body>
     <form id="form1" runat="server">
         <header class="navbar">
-
             <asp:HyperLink ID="logolink" runat="server" NavigateUrl="~/Home.aspx"><asp:Image ID="smallLogo" runat="server" CssClass="hyperlink" ImageUrl="~/img/smallLogo.svg" /></asp:HyperLink>
 
-            <nav> 
+            <button type="button" class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav"> 
                 <ul class="navbar-items">
                     <li class="nav-list"><asp:HyperLink ID="home" runat="server" NavigateUrl="~/Home.aspx" CssClass="hyperlink">Home</asp:HyperLink></li>
                     <li class="nav-list"><asp:HyperLink ID="about" runat="server" CssClass="hyperlink" NavigateUrl="~/About.aspx">About Us</asp:HyperLink></li>
@@ -75,6 +78,30 @@
     <div class="copyright-row">
          <p>© Copyright 2025 · www.lightsyncaudio.ph · all rights reserved</p>
     </div>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile menu toggle functionality
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', function () {
+                    mainNav.classList.toggle('active');
+                    // Change icon between bars and times
+                    const icon = menuToggle.querySelector('i');
+                    if (icon.classList.contains('fa-bars')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+        });
+    </script>
     </form>
 </body>
 </html>
+

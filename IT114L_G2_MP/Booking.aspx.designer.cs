@@ -24,6 +24,15 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox name;
 
         /// <summary>
+        /// rfvName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvName;
+
+        /// <summary>
         /// evtType control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace IT114L_G2_MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox evtType;
+
+        /// <summary>
+        /// rfvEventType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEventType;
 
         /// <summary>
         /// numAttendees control.
@@ -42,6 +60,24 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox numAttendees;
 
         /// <summary>
+        /// rfvAttendees control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAttendees;
+
+        /// <summary>
+        /// rvAttendees control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvAttendees;
+
+        /// <summary>
         /// bookDate control.
         /// </summary>
         /// <remarks>
@@ -49,6 +85,24 @@ namespace IT114L_G2_MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox bookDate;
+
+        /// <summary>
+        /// rfvDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDate;
+
+        /// <summary>
+        /// cvDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvDate;
 
         /// <summary>
         /// region control.
@@ -60,6 +114,15 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox region;
 
         /// <summary>
+        /// rfvRegion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvRegion;
+
+        /// <summary>
         /// city control.
         /// </summary>
         /// <remarks>
@@ -67,6 +130,15 @@ namespace IT114L_G2_MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox city;
+
+        /// <summary>
+        /// rfvCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCity;
 
         /// <summary>
         /// province control.
@@ -78,6 +150,15 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox province;
 
         /// <summary>
+        /// rfvProvince control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProvince;
+
+        /// <summary>
         /// barangay control.
         /// </summary>
         /// <remarks>
@@ -85,6 +166,15 @@ namespace IT114L_G2_MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox barangay;
+
+        /// <summary>
+        /// rfvBarangay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvBarangay;
 
         /// <summary>
         /// address control.
@@ -96,6 +186,15 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox address;
 
         /// <summary>
+        /// rfvAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvAddress;
+
+        /// <summary>
         /// ddlPackages control.
         /// </summary>
         /// <remarks>
@@ -103,6 +202,15 @@ namespace IT114L_G2_MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlPackages;
+
+        /// <summary>
+        /// rfvPackage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPackage;
 
         /// <summary>
         /// gvPackageContents control.
@@ -121,6 +229,15 @@ namespace IT114L_G2_MP
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+
+        /// <summary>
+        /// cvTerms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cvTerms;
 
         /// <summary>
         /// submit control.

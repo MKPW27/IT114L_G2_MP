@@ -23,13 +23,12 @@ body {
 .left-container {
     flex: 1;
     min-width: 300px;
-
 }
 
 .right-container {
     min-width: 300px;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     flex-direction: row;
     gap: 30px;
 }

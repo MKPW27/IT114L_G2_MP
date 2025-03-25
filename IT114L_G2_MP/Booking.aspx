@@ -1,38 +1,80 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CustomerMasterPage.Master" AutoEventWireup="true" CodeBehind="Booking.aspx.cs" Inherits="IT114L_G2_MP.WebForm5" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Css/bookcss.css" rel="stylesheet" />
-    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="booking-con">
-
         <div class="evt-container-line">
             <h3>Event Details</h3>
         </div>
         <div class="container">
             <div class="booking-input-container">
                 <div class="booking-input">
-                    <p>Event Name</p>
+                    <p>Event Name <span class="required">*</span></p>
                     <asp:TextBox ID="name" runat="server" CssClass="input"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvName" runat="server" 
+                        ControlToValidate="name" 
+                        ErrorMessage="Event name is required" 
+                        Display="Dynamic" 
+                        CssClass="error-message" 
+                        ForeColor="#B02B2D">
+                    </asp:RequiredFieldValidator>
                 </div>
                 <div class="booking-input">
-                    <p>Event Type</p>
+                    <p>Event Type <span class="required">*</span></p>
                     <asp:TextBox ID="evtType" runat="server" CssClass="input"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvEventType" runat="server" 
+                        ControlToValidate="evtType" 
+                        ErrorMessage="Event type is required" 
+                        Display="Dynamic" 
+                        CssClass="error-message" 
+                        ForeColor="#B02B2D">
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
 
             <div class="booking-input-container">
                 <div class="booking-input">
-                    <p>Number of Attendees</p>
+                    <p>Number of Attendees <span class="required">*</span></p>
                     <asp:TextBox ID="numAttendees" runat="server" CssClass="input" TextMode="Number"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvAttendees" runat="server" 
+                        ControlToValidate="numAttendees" 
+                        ErrorMessage="Number of attendees is required" 
+                        Display="Dynamic" 
+                        CssClass="error-message" 
+                        ForeColor="#B02B2D">
+                    </asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="rvAttendees" runat="server" 
+                        ControlToValidate="numAttendees" 
+                        ErrorMessage="Please enter a positive number" 
+                        MinimumValue="1" 
+                        MaximumValue="100000" 
+                        Type="Integer" 
+                        Display="Dynamic" 
+                        CssClass="error-message" 
+                        ForeColor="#B02B2D">
+                    </asp:RangeValidator>
                 </div>
                 <div class="booking-input">
-                    <p>Event Date</p>
-                     <asp:TextBox ID="bookDate" runat="server" CssClass="input date" TextMode="Date"></asp:TextBox>
+                    <p>Event Date <span class="required">*</span></p>
+                    <asp:TextBox ID="bookDate" runat="server" CssClass="input date" TextMode="Date"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvDate" runat="server" 
+                        ControlToValidate="bookDate" 
+                        ErrorMessage="Event date is required" 
+                        Display="Dynamic" 
+                        CssClass="error-message" 
+                        ForeColor="#B02B2D">
+                    </asp:RequiredFieldValidator>
+                    <asp:CustomValidator ID="cvDate" runat="server" 
+                        ControlToValidate="bookDate" 
+                        ErrorMessage="Event date cannot be in the past" 
+                        Display="Dynamic" 
+                        CssClass="error-message" 
+                        ForeColor="#B02B2D"
+                        OnServerValidate="ValidateEventDate">
+                    </asp:CustomValidator>
                 </div>
-
             </div>
-
         </div>
 
         <div class="evt-container-line">
@@ -41,29 +83,64 @@
         <div class="container">
             <div class="booking-input-container">
                 <div class="booking-input">
-                    <p>Region</p>
+                    <p>Region <span class="required">*</span></p>
                     <asp:TextBox ID="region" runat="server" CssClass="input"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvRegion" runat="server" 
+                        ControlToValidate="region" 
+                        ErrorMessage="Region is required" 
+                        Display="Dynamic" 
+                        CssClass="error-message" 
+                        ForeColor="#B02B2D">
+                    </asp:RequiredFieldValidator>
                 </div>
                 <div class="booking-input">
-                    <p>City</p>
+                    <p>City <span class="required">*</span></p>
                     <asp:TextBox ID="city" runat="server" CssClass="input"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvCity" runat="server" 
+                        ControlToValidate="city" 
+                        ErrorMessage="City is required" 
+                        Display="Dynamic" 
+                        CssClass="error-message" 
+                        ForeColor="#B02B2D">
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
 
             <div class="booking-input-container">
                 <div class="booking-input">
-                    <p>Province</p>
+                    <p>Province <span class="required">*</span></p>
                     <asp:TextBox ID="province" runat="server" CssClass="input"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvProvince" runat="server" 
+                        ControlToValidate="province" 
+                        ErrorMessage="Province is required" 
+                        Display="Dynamic" 
+                        CssClass="error-message" 
+                        ForeColor="#B02B2D">
+                    </asp:RequiredFieldValidator>
                 </div>
                 <div class="booking-input">
-                    <p>Barangay</p>
+                    <p>Barangay <span class="required">*</span></p>
                     <asp:TextBox ID="barangay" runat="server" CssClass="input"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvBarangay" runat="server" 
+                        ControlToValidate="barangay" 
+                        ErrorMessage="Barangay is required" 
+                        Display="Dynamic" 
+                        CssClass="error-message" 
+                        ForeColor="#B02B2D">
+                    </asp:RequiredFieldValidator>
                 </div>
             </div>
 
             <div class="wide-booking-input">
-                <p>Address</p>
-                <asp:TextBox ID="address" runat="server" CssClass="wide-input" ></asp:TextBox>
+                <p>Address <span class="required">*</span></p>
+                <asp:TextBox ID="address" runat="server" CssClass="wide-input"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="rfvAddress" runat="server" 
+                    ControlToValidate="address" 
+                    ErrorMessage="Address is required" 
+                    Display="Dynamic" 
+                    CssClass="error-message" 
+                    ForeColor="#B02B2D">
+                </asp:RequiredFieldValidator>
             </div>
         </div>
         
@@ -72,8 +149,19 @@
         </div>
 
         <div class="container">
-            <asp:DropDownList ID="ddlPackages" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPackages_SelectedIndexChanged" CssClass="form-control">
-            </asp:DropDownList>
+            <div class="package-selection">
+                <p>Select a Package <span class="required">*</span></p>
+                <asp:DropDownList ID="ddlPackages" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPackages_SelectedIndexChanged" CssClass="form-control">
+                </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="rfvPackage" runat="server" 
+                    ControlToValidate="ddlPackages" 
+                    ErrorMessage="Please select a package" 
+                    Display="Dynamic" 
+                    CssClass="error-message" 
+                    ForeColor="#B02B2D"
+                    InitialValue="0">
+                </asp:RequiredFieldValidator>
+            </div>
 
             <asp:GridView ID="gvPackageContents" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered">
                 <Columns>
@@ -84,7 +172,6 @@
                 </Columns>
             </asp:GridView>
         </div>
-
 
         <div class="evt-container-line"></div>
         <div class="bold booking-input">
@@ -120,15 +207,23 @@
             <p>7.2. Any modifications to this agreement must be made in writing and approved by both parties.</p>
             <br />
             <p>For inquiries or clarifications, please contact Light Sync Audio at +63 917 248 2837 or email us at lightsyncaudio@gmail.com.</p>
-
         </div>
 
         <div class="submit-col">
             <div class="submit">
                 <asp:CheckBox ID="CheckBox1" runat="server" />
-                <p>I have read and understood the Terms and Conditions of Light Sync Audio and agree to abide by them.</p>
+                <p>I have read and understood the Terms and Conditions of Light Sync Audio and agree to abide by them. <span class="required">*</span></p>
             </div>
+            <asp:CustomValidator ID="cvTerms" runat="server" 
+                ErrorMessage="You must agree to the Terms and Conditions" 
+                Display="Dynamic" 
+                CssClass="error-message" 
+                ForeColor="#B02B2D"
+                OnServerValidate="ValidateTermsAgreement">
+            </asp:CustomValidator>
             <asp:Button ID="submit" runat="server" Text="Submit" CssClass="submit-btn" OnClick="submit_Click" />
+            
         </div>
     </div>
 </asp:Content>
+
