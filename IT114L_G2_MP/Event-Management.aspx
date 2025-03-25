@@ -138,22 +138,23 @@
 
             <div class="content3">
                 Discount <asp:DropDownList runat="server" ID="discount_ddl" CssClass="ddl">
-                        <asp:ListItem Value="0">None</asp:ListItem>
-                        <asp:ListItem Value="1">Loyalty Discount (5%)</asp:ListItem>
-                        <asp:ListItem Value="2">Partnership Discount (10%)</asp:ListItem>
+                        <asp:ListItem Value="">None</asp:ListItem>
+                        <asp:ListItem Value="0.05">Loyalty Discount (5%)</asp:ListItem>
+                        <asp:ListItem Value="0.1">Partnership Discount (10%)</asp:ListItem>
                     </asp:DropDownList><br /><br />
 
                 Booking Status <asp:DropDownList ID="bookStatus" runat="server" CssClass="ddl" >
-                                    <asp:ListItem Value ="0">Pending</asp:ListItem>
-                                    <asp:ListItem Value ="1">Approved</asp:ListItem>
-                                    <asp:ListItem Value ="1">Disapproved</asp:ListItem>
+                                    <asp:ListItem Value ="">Empty</asp:ListItem>
+                                    <asp:ListItem Value ="Pending">Pending</asp:ListItem>
+                                    <asp:ListItem Value ="Approved">Approved</asp:ListItem>
+                                    <asp:ListItem Value ="Disapproved">Disapproved</asp:ListItem>
                                </asp:DropDownList>
             </div>
 
             <div class="button-container">
                 <center>
-                    <asp:Button ID="delete_btn" runat="server" Text="Delete" CssClass="button" BackColor="Red" ForeColor="White" Type="Clear"/>
-                    <asp:Button ID="save_btn" runat="server" Text="Save" CssClass="button" BackColor="Green" ForeColor="White" Type="Submit"/>
+                    <asp:Button ID="delete_btn" runat="server" Text="Clear" CssClass="button" BackColor="Red" ForeColor="White" Type="Clear" OnClick="delete_btn_Click"/>
+                    <asp:Button ID="save_btn" runat="server" Text="Save" CssClass="button" BackColor="Green" ForeColor="White" Type="Submit" OnClick="save_btn_Click"/>
                 </center>
             </div>
         </div>

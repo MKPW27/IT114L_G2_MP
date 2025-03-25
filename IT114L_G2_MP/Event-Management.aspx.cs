@@ -18,16 +18,13 @@ namespace IT114L_G2_MP
         
         protected void Page_Load(object sender, EventArgs e)
         {
-           //LoadData();
+           LoadData();
         }
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (GridView1.SelectedRow != null)
             {
-                // Get Booking ID from selected row (adjust index if necessary)
                 string bookingID = GridView1.SelectedRow.Cells[1].Text;
-
-                // Load event details
                 LoadEventDetails(bookingID);
             }
         }
@@ -62,7 +59,7 @@ namespace IT114L_G2_MP
                     ev_pax.Text = reader["event_pax"].ToString();
                     packageid.Text = reader["package_id"].ToString();
                     bookStatus.SelectedValue = reader["event_status"].ToString();
-                    //discount_ddl.SelectedValue = reader["booking_discount"].ToString();
+                    discount_ddl.SelectedValue = reader["booking_discount"].ToString();
                 }
                 reader.Close();
                 conn.Close();
@@ -97,6 +94,50 @@ namespace IT114L_G2_MP
                 }
                 conn.Close();
             }
+        }
+
+        protected void save_btn_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(connstr))
+            {
+                string update = "update Booking set event_status = @status where booking_id = @bookingID; update Payment set booking_discount = @discount where booking_id = @bookingID";
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(update, conn))
+                {
+                    cmd.Parameters.AddWithValue("@discount", discount_ddl.SelectedValue);
+                    cmd.Parameters.AddWithValue("@status", bookStatus.SelectedValue);
+                    cmd.Parameters.AddWithValue("@bookingID", booking_ID.Text);
+                    cmd.ExecuteNonQuery();
+                    ClearInput();
+                }
+                conn.Close();
+            }
+        }
+
+        protected void delete_btn_Click(object sender, EventArgs e)
+        {
+            ClearInput();
+        }
+        public void ClearInput()
+        {
+            booking_ID.Text = "";
+            custname.Text = "";
+            custemail.Text = "";
+            b_number.Text = "";
+            compname.Text = "";
+            p_number.Text = "";
+            region.Text = "";
+            province.Text = "";
+            city.Text = "";
+            brgy.Text = "";
+            addr.Text = "";
+            ev_name.Text = "";
+            ev_date.Text = "";
+            ev_type.Text = "";
+            ev_pax.Text = "";
+            packageid.Text = "";
+            bookStatus.SelectedValue = "";
+            discount_ddl.SelectedValue = "";
         }
     }
 }

@@ -85,7 +85,6 @@ namespace IT114L_G2_MP
                 record_count += 1;
 
                 string insertstr = $"insert into equipments values ('{id}{record_count.ToString("D13")}','{brand}','{model}',{ppd},{qty},'{acq}','{fuct}','{type}')";
-                
 
                 cmd = new SqlCommand(insertstr, conn);
                 cmd.ExecuteNonQuery();

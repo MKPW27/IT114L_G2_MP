@@ -57,9 +57,9 @@
                 Discount
                 <br />
                 <asp:DropDownList runat="server" ID="discount_ddl" CssClass="ddl">
-                    <asp:ListItem Value="0">None</asp:ListItem>
-                    <asp:ListItem Value="1">Loyalty Discount (5%)</asp:ListItem>
-                    <asp:ListItem Value="2">Partnership Discount (10%)</asp:ListItem>
+                    <asp:ListItem Value="">None</asp:ListItem>
+                    <asp:ListItem Value="0.05">Loyalty Discount (5%)</asp:ListItem>
+                    <asp:ListItem Value="0.1">Partnership Discount (10%)</asp:ListItem>
                 </asp:DropDownList>
             </div>
         </div>
