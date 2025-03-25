@@ -14,7 +14,7 @@
 <body>
     <form id="form1" runat="server">
         <header class="navbar">
-            <asp:HyperLink ID="logolink" runat="server" NavigateUrl="~/Default.aspx"><asp:Image ID="smallLogo" runat="server" CssClass="hyperlink" ImageUrl="~/img/smallLogo.svg" /></asp:HyperLink>
+            <asp:HyperLink ID="logolink" runat="server" <asp:Image ID="smallLogo" runat="server" CssClass="hyperlink" ImageUrl="~/img/smallLogo.svg" /></asp:HyperLink>
 
             <nav> 
                 <ul class="navbar-items">

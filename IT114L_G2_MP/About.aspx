@@ -10,6 +10,7 @@
         <asp:Image runat="server" ImageUrl="~/img/about-banner.jpg" CssClass="home-banner"/>
         <div class="overlay-text">
             <h3>About Light Sync Audio</h3>
+            <p>Premier Lighting & Sound solutions for unforgettable events. Brilliant visuals, flawless audio—experience perfection!</p>
         </div>
 
         <div class="overlay-content">
@@ -33,10 +34,9 @@
     <div class="history-section">
         <div class="body-content ">
             <h3>Our <span class="red">History</span></h3>
-            <p>
-                From a simple rental service to a leading events production provider, LightSyncAudio continues to grow, bringing unforgettable experiences to every event it touches. LightSyncAudio Lights and Sounds was founded in 2020 by Wil Vallo, a Computer Science student from Mapua Malayan Colleges Laguna. His passion for music led him to perform at major school events, local bars, and private gigs across Laguna and Manila. As a multi-instrumentalist, he had amassed a collection of professional audio and lighting equipment, but when the pandemic hit, his gear sat unused. Rather than letting it go to waste, he saw an opportunity—turning his passion into a business by offering rental services.
+            <p>From a simple rental service to a leading events production provider, LightSyncAudio continues to grow, bringing unforgettable experiences to every event it touches. LightSyncAudio Lights and Sounds was founded in 2020 by Wil Vallo, a Computer Science student from Mapua Malayan Colleges Laguna. His passion for music led him to perform at major school events, local bars, and private gigs across Laguna and Manila. </p>
+            <p>As a multi-instrumentalist, he had amassed a collection of professional audio and lighting equipment, but when the pandemic hit, his gear sat unused. Rather than letting it go to waste, he saw an opportunity—turning his passion into a business by offering rental services.</p>
 
-            </p>
         </div>
 
 
@@ -50,8 +50,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="timeline-section">
+
+            <div class="timeline-section">
         <div class="timeline-entry">
             <asp:Image runat="server" ImageUrl="~/img/timeline-img1.png" CssClass="timeline-img"/>
             <div class="timeline-content">
@@ -83,7 +83,10 @@
         </div>
 
 
-        <div class="fill"></div>
+        </div>
     </div>
+            
+
+
 
 </asp:Content>

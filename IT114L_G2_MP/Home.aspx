@@ -70,8 +70,8 @@
                         <h2>About LightSync Audio</h2>
                         <p>Your premier audio and lighting equipment provider</p>
                     </div>
-                    <p>Founded in 2010, LightSync Audio has been providing top-quality sound and lighting equipment for events of all sizes. Our mission is to deliver exceptional audio-visual experiences through cutting-edge technology and unparalleled service.</p>
-                    <p>With a team of experienced professionals and a vast inventory of premium equipment, we're committed to making your event shine. From intimate gatherings to large-scale productions, we have the expertise and resources to exceed your expectations.</p>
+                    <p>From a simple rental service to a leading events production provider, LightSyncAudio continues to grow, bringing unforgettable experiences to every event it touches. LightSyncAudio Lights and Sounds was founded in 2020 by Wil Vallo, a Computer Science student from Mapua Malayan Colleges Laguna. His passion for music led him to perform at major school events, local bars, and private gigs across Laguna and Manila. </p>
+                    <p>As a multi-instrumentalist, he had amassed a collection of professional audio and lighting equipment, but when the pandemic hit, his gear sat unused. Rather than letting it go to waste, he saw an opportunity—turning his passion into a business by offering rental services.</p>
                     <asp:Button runat="server" Text="Learn More" CssClass="secondary-button" PostBackUrl="~/About.aspx" />
                 </div>
                 <div class="about-image">
@@ -195,7 +195,7 @@
                     <div class="stat-icon">
                         <i class="fas fa-award"></i>
                     </div>
-                    <div class="stat-number">10+</div>
+                    <div class="stat-number">5+</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
             </div>

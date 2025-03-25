@@ -18,7 +18,7 @@ namespace IT114L_G2_MP
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None; //not connected
             if (!IsPostBack)
             {
-                LoadPackages();
+                //LoadPackages();
             }
         }
         private void LoadPackages()
