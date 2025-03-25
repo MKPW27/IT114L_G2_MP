@@ -12,11 +12,16 @@ namespace IT114L_G2_MP
 {
     public partial class Equipment_Management : System.Web.UI.Page
     {
-        string connstr = $"Data Source=.\\SQLExpress; Initial Catalog=LightSyncAudio; Integrated Security=SSPI;";
+        string connstr = "Data Source=.\\SQLExpress; Initial Catalog=LightSyncAudio; Integrated Security=SSPI;";
         protected void Page_Load(object sender, EventArgs e)
         {
             ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             equip_acq.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            LoadGrid();
+        }
+        public void LoadGrid()
+        {
+
         }
         protected void ddl_typeChange(object sender, EventArgs e)
         {

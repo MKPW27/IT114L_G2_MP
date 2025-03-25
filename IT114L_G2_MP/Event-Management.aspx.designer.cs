@@ -168,13 +168,13 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.TextBox ev_pax;
 
         /// <summary>
-        /// teamname control.
+        /// teamDDL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox teamname;
+        protected global::System.Web.UI.WebControls.DropDownList teamDDL;
 
         /// <summary>
         /// packageid control.
@@ -204,13 +204,13 @@ namespace IT114L_G2_MP
         protected global::System.Web.UI.WebControls.DropDownList bookStatus;
 
         /// <summary>
-        /// delete_btn control.
+        /// clear_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button delete_btn;
+        protected global::System.Web.UI.WebControls.Button clear_btn;
 
         /// <summary>
         /// save_btn control.

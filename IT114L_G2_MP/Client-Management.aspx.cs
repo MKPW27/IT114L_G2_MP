@@ -14,7 +14,7 @@ namespace IT114L_G2_MP
         string connstr = $"Data Source=.\\SQLExpress; Initial Catalog=LightSyncAudio; Integrated Security=SSPI;";
         protected void Page_Load(object sender, EventArgs e)
         {
-            //displayAtGrid();
+            displayAtGrid();
         }
         public void clearInputFields()
         {

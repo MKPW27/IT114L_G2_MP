@@ -24,6 +24,7 @@
                     <li class="nav-list"><asp:HyperLink ID="event" runat="server" CssClass="hyperlink" NavigateUrl="~/Event-Management.aspx"><asp:Image ID="Image5" runat="server" ImageUrl="~/navIcons/event.png" CssClass="nav-icon" /><br /><span class="nav-text">My Events</span></asp:HyperLink></li>
                     <li class="nav-list"><asp:HyperLink ID="payment" runat="server" CssClass="hyperlink" NavigateUrl="~/Payment-Management.aspx"><asp:Image ID="Image6" runat="server" ImageUrl="~/navIcons/payment.png" CssClass="nav-icon" /><br /><span class="nav-text">My Payments</span></asp:HyperLink></li>
                     <li class="nav-list"><asp:HyperLink ID="equipments" runat="server" CssClass="hyperlink" NavigateUrl="~/Equipment-Management.aspx"><asp:Image ID="Image4" runat="server" ImageUrl="~/navIcons/equipment.png" CssClass="nav-icon" /><br /><span class="nav-text">My Equipments</span></asp:HyperLink></li>
+                    <li class="nav-list"><asp:HyperLink ID="HyperLink2" runat="server" CssClass="hyperlink" NavigateUrl="~/Team-Management.aspx"><asp:Image ID="Image2" runat="server" ImageUrl="~/navIcons/team.png" CssClass="nav-icon" /><br /><span class="nav-text">My Teams</span></asp:HyperLink></li>
                 </ul>
             </nav>
             <asp:Button ID="logOut" runat="server" Text="Log Out" CssClass="BookBtn" OnClick="btnLogout_click"/>
