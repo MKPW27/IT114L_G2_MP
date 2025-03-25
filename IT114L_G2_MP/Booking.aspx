@@ -28,18 +28,18 @@
         <div class="container">
             <div class="booking-input-container">
                 <div class="booking-input">
-                    <p>Event Name</p>
+                    <p>Event Name</p><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="name" ValidationGroup="bookingVal"></asp:RequiredFieldValidator> 
                     <asp:TextBox ID="name" runat="server" CssClass="input"></asp:TextBox>
                 </div>
                 <div class="booking-input">
-                    <p>Event Type</p>
+                    <p>Event Type</p><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="evtType" ValidationGroup="bookingVal"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="evtType" runat="server" CssClass="input"></asp:TextBox>
                 </div>
             </div>
 
             <div class="booking-input-container">
                 <div class="booking-input">
-                    <p>Number of Attendees</p>
+                    <p>Number of Attendees</p><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="*" ControlToValidate="numAttendees" ValidationGroup="bookingVal"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="numAttendees" runat="server" CssClass="input" TextMode="Number"></asp:TextBox>
                 </div>
                 <div class="booking-input">

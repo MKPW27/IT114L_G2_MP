@@ -20,21 +20,29 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
     background-size: cover;
     background-position: center;
     height: 450px;
     display: flex;
-    align-items: center;
+    flex-direction:column;
     justify-content: center;
+    padding-left: 250px;
+
 }
 
-.hero-section h1 {
-    color: var(--white);
-    font-size: 48px;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+    .hero-section h1 {
+        color: var(--white);
+        font-size: 60px;
+        font-weight: 700;
+
+    }
+
+    .hero-section p {
+        color: #f5f5f5;
+        font-size: 16px;
+        width: 600px;
+    }
 
 /* Services Section */
 .services-container {
@@ -128,7 +136,7 @@ body {
 
 /* Special Events Section */
 .special-events {
-    background-color: var(--dark-gray);
+    background-color: #121212;
     padding: 50px 0;
 }
 

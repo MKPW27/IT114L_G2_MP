@@ -8,7 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   
     <section class="hero-section">
-        <h1>OUR SERVICES</h1>
+        <h1>Our Services</h1>
+        <p>Expert Lighting & Sound solutions for any event. Stunning visuals, crystal-clear audio—perfect ambiance guaranteed!</p>
     </section>
 
         <!-- Services Section -->
